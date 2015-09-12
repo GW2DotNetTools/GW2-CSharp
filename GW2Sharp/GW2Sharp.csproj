@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0276AF2-742D-4E20-B54D-28E51E7A3FD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GW2Sharp</RootNamespace>
+    <AssemblyName>GW2Sharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GW2Api.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="v2\authenticated\account\bank\" />
+    <Folder Include="v2\authenticated\account\dyes\" />
+    <Folder Include="v2\authenticated\account\materials\" />
+    <Folder Include="v2\authenticated\account\skins\" />
+    <Folder Include="v2\authenticated\account\wallet\" />
+    <Folder Include="v2\authenticated\characters\" />
+    <Folder Include="v2\authenticated\commerce\transactions\" />
+    <Folder Include="v2\authenticated\pvp\games\" />
+    <Folder Include="v2\authenticated\pvp\stats\" />
+    <Folder Include="v2\authenticated\tokeninfo\" />
+    <Folder Include="v2\unauthenticated\game mechanics\specializations\" />
+    <Folder Include="v2\unauthenticated\game mechanics\traits\" />
+    <Folder Include="v2\unauthenticated\items\materials\" />
+    <Folder Include="v2\unauthenticated\items\recipes\search\" />
+    <Folder Include="v2\unauthenticated\items\skins\" />
+    <Folder Include="v2\unauthenticated\map information\continents\" />
+    <Folder Include="v2\unauthenticated\map information\maps\" />
+    <Folder Include="v2\unauthenticated\miscellaneous\build\" />
+    <Folder Include="v2\unauthenticated\miscellaneous\colors\" />
+    <Folder Include="v2\unauthenticated\miscellaneous\currencies\" />
+    <Folder Include="v2\unauthenticated\miscellaneous\files\" />
+    <Folder Include="v2\unauthenticated\miscellaneous\quaggans\" />
+    <Folder Include="v2\unauthenticated\miscellaneous\worlds\" />
+    <Folder Include="v2\unauthenticated\trading post\commerce\exchange\" />
+    <Folder Include="v2\unauthenticated\trading post\commerce\listings\" />
+    <Folder Include="v2\unauthenticated\trading post\commerce\prices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
