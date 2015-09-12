@@ -8,9 +8,5 @@ namespace GW2Sharp
 {
     public static class GW2Api
     {
-        public GW2Api()
-        {
-
-        }
     }
 }
