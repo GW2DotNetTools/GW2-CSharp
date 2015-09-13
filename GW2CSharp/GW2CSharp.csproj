@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB4FD259-B26F-4999-94D9-E3DADA9B62F6}</ProjectGuid>
+    <ProjectGuid>{A0276AF2-742D-4E20-B54D-28E51E7A3FD2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tests</RootNamespace>
-    <AssemblyName>Tests</AssemblyName>
+    <RootNamespace>GW2CSharp</RootNamespace>
+    <AssemblyName>GW2CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\GW2CSharp.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,10 +29,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\GW2CSharp.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,18 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GW2Api.UnitTest.cs" />
+    <Compile Include="GW2Api.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="V1\Services\RenderService.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\Color.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Currency.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\World.UnitTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+    <Compile Include="RequestedLanguage.cs" />
+    <Compile Include="V1\Services\Enums\FileFormat.cs" />
+    <Compile Include="V1\Services\RenderService.cs" />
+    <Compile Include="V2\ApiBase.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\BuildWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\Color.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\ColorWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\DyeMaterial.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Currency.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\CurrencyWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Enums\CurrencyArt.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\Enums\Language.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\Enums\Population.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\Enums\Region.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\World.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\WorldWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="V2\Authenticated\Account\Bank\" />
@@ -81,10 +90,7 @@
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Prices\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GW2CSharp\GW2CSharp.csproj">
-      <Project>{a0276af2-742d-4e20-b54d-28e51e7a3fd2}</Project>
-      <Name>GW2CSharp</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

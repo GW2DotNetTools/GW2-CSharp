@@ -1,6 +1,6 @@
-﻿using GW2Sharp;
-using GW2Sharp.V2.Unauthenticated.Miscellaneous.Currencies;
-using GW2Sharp.V2.Unauthenticated.Miscellaneous.Currencies.Enums;
+﻿using GW2CSharp;
+using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
+using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies.Enums;
 using NUnit.Framework;
 
 namespace Tests.V2.Unauthenticated.Miscellaneous.Currencies

@@ -1,5 +1,5 @@
-﻿using GW2Sharp.V1.Services;
-using GW2Sharp.V1.Services.Enums;
+﻿using GW2CSharp.V1.Services;
+using GW2CSharp.V1.Services.Enums;
 using NUnit.Framework;
 using System.Drawing;
 

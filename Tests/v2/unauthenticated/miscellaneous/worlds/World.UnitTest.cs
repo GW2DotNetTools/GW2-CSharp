@@ -1,6 +1,6 @@
-﻿using GW2Sharp;
-using GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds;
-using GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums;
+﻿using GW2CSharp;
+using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds;
+using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
