@@ -1,6 +1,8 @@
 ﻿using GW2CSharp;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Tests.V2.Unauthenticated.Miscellaneous.Colors
@@ -25,7 +27,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Colors
         [Test]
         public void ReturnsAllColors()
         {
-            var allColors = GW2Api.Colors.GetAllColors();
+            Dictionary<int, Lazy<Color>> allColors = GW2Api.Colors.GetAllColors();
 
             Color actualColor = allColors[1].Value;
 

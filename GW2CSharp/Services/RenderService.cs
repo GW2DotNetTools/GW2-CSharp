@@ -1,9 +1,9 @@
-﻿using GW2CSharp.V1.Services.Enums;
+﻿using GW2CSharp.Services.Enums;
 using System;
 using System.Drawing;
 using System.Net;
 
-namespace GW2CSharp.V1.Services
+namespace GW2CSharp.Services
 {
     /// <summary>
     /// Represents the v1/renderservice endpoint which provides access to in-game assets like item icons.

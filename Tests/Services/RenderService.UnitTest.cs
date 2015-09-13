@@ -1,9 +1,9 @@
-﻿using GW2CSharp.V1.Services;
-using GW2CSharp.V1.Services.Enums;
+﻿using GW2CSharp.Services;
+using GW2CSharp.Services.Enums;
 using NUnit.Framework;
 using System.Drawing;
 
-namespace Tests.V1.Services
+namespace Tests.Services
 {
     [TestFixture]
     public class RenderServiceUnitTest

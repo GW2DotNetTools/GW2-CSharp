@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GW2CSharp.V1.Services.Enums
+﻿
+namespace GW2CSharp.Services.Enums
 {
     /// <summary>
     /// Represents all known formats of the v1/renderservice endpoint.
