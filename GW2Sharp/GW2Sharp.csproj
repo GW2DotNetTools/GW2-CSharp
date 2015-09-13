@@ -52,6 +52,9 @@
     <Compile Include="V1\Services\RenderService.cs" />
     <Compile Include="V2\ApiBase.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\BuildWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\Color.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\ColorWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\DyeMaterial.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Currency.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\CurrencyWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Enums\CurrencyArt.cs" />
@@ -79,7 +82,6 @@
     <Folder Include="V2\Unauthenticated\MapInformation\Maps\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Specializations\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Traits\" />
-    <Folder Include="V2\Unauthenticated\Miscellaneous\Colors\" />
     <Folder Include="V2\Unauthenticated\Miscellaneous\Files\" />
     <Folder Include="V2\Unauthenticated\Miscellaneous\Quaggans\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Exchange\" />
