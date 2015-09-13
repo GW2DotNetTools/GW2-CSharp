@@ -1,4 +1,5 @@
 ﻿using GW2Sharp;
+using GW2Sharp.V1.Services;
 using NUnit.Framework;
 
 namespace Tests

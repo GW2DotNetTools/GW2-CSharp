@@ -1,4 +1,5 @@
 ﻿using GW2Sharp.V2.Unauthenticated.Miscellaneous;
+using GW2Sharp.V2.Unauthenticated.Miscellaneous.Currencies;
 using GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds;
 
 namespace GW2Sharp
@@ -27,6 +28,17 @@ namespace GW2Sharp
             get 
             {
                 return new WorldWrapper();
+            }
+        }
+
+        /// <summary>
+        /// Returns a wrapper for all currency endpoint calls.
+        /// </summary>
+        public static CurrencyWrapper Currencies
+        {
+            get
+            {
+                return new CurrencyWrapper();
             }
         }
     }

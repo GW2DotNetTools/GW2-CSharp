@@ -8,7 +8,7 @@ namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds
     public class World   
     {
         /// <summary>
-        /// Initialization of a new world.
+        /// Initialization of a new world object.
         /// </summary>
         /// <param name="id">The world Id.</param>
         /// <param name="name">The world name.</param>
