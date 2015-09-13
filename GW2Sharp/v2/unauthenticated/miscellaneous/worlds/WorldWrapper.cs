@@ -13,10 +13,11 @@ namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds
         /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?id=</para>
         /// </summary>
         /// <param name="id">The world id.</param>
+        /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <returns>World object that matches the Id.</returns>
-        public World GetWorldById(int id)
+        public World GetWorldById(int id, RequestedLanguage requestedLanguage = RequestedLanguage.en) 
         {
-            string jsonString = DownloadJsonString("https://api.guildwars2.com/v2/worlds?id=" + id);
+            string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/worlds?id={0}&lang={1}", id, requestedLanguage));
             return JsonConvert.DeserializeObject<World>(jsonString);
         }
 
@@ -24,11 +25,12 @@ namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds
         /// Returns the worlds that matches the ids.
         /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=</para>
         /// </summary>
+        /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <param name="ids">The world ids.</param>
         /// <returns>List of worlds that matches the ids.</returns>
-        public IEnumerable<World> GetWorldById(params int[] ids)
+        public IEnumerable<World> GetWorldById(RequestedLanguage requestedLanguage = RequestedLanguage.en, params int[] ids)
         {
-            return GetWorldByIds(ids);
+            return GetWorldByIds(ids, requestedLanguage);
         }
 
         /// <summary>
@@ -36,14 +38,16 @@ namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds
         /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=</para>
         /// </summary>
         /// <param name="ids">The world ids.</param>
+        /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <returns>List of worlds that matches the ids.</returns>
-        public IEnumerable<World> GetWorldByIds(IEnumerable<int> ids)
+        public IEnumerable<World> GetWorldByIds(IEnumerable<int> ids, RequestedLanguage requestedLanguage = RequestedLanguage.en)
         {
             string url = "https://api.guildwars2.com/v2/worlds?ids=";
             foreach (int id in ids)
             {
                 url += id + ",";
             }
+            url = string.Format("{0}&lang={1}", url, requestedLanguage); 
 
             string jsonString = DownloadJsonString(url);
             return JsonConvert.DeserializeObject<List<World>>(jsonString);
@@ -53,10 +57,11 @@ namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds
         /// Returns all worlds.
         /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=all</para>
         /// </summary>
+        /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <returns>List of all worlds.</returns>
-        public IEnumerable<World> GetAllWorlds()
+        public IEnumerable<World> GetAllWorlds(RequestedLanguage requestedLanguage = RequestedLanguage.en)
         {
-            string jsonString = DownloadJsonString("https://api.guildwars2.com/v2/worlds?ids=all");
+            string jsonString = DownloadJsonString("https://api.guildwars2.com/v2/worlds?ids=all&lang=" + requestedLanguage);
             return JsonConvert.DeserializeObject<List<World>>(jsonString);
         }
     }

@@ -31,7 +31,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Worlds
         [Test]
         public void ReturnsMultipleWorldById()
         {
-            List<World> world = GW2Api.Worlds.GetWorldById(1001, 2012).ToList();
+            List<World> world = GW2Api.Worlds.GetWorldById(RequestedLanguage.en, 1001, 2012).ToList();
 
             CompareWorlds(anvilRock, world[0]);
             CompareWorlds(pikenSquare, world[1]);

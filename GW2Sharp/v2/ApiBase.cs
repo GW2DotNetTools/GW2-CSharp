@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 
 namespace GW2Sharp.V2
 {
@@ -10,9 +11,17 @@ namespace GW2Sharp.V2
         internal static string DownloadJsonString(string url)
         {
             string jsonString = string.Empty;
-            using (WebClient wc = new WebClient())
+            
+            try
             {
-                jsonString = wc.DownloadString(url);
+                using (WebClient wc = new WebClient())
+                {
+                    jsonString = wc.DownloadString(url);
+                }
+            }
+            catch (Exception)
+            {
+                throw new ArgumentException(url + " does not return a valid object.");
             }
 
             return jsonString;

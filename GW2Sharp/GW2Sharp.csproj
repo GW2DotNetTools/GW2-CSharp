@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="GW2Api.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestedLanguage.cs" />
     <Compile Include="V1\Services\Enums\FileFormat.cs" />
     <Compile Include="V1\Services\RenderService.cs" />
     <Compile Include="V2\ApiBase.cs" />

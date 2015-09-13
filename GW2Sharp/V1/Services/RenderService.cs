@@ -1,4 +1,5 @@
 ﻿using GW2Sharp.V1.Services.Enums;
+using System;
 using System.Drawing;
 using System.Net;
 
@@ -26,9 +27,16 @@ namespace GW2Sharp.V1.Services
             myRequest.Method = "GET";
 
             Bitmap bmp = null;
-            using (HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse())
+            try
             {
-                bmp = new Bitmap(myResponse.GetResponseStream());
+                using (HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse())
+                {
+                    bmp = new Bitmap(myResponse.GetResponseStream());
+                }
+            }
+            catch (Exception)
+            {
+                throw new ArgumentException(url + " does not return a valid object.");
             }
 
             return bmp;
