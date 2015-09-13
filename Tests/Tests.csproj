@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="GW2Api.UnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="v2\unauthenticated\miscellaneous\worlds\World.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\World.UnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -59,30 +59,30 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="v2\authenticated\account\bank\" />
-    <Folder Include="v2\authenticated\account\dyes\" />
-    <Folder Include="v2\authenticated\account\materials\" />
-    <Folder Include="v2\authenticated\account\skins\" />
-    <Folder Include="v2\authenticated\account\wallet\" />
-    <Folder Include="v2\authenticated\characters\" />
-    <Folder Include="v2\authenticated\commerce\transactions\" />
-    <Folder Include="v2\authenticated\pvp\games\" />
-    <Folder Include="v2\authenticated\pvp\stats\" />
-    <Folder Include="v2\authenticated\tokeninfo\" />
-    <Folder Include="v2\unauthenticated\game mechanics\specializations\" />
-    <Folder Include="v2\unauthenticated\game mechanics\traits\" />
-    <Folder Include="v2\unauthenticated\items\materials\" />
-    <Folder Include="v2\unauthenticated\items\recipes\search\" />
-    <Folder Include="v2\unauthenticated\items\skins\" />
-    <Folder Include="v2\unauthenticated\map information\continents\" />
-    <Folder Include="v2\unauthenticated\map information\maps\" />
-    <Folder Include="v2\unauthenticated\miscellaneous\colors\" />
-    <Folder Include="v2\unauthenticated\miscellaneous\currencies\" />
-    <Folder Include="v2\unauthenticated\miscellaneous\files\" />
-    <Folder Include="v2\unauthenticated\miscellaneous\quaggans\" />
-    <Folder Include="v2\unauthenticated\trading post\commerce\exchange\" />
-    <Folder Include="v2\unauthenticated\trading post\commerce\listings\" />
-    <Folder Include="v2\unauthenticated\trading post\commerce\prices\" />
+    <Folder Include="V2\Authenticated\Account\Bank\" />
+    <Folder Include="V2\Authenticated\Account\Dyes\" />
+    <Folder Include="V2\Authenticated\Account\Materials\" />
+    <Folder Include="V2\Authenticated\Account\Skins\" />
+    <Folder Include="V2\Authenticated\Account\Wallet\" />
+    <Folder Include="V2\Authenticated\Characters\" />
+    <Folder Include="V2\Authenticated\Commerce\Transactions\" />
+    <Folder Include="V2\Authenticated\Pvp\Games\" />
+    <Folder Include="V2\Authenticated\Pvp\Stats\" />
+    <Folder Include="V2\Authenticated\Tokeninfo\" />
+    <Folder Include="V2\Unauthenticated\Items\materials\" />
+    <Folder Include="V2\Unauthenticated\Items\recipes\search\" />
+    <Folder Include="V2\Unauthenticated\Items\skins\" />
+    <Folder Include="V2\Unauthenticated\MapInformation\Continents\" />
+    <Folder Include="V2\Unauthenticated\MapInformation\Maps\" />
+    <Folder Include="V2\Unauthenticated\Mechanics\Specializations\" />
+    <Folder Include="V2\Unauthenticated\Mechanics\Traits\" />
+    <Folder Include="V2\Unauthenticated\Miscellaneous\Colors\" />
+    <Folder Include="V2\Unauthenticated\Miscellaneous\Currencies\" />
+    <Folder Include="V2\Unauthenticated\Miscellaneous\Files\" />
+    <Folder Include="V2\Unauthenticated\Miscellaneous\Quaggans\" />
+    <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Exchange\" />
+    <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Listings\" />
+    <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Prices\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

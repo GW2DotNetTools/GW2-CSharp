@@ -1,12 +1,16 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace GW2Sharp.v2.unauthenticated.miscellaneous.worlds
+namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds
 {
+    /// <summary>
+    /// Represents a wrapper for the v2/world endpoint.
+    /// </summary>
     public class WorldWrapper : ApiBase
     {
         /// <summary>
         /// Returns the world that matches the Id.
+        /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?id=</para>
         /// </summary>
         /// <param name="id">The world id.</param>
         /// <returns>World object that matches the Id.</returns>
@@ -18,6 +22,7 @@ namespace GW2Sharp.v2.unauthenticated.miscellaneous.worlds
 
         /// <summary>
         /// Returns the worlds that matches the ids.
+        /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=</para>
         /// </summary>
         /// <param name="ids">The world ids.</param>
         /// <returns>List of worlds that matches the ids.</returns>
@@ -28,6 +33,7 @@ namespace GW2Sharp.v2.unauthenticated.miscellaneous.worlds
 
         /// <summary>
         /// Returns the worlds that matches the ids.
+        /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=</para>
         /// </summary>
         /// <param name="ids">The world ids.</param>
         /// <returns>List of worlds that matches the ids.</returns>
@@ -45,6 +51,7 @@ namespace GW2Sharp.v2.unauthenticated.miscellaneous.worlds
 
         /// <summary>
         /// Returns all worlds.
+        /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=all</para>
         /// </summary>
         /// <returns>List of all worlds.</returns>
         public IEnumerable<World> GetAllWorlds()

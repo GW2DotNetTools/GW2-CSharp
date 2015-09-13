@@ -1,11 +1,14 @@
-﻿using GW2Sharp.v2.unauthenticated.miscellaneous.worlds.enums;
+﻿using GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums;
 
-namespace GW2Sharp.v2.unauthenticated.miscellaneous.worlds
+namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds
 {
+    /// <summary>
+    /// Represents a single world from the v2/worlds endpoint.
+    /// </summary>
     public class World   
     {
         /// <summary>
-        /// Represents a single world from the v2/worlds Endpoint.
+        /// Initialization of a new world.
         /// </summary>
         /// <param name="id">The world Id.</param>
         /// <param name="name">The world name.</param>
@@ -34,7 +37,6 @@ namespace GW2Sharp.v2.unauthenticated.miscellaneous.worlds
 
         /// <summary>
         /// Returns the Region of this world.
-        /// <para>The first digit of the id indicates the world's region. 1 is North America, 2 is Europe.</para>
         /// </summary>
         public Region Region
         {
@@ -47,7 +49,6 @@ namespace GW2Sharp.v2.unauthenticated.miscellaneous.worlds
 
         /// <summary>
         /// Returns the Language of this world.
-        /// <para>The second digit of the id currently correlates with the world's assigned language: 1 means French, 2 means German, and 3 means Spanish.</para>
         /// </summary>
         public Language Language 
         {

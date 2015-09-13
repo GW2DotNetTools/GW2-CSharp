@@ -1,6 +1,5 @@
-﻿using GW2Sharp.v2.unauthenticated.miscellaneous;
-using GW2Sharp.v2.unauthenticated.miscellaneous.worlds;
-using System.Collections.Generic;
+﻿using GW2Sharp.V2.Unauthenticated.Miscellaneous;
+using GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds;
 
 namespace GW2Sharp
 {

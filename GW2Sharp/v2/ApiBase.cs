@@ -1,8 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System.Net;
 
-namespace GW2Sharp.v2
+namespace GW2Sharp.V2
 {
+    /// <summary>
+    /// Base class for all coming endpoint calls.
+    /// </summary>
     public class ApiBase
     {
         internal static string DownloadJsonString(string url)

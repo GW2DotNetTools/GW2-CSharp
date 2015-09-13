@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GW2Sharp.v2.unauthenticated.miscellaneous
+namespace GW2Sharp.V2.Unauthenticated.Miscellaneous
 {
     internal class BuildWrapper : ApiBase
     {

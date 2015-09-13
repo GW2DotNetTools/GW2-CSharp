@@ -1,11 +1,11 @@
 ﻿using GW2Sharp;
-using GW2Sharp.v2.unauthenticated.miscellaneous.worlds;
-using GW2Sharp.v2.unauthenticated.miscellaneous.worlds.enums;
+using GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds;
+using GW2Sharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tests.v2.unauthenticated.miscellaneous.worlds
+namespace Tests.V2.Unauthenticated.Miscellaneous.Worlds
 {
     [TestFixture]
     public class WorldUnitTest
