@@ -15,7 +15,7 @@ namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Colors
         /// </summary>
         /// <param name="id">The color id.</param>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
-        /// <returns></returns>
+        /// <returns>Color that matches the id.</returns>
         public Color GetColorById(int id, RequestedLanguage requestedLanguage = RequestedLanguage.en)
         {
             string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/colors/{0}?lang={1}", id, requestedLanguage));
@@ -27,7 +27,7 @@ namespace GW2Sharp.V2.Unauthenticated.Miscellaneous.Colors
         /// <para>Endpoint: https://api.guildwars2.com/v2/colors</para>
         /// </summary>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
-        /// <returns></returns>
+        /// <returns>Dictionary with all known colors.</returns>
         public Dictionary<int, Lazy<Color>> GetAllColors(RequestedLanguage requestedLanguage = RequestedLanguage.en) 
         {
             string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/colors"));
