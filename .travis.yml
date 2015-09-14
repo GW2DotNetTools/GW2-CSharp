@@ -1,6 +1,0 @@
-language: csharp
-solution: GW2CSharp.sln
-install:
-  - nuget restore GW2CSharp.sln
-mono:
-  - latest
