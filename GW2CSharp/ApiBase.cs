@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace GW2CSharp.V2
+namespace GW2CSharp
 {
     /// <summary>
     /// Base class for all coming endpoint calls.

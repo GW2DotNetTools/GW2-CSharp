@@ -6,7 +6,7 @@ using System.Net;
 namespace GW2CSharp.Services
 {
     /// <summary>
-    /// Represents the v1/renderservice endpoint which provides access to in-game assets like item icons.
+    /// Represents the render service which provides access to in-game assets like item icons.
     /// </summary>
     public static class RenderService
     {
@@ -23,6 +23,18 @@ namespace GW2CSharp.Services
         public static Bitmap GetImage(string signature, string fileId, FileFormat format)
         {
             string url = string.Format(Pattern, signature, fileId, format.ToString());
+
+            return GetImage(url);
+        }
+
+        /// <summary>
+        /// Returns a Bitmap from the render service.
+        /// <para>Endpoint: https://render.guildwars2.com/file/{url}</para>
+        /// </summary>
+        /// <param name="url">Link to the image.</param>
+        /// <returns>Bitmap from the render service.</returns>
+        public static Bitmap GetImage(string url)
+        {
             HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(url);
             myRequest.Method = "GET";
 

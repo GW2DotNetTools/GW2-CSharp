@@ -12,8 +12,8 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Currencies
         public void ReturnsCorrectCurrency() 
         {
             Currency expectedCurrency = new Currency(4, "Gem", "Purchased and spent via the Black Lion Trading Company.", 0, "https://render.guildwars2.com/file/220061640ECA41C0577758030357221B4ECCE62C/502065.png");
-            
-            Currency actualCurrency = GW2Api.Currencies.GetCurrency(CurrencyArt.Gem);
+
+            Currency actualCurrency = GW2Api.V2.Currencies.GetCurrency(CurrencyArt.Gem);
 
             Assert.AreEqual(expectedCurrency.Id, actualCurrency.Id);
             Assert.AreEqual(expectedCurrency.Name, actualCurrency.Name);

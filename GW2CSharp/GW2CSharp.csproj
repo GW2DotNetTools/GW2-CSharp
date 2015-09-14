@@ -51,7 +51,8 @@
     <Compile Include="RequestedLanguage.cs" />
     <Compile Include="Services\Enums\FileFormat.cs" />
     <Compile Include="Services\RenderService.cs" />
-    <Compile Include="V2\ApiBase.cs" />
+    <Compile Include="ApiBase.cs" />
+    <Compile Include="V1\V1Endpoint.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\BuildWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\Color.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\ColorWrapper.cs" />
@@ -64,9 +65,9 @@
     <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\Enums\Region.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\World.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\WorldWrapper.cs" />
+    <Compile Include="V2\V2Endpoint.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="V1\" />
     <Folder Include="V2\Authenticated\Account\Bank\" />
     <Folder Include="V2\Authenticated\Account\Dyes\" />
     <Folder Include="V2\Authenticated\Account\Materials\" />

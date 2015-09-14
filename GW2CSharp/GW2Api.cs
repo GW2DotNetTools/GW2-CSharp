@@ -1,4 +1,7 @@
-﻿using GW2CSharp.V2.Unauthenticated.Miscellaneous;
+﻿using GW2CSharp.Services;
+using GW2CSharp.V1;
+using GW2CSharp.V2;
+using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds;
@@ -11,47 +14,25 @@ namespace GW2CSharp
     public static class GW2Api
     {
         /// <summary>
-        /// Returns the current build id.
+        /// Returns the V1 endpoint.
         /// </summary>
-        public static int GetBuildId
+        public static V1Endpoint V1
         {
             get
             {
-                return BuildWrapper.GetId();
+                return new V1Endpoint();
             }
         }
 
         /// <summary>
-        /// Returns a wrapper for all world endpoint calls.
+        /// Returns the V2 endpoint.
         /// </summary>
-        public static WorldWrapper Worlds 
-        {
-            get 
-            {
-                return new WorldWrapper();
-            }
-        }
-
-        /// <summary>
-        /// Returns a wrapper for all currency endpoint calls.
-        /// </summary>
-        public static CurrencyWrapper Currencies
+        public static V2Endpoint V2 
         {
             get
             {
-                return new CurrencyWrapper();
-            }
-        }
-
-        /// <summary>
-        /// Returns a wrapper for all currency endpoint calls.
-        /// </summary>
-        public static ColorWrapper Colors
-        {
-            get
-            {
-                return new ColorWrapper();
-            }
+                return new V2Endpoint(); 
+            } 
         }
     }
 }

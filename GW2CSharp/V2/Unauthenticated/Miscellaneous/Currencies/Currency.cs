@@ -1,4 +1,6 @@
-﻿
+﻿using GW2CSharp.Services;
+using System.Drawing;
+
 namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies
 {
     /// <summary>
@@ -47,5 +49,14 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies
         /// A URL to an icon for the currency.
         /// </summary>
         public string Icon { get; private set; }
+
+        /// <summary>
+        /// Returns the Icon as a Bitmap.
+        /// </summary>
+        /// <returns>Icon as a Bitmap.</returns>
+        public Bitmap GetIcon() 
+        {
+            return RenderService.GetImage(Icon);
+        }
     }
 }

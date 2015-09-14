@@ -14,7 +14,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Colors
         public void ReturnsSingleColor() 
         {
             Color expectedColor = new Color(10, "Sky", new int []{ 128,26,26}, null, null, null);
-            Color actualColor = GW2Api.Colors.GetColorById(10);
+            Color actualColor = GW2Api.V2.Colors.GetColorById(10);
 
             Assert.AreEqual(expectedColor.Id, actualColor.Id);
             Assert.AreEqual(expectedColor.Name, actualColor.Name);
@@ -27,7 +27,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Colors
         [Test]
         public void ReturnsAllColors()
         {
-            Dictionary<int, Lazy<Color>> allColors = GW2Api.Colors.GetAllColors();
+            Dictionary<int, Lazy<Color>> allColors = GW2Api.V2.Colors.GetAllColors();
 
             Color actualColor = allColors[1].Value;
 

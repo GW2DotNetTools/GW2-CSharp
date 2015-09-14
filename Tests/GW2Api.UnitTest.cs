@@ -9,7 +9,7 @@ namespace Tests
         [Test]
         public void ReturnsCorrectBuildId() 
         {
-            int id = GW2Api.GetBuildId;
+            int id = GW2Api.V2.GetBuildId;
             Assert.Greater(id, 0);
         }
     }
