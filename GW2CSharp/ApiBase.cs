@@ -8,7 +8,12 @@ namespace GW2CSharp
     /// </summary>
     public class ApiBase
     {
-        internal static string DownloadJsonString(string url)
+        /// <summary>
+        /// Downloads a JsonString from a url.
+        /// </summary>
+        /// <param name="url">Url.</param>
+        /// <returns>JsonString from url.</returns>
+        public static string DownloadJsonString(string url)
         {
             string jsonString = string.Empty;
             
