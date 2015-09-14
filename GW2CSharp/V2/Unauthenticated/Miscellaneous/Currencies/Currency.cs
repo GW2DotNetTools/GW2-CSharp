@@ -4,7 +4,7 @@ using System.Drawing;
 namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies
 {
     /// <summary>
-    /// Represtents a single currency of the v2/currencies endpoint.
+    /// Represents a single currency of the v2/currencies endpoint.
     /// </summary>
     public class Currency
     {

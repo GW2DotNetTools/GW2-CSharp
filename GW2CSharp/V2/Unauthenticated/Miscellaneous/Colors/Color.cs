@@ -3,7 +3,7 @@
 namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors
 {
     /// <summary>
-    /// Represtents a single color of the v2/colors endpoint.
+    /// Represents a single color of the v2/colors endpoint.
     /// </summary>
     public class Color
     {

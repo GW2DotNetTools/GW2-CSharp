@@ -49,6 +49,7 @@
     <Compile Include="Services\RenderService.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\Color.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Currency.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Files\RessourceFile.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Quaggans\Quaggan.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\World.UnitTest.cs" />
   </ItemGroup>
@@ -77,7 +78,6 @@
     <Folder Include="V2\Unauthenticated\MapInformation\Maps\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Specializations\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Traits\" />
-    <Folder Include="V2\Unauthenticated\Miscellaneous\Files\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Exchange\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Listings\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Prices\" />

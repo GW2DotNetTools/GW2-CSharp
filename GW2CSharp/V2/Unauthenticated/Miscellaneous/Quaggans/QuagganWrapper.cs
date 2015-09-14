@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Quaggans
 {
     /// <summary>
-    /// Represtents a wrapper for the v2/quaggans endpoint.
+    /// Represents a wrapper for the v2/quaggans endpoint.
     /// </summary>
     public class QuagganWrapper : ApiBase
     {

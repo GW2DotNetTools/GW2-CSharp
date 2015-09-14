@@ -2,7 +2,7 @@
 namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors
 {
     /// <summary>
-    /// Represtents a single DyeMaterial.
+    /// Represents a single DyeMaterial.
     /// </summary>
     public class DyeMaterial
     {

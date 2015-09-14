@@ -60,6 +60,8 @@
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Currency.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\CurrencyWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Enums\CurrencyArt.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Files\RessourceFile.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Files\RessourceFileWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Quaggans\Quaggan.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Quaggans\QuagganWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\Enums\Language.cs" />
@@ -87,7 +89,6 @@
     <Folder Include="V2\Unauthenticated\MapInformation\Maps\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Specializations\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Traits\" />
-    <Folder Include="V2\Unauthenticated\Miscellaneous\Files\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Exchange\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Listings\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Prices\" />

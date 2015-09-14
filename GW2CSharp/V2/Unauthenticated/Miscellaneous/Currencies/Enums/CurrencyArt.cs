@@ -4,7 +4,7 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies.Enums
     /// <summary>
     /// Represents all known currencies in the wallet.
     /// </summary>
-    public enum CurrencyArt
+    public enum CurrencyType
     {
         /// <summary>
         /// Coin.

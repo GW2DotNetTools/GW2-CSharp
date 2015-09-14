@@ -1,6 +1,7 @@
 ﻿using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
+using GW2CSharp.V2.Unauthenticated.Miscellaneous.Files;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Quaggans;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds;
 
@@ -35,5 +36,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all quaggan endpoint calls.
         /// </summary>
         public QuagganWrapper Quaggans { get { return new QuagganWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all RessourceFile endpoint calls.
+        /// </summary>
+        public RessourceFileWrapper RessourceFiles { get { return new RessourceFileWrapper(); } }
     }
 }
