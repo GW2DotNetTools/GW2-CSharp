@@ -29,7 +29,6 @@ namespace GW2CSharp.Services
 
         /// <summary>
         /// Returns a Bitmap from the render service.
-        /// <para>Endpoint: https://render.guildwars2.com/file/{url}</para>
         /// </summary>
         /// <param name="url">Link to the image.</param>
         /// <returns>Bitmap from the render service.</returns>

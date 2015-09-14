@@ -7,7 +7,7 @@ namespace Tests
     public class GW2ApiUnitTest
     {
         [Test]
-        public void ReturnsCorrectBuildId() 
+        public void ShouldReturnCorrectBuildId() 
         {
             int id = GW2Api.V2.GetBuildId;
             Assert.Greater(id, 0);

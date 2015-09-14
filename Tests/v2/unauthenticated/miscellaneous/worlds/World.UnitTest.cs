@@ -21,7 +21,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Worlds
         }
 
         [Test]
-        public void ReturnsSingleWorldById()
+        public void ShouldReturnSingleWorldById()
         {
             World world = GW2Api.V2.Worlds.GetWorldById(2012);
 
@@ -29,7 +29,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Worlds
         }
 
         [Test]
-        public void ReturnsMultipleWorldById()
+        public void ShoudlReturnMultipleWorldsById()
         {
             List<World> world = GW2Api.V2.Worlds.GetWorldById(RequestedLanguage.en, 1001, 2012).ToList();
 
@@ -38,7 +38,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Worlds
         }
 
         [Test]
-        public void ReturnsAllWorlds()
+        public void ShouldReturnAllWorlds()
         {
             List<World> world = GW2Api.V2.Worlds.GetAllWorlds().ToList();
 

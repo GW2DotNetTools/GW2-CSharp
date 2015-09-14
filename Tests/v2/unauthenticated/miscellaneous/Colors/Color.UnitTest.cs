@@ -11,7 +11,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Colors
     public class ColorUnitTest
     {
         [Test]
-        public void ReturnsSingleColor() 
+        public void ShouldReturnSingleColor() 
         {
             Color expectedColor = new Color(10, "Sky", new int []{ 128,26,26}, null, null, null);
             Color actualColor = GW2Api.V2.Colors.GetColorById(10);
@@ -25,7 +25,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Colors
         }
 
         [Test]
-        public void ReturnsAllColors()
+        public void ShouldReturnAllColors()
         {
             Dictionary<int, Lazy<Color>> allColors = GW2Api.V2.Colors.GetAllColors();
 

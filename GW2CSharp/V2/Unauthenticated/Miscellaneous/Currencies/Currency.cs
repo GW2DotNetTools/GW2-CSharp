@@ -54,7 +54,7 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies
         /// Returns the Icon as a Bitmap.
         /// </summary>
         /// <returns>Icon as a Bitmap.</returns>
-        public Bitmap GetIcon() 
+        public Bitmap GetImage() 
         {
             return RenderService.GetImage(Icon);
         }
