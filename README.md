@@ -11,6 +11,7 @@ Have a look at the [milestones](https://github.com/GW2DotNetTools/GW2-Sharp/mile
 ### Current Status ###
 Endpoint | Status
 ------------- | -------------
+overall                    | 19%
 /v2/account                | 0%
 /v2/account/bank           | 0%
 /v2/account/dyes           | 0%
@@ -29,7 +30,6 @@ Endpoint | Status
 /v2/continents             | 0%
 /v2/currencies             | 100%
 /v2/files                  | 100%
-/v2/floors                 | 0%
 /v2/items                  | 0%
 /v2/maps                   | 0%
 /v2/materials              | 0%
