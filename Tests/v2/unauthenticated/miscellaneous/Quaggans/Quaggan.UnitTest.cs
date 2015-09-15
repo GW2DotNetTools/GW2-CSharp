@@ -20,6 +20,15 @@ namespace Tests.V2.Unauthenticated.Miscellaneous.Quaggans
         }
 
         [Test]
+        public void ShouldReturnSpecificQuagganFromList()
+        {
+            List<Lazy<Quaggan>> quaggans = GW2Api.V2.Quaggans.GetAllQuaggans().ToList();
+            Quaggan cryQuaggan = quaggans[13].Value;
+
+            Assert.AreEqual("https://static.staticwars.com/quaggans/cry.jpg", cryQuaggan.Url);
+        }
+
+        [Test]
         public void ShouldReturnSingleQuaggan()
         {
             Quaggan cakeQuaggan = GW2Api.V2.Quaggans.GetQuaggan("cake");

@@ -4,6 +4,7 @@ using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Files;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Quaggans;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds;
+using GW2CSharp.V2.Unauthenticated.TradingPost.Commerce.Exchanges;
 
 namespace GW2CSharp.V2
 {
@@ -41,5 +42,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all RessourceFile endpoint calls.
         /// </summary>
         public RessourceFileWrapper RessourceFiles { get { return new RessourceFileWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all exchange endpoint calls.
+        /// </summary>
+        public ExchangeWrapper Exchanges { get { return new ExchangeWrapper(); } }
     }
 }

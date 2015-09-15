@@ -59,7 +59,7 @@
     <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\DyeMaterial.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Currency.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\CurrencyWrapper.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Enums\CurrencyArt.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Enums\CurrencyType.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Files\RessourceFile.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Files\RessourceFileWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Quaggans\Quaggan.cs" />
@@ -69,6 +69,10 @@
     <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\Enums\Region.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\World.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\WorldWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\TradingPost\Commerce\Exchanges\Gem.cs" />
+    <Compile Include="Entities\Money.cs" />
+    <Compile Include="V2\Unauthenticated\TradingPost\Commerce\Exchanges\Coin.cs" />
+    <Compile Include="V2\Unauthenticated\TradingPost\Commerce\Exchanges\ExchangeWrapper.cs" />
     <Compile Include="V2\V2Endpoint.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -89,7 +93,6 @@
     <Folder Include="V2\Unauthenticated\MapInformation\Maps\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Specializations\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Traits\" />
-    <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Exchange\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Listings\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Prices\" />
   </ItemGroup>

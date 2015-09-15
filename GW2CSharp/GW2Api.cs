@@ -10,6 +10,7 @@ namespace GW2CSharp
 {
     /// <summary>
     /// Represents the Guild Wars 2 Api.
+    /// <para>Full documentation under: http://gw2dotnettools.github.io/GW2-CSharp-Documentation</para>
     /// </summary>
     public static class GW2Api
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Net;
 
 namespace GW2CSharp
@@ -30,6 +31,17 @@ namespace GW2CSharp
             }
 
             return jsonString;
+        }
+
+        /// <summary>
+        /// Deserializes a object.
+        /// </summary>
+        /// <typeparam name="T">Type.</typeparam>
+        /// <param name="url">Endpoint url.</param>
+        /// <returns>Converted object.</returns>
+        public static T DeserializeObject<T>(string url)
+        {
+            return JsonConvert.DeserializeObject<T>(DownloadJsonString(url));
         }
     }
 }
