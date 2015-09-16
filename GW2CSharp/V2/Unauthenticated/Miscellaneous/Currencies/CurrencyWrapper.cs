@@ -10,7 +10,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies
     {
         /// <summary>
         /// Returns the currency that matches the CurrencyType.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/currencies/{0}?lang={1}</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/currencies/
+        /// </para>
         /// </summary>
         /// <param name="currencyType">Represents a known currencies in the wallet.</param>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>

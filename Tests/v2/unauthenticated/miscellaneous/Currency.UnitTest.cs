@@ -4,7 +4,7 @@ using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies.Enums;
 using NUnit.Framework;
 using System.Drawing;
 
-namespace Tests.V2.Unauthenticated.Miscellaneous.Currencies
+namespace Tests.V2.Unauthenticated.Miscellaneous
 {
     [TestFixture]
     public class CurrencyUnitTest

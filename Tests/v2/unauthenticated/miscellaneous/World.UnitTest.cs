@@ -5,7 +5,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tests.V2.Unauthenticated.Miscellaneous.Worlds
+namespace Tests.V2.Unauthenticated.Miscellaneous
 {
     [TestFixture]
     public class WorldUnitTest

@@ -11,7 +11,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors
     {
         /// <summary>
         /// Returns the color that matches the id.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/colors/{0}?lang={1}</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/colors/
+        /// </para>
         /// </summary>
         /// <param name="id">The color id.</param>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
@@ -24,7 +26,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors
 
         /// <summary>
         /// Returns the a Dictionary with all known colors.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/colors</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/colors
+        /// </para>
         /// </summary>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <returns>Dictionary with all known colors.</returns>

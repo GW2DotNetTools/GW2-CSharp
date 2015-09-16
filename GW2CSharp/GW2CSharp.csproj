@@ -53,6 +53,9 @@
     <Compile Include="Services\RenderService.cs" />
     <Compile Include="ApiBase.cs" />
     <Compile Include="V1\V1Endpoint.cs" />
+    <Compile Include="V2\Authenticated\TokenInfo\Permission.cs" />
+    <Compile Include="V2\Authenticated\TokenInfo\TokenInfo.cs" />
+    <Compile Include="V2\Authenticated\TokenInfo\TokenInfoWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\BuildWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\Color.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\ColorWrapper.cs" />
@@ -85,7 +88,6 @@
     <Folder Include="V2\Authenticated\Commerce\Transactions\" />
     <Folder Include="V2\Authenticated\Pvp\Games\" />
     <Folder Include="V2\Authenticated\Pvp\Stats\" />
-    <Folder Include="V2\Authenticated\Tokeninfo\" />
     <Folder Include="V2\Unauthenticated\Items\materials\" />
     <Folder Include="V2\Unauthenticated\Items\recipes\search\" />
     <Folder Include="V2\Unauthenticated\Items\skins\" />

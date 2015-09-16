@@ -10,7 +10,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds
     {
         /// <summary>
         /// Returns the world that matches the Id.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?id=</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/worlds?id=
+        /// </para>
         /// </summary>
         /// <param name="id">The world id.</param>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
@@ -23,7 +25,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds
 
         /// <summary>
         /// Returns the worlds that matches the ids.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/worlds?ids=
+        /// </para>
         /// </summary>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <param name="ids">The world ids.</param>
@@ -35,7 +39,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds
 
         /// <summary>
         /// Returns the worlds that matches the ids.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/worlds?ids=
+        /// </para>
         /// </summary>
         /// <param name="ids">The world ids.</param>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
@@ -55,7 +61,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds
 
         /// <summary>
         /// Returns all worlds.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/worlds?ids=all</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/worlds?ids=all
+        /// </para>
         /// </summary>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <returns>List of all worlds.</returns>

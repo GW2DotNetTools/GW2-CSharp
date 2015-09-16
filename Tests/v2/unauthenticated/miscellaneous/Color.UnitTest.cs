@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tests.V2.Unauthenticated.Miscellaneous.Colors
+namespace Tests.V2.Unauthenticated.Miscellaneous
 {
     [TestFixture]
     public class ColorUnitTest

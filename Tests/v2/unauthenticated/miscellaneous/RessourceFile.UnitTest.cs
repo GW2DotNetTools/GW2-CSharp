@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tests.V2.Unauthenticated.Miscellaneous.Files
+namespace Tests.V2.Unauthenticated.Miscellaneous
 {
     [TestFixture]
     public class RessourceFileUnitTest

@@ -22,12 +22,12 @@ namespace GW2CSharp.V2.Unauthenticated.TradingPost.Commerce.Exchanges
         ///  The number of coins you get for a single gem.
         /// </summary>
         [JsonProperty(PropertyName = "coins_per_gem")]
-        public int CoinsPerGemRaw { get; set; }
+        public int CoinsPerGemRaw { get; private set; }
 
         /// <summary>
         /// The number of coins you get for the specified quantity of gems.
         /// </summary>
         [JsonProperty(PropertyName = "quantity")]
-        public int AmountOfCoinsRaw { get; set; }
+        public int AmountOfCoinsRaw { get; private set; }
     }
 }

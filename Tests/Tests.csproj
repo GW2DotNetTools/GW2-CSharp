@@ -48,12 +48,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Money.UnitTest.cs" />
     <Compile Include="Services\RenderService.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Colors\Color.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Currencies\Currency.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Files\RessourceFile.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Quaggans\Quaggan.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Worlds\World.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\TradingPost\Commerce\Exchanges\Exchange.UnitTest.cs" />
+    <Compile Include="V2\Authenticated\Tokeninfo.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Color.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Currency.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\RessourceFile.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\Quaggan.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Miscellaneous\World.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\TradingPost\Commerce\Exchange.UnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -72,7 +73,6 @@
     <Folder Include="V2\Authenticated\Commerce\Transactions\" />
     <Folder Include="V2\Authenticated\Pvp\Games\" />
     <Folder Include="V2\Authenticated\Pvp\Stats\" />
-    <Folder Include="V2\Authenticated\Tokeninfo\" />
     <Folder Include="V2\Unauthenticated\Items\materials\" />
     <Folder Include="V2\Unauthenticated\Items\recipes\search\" />
     <Folder Include="V2\Unauthenticated\Items\skins\" />

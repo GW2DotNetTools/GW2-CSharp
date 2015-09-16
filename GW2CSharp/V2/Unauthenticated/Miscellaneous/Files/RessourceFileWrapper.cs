@@ -10,7 +10,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Files
     {
         /// <summary>
         /// Returns a single RessourceFile that matches the id.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/files?id=</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/files?id=
+        /// </para>
         /// </summary>
         /// <param name="id">The file identifier.</param>
         /// <returns>RessourceFile that matches the id.</returns>
@@ -22,7 +24,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Files
 
         /// <summary>
         /// Returns all RessourceFiles that matches the id.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/files?ids=</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/files?ids=
+        /// </para>
         /// </summary>
         /// <param name="ids">The file identifier.</param>
         /// <returns>RessourceFiles that matches the id.</returns>
@@ -33,7 +37,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Files
 
         /// <summary>
         /// Returns all RessourceFiles that matches the id.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/files?ids=</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/files?ids=
+        /// </para>
         /// </summary>
         /// <param name="ids">The file identifiers.</param>
         /// <returns>RessourceFiles that matches the id.</returns>
@@ -51,7 +57,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Files
 
         /// <summary>
         /// Returns all RessourceFiles.
-        /// <para>Endpoint: https://api.guildwars2.com/v2/files?ids=all</para>
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/files?ids=all
+        /// </para>
         /// </summary>
         /// <returns>All RessourceFiles.</returns>
         public IEnumerable<RessourceFile> GetAllRessourceFiles()

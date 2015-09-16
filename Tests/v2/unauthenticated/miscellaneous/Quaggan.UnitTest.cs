@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
-namespace Tests.V2.Unauthenticated.Miscellaneous.Quaggans
+namespace Tests.V2.Unauthenticated.Miscellaneous
 {
     [TestFixture]
     public class QuagganUnitTest

@@ -14,7 +14,9 @@ namespace GW2CSharp.Services
 
         /// <summary>
         /// Returns a Bitmap from the render service.
-        /// <para>Endpoint: https://render.guildwars2.com/file/{signature}/{file_id}.{format}</para>
+        /// <para>
+        /// Endpoint: https://render.guildwars2.com/file/
+        /// </para>
         /// </summary>
         /// <param name="signature">Signature of the image.</param>
         /// <param name="fileId">FileId of the image.</param>

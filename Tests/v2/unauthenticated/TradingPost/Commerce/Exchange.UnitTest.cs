@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tests.V2.Unauthenticated.TradingPost.Commerce.Exchanges
+namespace Tests.V2.Unauthenticated.TradingPost.Commerce
 {
     [TestFixture]
     public class ExchangeUnitTest

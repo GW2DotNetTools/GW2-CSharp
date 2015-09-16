@@ -1,4 +1,5 @@
-﻿using GW2CSharp.V2.Unauthenticated.Miscellaneous;
+﻿using GW2CSharp.V2.Authenticated.TokenInfo;
+using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Files;
@@ -47,5 +48,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all exchange endpoint calls.
         /// </summary>
         public ExchangeWrapper Exchanges { get { return new ExchangeWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all tokeninfo endpoint calls.
+        /// </summary>
+        public TokeninfoWrapper TokenInfo { get { return new TokeninfoWrapper(); } }
     }
 }
