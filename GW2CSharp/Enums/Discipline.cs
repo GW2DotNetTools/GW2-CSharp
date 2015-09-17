@@ -4,7 +4,7 @@ namespace GW2CSharp.Enums
     /// <summary>
     /// All crafting disciplines in GW2
     /// </summary>
-    public enum Disciplines
+    public enum Discipline
     {
         /// <summary>
         /// Artificer.

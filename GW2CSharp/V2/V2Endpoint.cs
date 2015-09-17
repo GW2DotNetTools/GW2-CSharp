@@ -1,5 +1,6 @@
 ﻿using GW2CSharp.V2.Authenticated.Pvp.Stats;
 using GW2CSharp.V2.Authenticated.TokenInfo;
+using GW2CSharp.V2.Unauthenticated.Items.Skins;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
@@ -59,5 +60,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all pvpstats endpoint calls.
         /// </summary>
         public PvpStatisticWrapper PvpStatistics { get { return new PvpStatisticWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all skin endpoint calls.
+        /// </summary>
+        public SkinWrapper Skins { get { return new SkinWrapper(); } }
     }
 }
