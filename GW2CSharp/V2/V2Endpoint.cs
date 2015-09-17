@@ -1,4 +1,5 @@
-﻿using GW2CSharp.V2.Authenticated.TokenInfo;
+﻿using GW2CSharp.V2.Authenticated.Pvp.Stats;
+using GW2CSharp.V2.Authenticated.TokenInfo;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
@@ -30,7 +31,7 @@ namespace GW2CSharp.V2
         public CurrencyWrapper Currencies { get { return new CurrencyWrapper(); } }
 
         /// <summary>
-        /// Returns a wrapper for all currency endpoint calls.
+        /// Returns a wrapper for all color endpoint calls.
         /// </summary>
         public ColorWrapper Colors { get { return new ColorWrapper(); } }
 
@@ -53,5 +54,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all tokeninfo endpoint calls.
         /// </summary>
         public TokeninfoWrapper TokenInfo { get { return new TokeninfoWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all pvpstats endpoint calls.
+        /// </summary>
+        public PvpStatisticWrapper PvpStatistics { get { return new PvpStatisticWrapper(); } }
     }
 }

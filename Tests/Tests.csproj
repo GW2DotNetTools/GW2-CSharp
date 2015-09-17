@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Money.UnitTest.cs" />
     <Compile Include="Services\RenderService.UnitTest.cs" />
+    <Compile Include="V2\Authenticated\Pvp\PvpStatistic.UnitTest.cs" />
     <Compile Include="V2\Authenticated\Tokeninfo.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Color.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currency.UnitTest.cs" />
@@ -72,7 +73,6 @@
     <Folder Include="V2\Authenticated\Characters\" />
     <Folder Include="V2\Authenticated\Commerce\Transactions\" />
     <Folder Include="V2\Authenticated\Pvp\Games\" />
-    <Folder Include="V2\Authenticated\Pvp\Stats\" />
     <Folder Include="V2\Unauthenticated\Items\materials\" />
     <Folder Include="V2\Unauthenticated\Items\recipes\search\" />
     <Folder Include="V2\Unauthenticated\Items\skins\" />

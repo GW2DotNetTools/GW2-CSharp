@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\Profession.cs" />
     <Compile Include="GW2Api.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestedLanguage.cs" />
@@ -53,6 +54,10 @@
     <Compile Include="Services\RenderService.cs" />
     <Compile Include="ApiBase.cs" />
     <Compile Include="V1\V1Endpoint.cs" />
+    <Compile Include="V2\Authenticated\Pvp\Stats\Enums\Ladder.cs" />
+    <Compile Include="V2\Authenticated\Pvp\Stats\PvpStatistic.cs" />
+    <Compile Include="V2\Authenticated\Pvp\Stats\PvpStatisticWrapper.cs" />
+    <Compile Include="V2\Authenticated\Pvp\Stats\Statistic.cs" />
     <Compile Include="V2\Authenticated\TokenInfo\Permission.cs" />
     <Compile Include="V2\Authenticated\TokenInfo\TokenInfo.cs" />
     <Compile Include="V2\Authenticated\TokenInfo\TokenInfoWrapper.cs" />
@@ -87,7 +92,6 @@
     <Folder Include="V2\Authenticated\Characters\" />
     <Folder Include="V2\Authenticated\Commerce\Transactions\" />
     <Folder Include="V2\Authenticated\Pvp\Games\" />
-    <Folder Include="V2\Authenticated\Pvp\Stats\" />
     <Folder Include="V2\Unauthenticated\Items\materials\" />
     <Folder Include="V2\Unauthenticated\Items\recipes\search\" />
     <Folder Include="V2\Unauthenticated\Items\skins\" />

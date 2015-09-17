@@ -52,6 +52,7 @@ namespace GW2CSharp.Entities
         /// <summary>
         /// Returns the raw value of this money object.
         /// </summary>
+        /// <returns>Raw coin which is used by the API.</returns>
         public int GetRawCoin() 
         {
             int goldInCopper = Gold * 10000;
