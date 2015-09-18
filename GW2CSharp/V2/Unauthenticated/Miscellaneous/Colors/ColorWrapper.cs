@@ -33,7 +33,7 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors
         /// </summary>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <returns>Dictionary with all known colors.</returns>
-        public Dictionary<int, Lazy<Color>> GetAllColors(RequestedLanguage requestedLanguage = RequestedLanguage.En) 
+        public Dictionary<int, Lazy<Color>> GetAllColors(RequestedLanguage requestedLanguage = RequestedLanguage.En)
         {
             string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/colors"));
 
@@ -45,6 +45,22 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors
                 colors.Add(colorId, new Lazy<Color>(() => GetColorById(colorId, requestedLanguage)));
             }
             return colors;
+        }
+
+        /// <summary>
+        /// Returns colors in pagesize.
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/colors?page={0}&page_size={1}&lang={2}
+        /// </para>
+        /// </summary>
+        /// <param name="page">Page number.</param>
+        /// <param name="pageSize">Size of colors on one page.</param>
+        /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
+        /// <returns>Color object on the given page.</returns>
+        public IEnumerable<Color> GetColorByPage(int page, int pageSize, RequestedLanguage requestedLanguage = RequestedLanguage.En)
+        {
+            string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/colors?page={0}&page_size={1}&lang={2}", page, pageSize, requestedLanguage));
+            return JsonConvert.DeserializeObject<IEnumerable<Color>>(jsonString);
         }
     }
 }

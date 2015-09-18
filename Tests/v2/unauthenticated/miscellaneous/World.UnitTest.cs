@@ -22,6 +22,14 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         }
 
         [Test]
+        public void ShouldReturnCorrectWorldsOnPage()
+        {
+            List<World> worlds = GW2Api.V2.Worlds.GetWorldByPage(35, 1).ToList();
+
+            CompareWorlds(pikenSquare, worlds[0]);
+        }
+
+        [Test]
         public void ShouldReturnSingleWorldById()
         {
             World world = GW2Api.V2.Worlds.GetWorldById(2012);
@@ -32,7 +40,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         [Test]
         public void ShoudlReturnMultipleWorldsById()
         {
-            List<World> world = GW2Api.V2.Worlds.GetWorldById(RequestedLanguage.En, 1001, 2012).ToList();
+            List<World> world = GW2Api.V2.Worlds.GetWorldByIds(RequestedLanguage.En, 1001, 2012).ToList();
 
             CompareWorlds(anvilRock, world[0]);
             CompareWorlds(pikenSquare, world[1]);

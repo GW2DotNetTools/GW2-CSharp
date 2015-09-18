@@ -107,7 +107,7 @@
     <Folder Include="V2\Authenticated\Commerce\Transactions\" />
     <Folder Include="V2\Authenticated\Pvp\Games\" />
     <Folder Include="V2\Unauthenticated\Items\materials\" />
-    <Folder Include="V2\Unauthenticated\Items\recipes\search\" />
+    <Folder Include="V2\Unauthenticated\Items\Recipes\search\" />
     <Folder Include="V2\Unauthenticated\MapInformation\Continents\" />
     <Folder Include="V2\Unauthenticated\MapInformation\Maps\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Specializations\" />

@@ -10,6 +10,22 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds
     public class WorldWrapper : ApiBase
     {
         /// <summary>
+        /// Returns worlds in pagesize.
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/worlds?page={0}&page_size={1}
+        /// </para>
+        /// </summary>
+        /// <param name="page">Page number.</param>
+        /// <param name="pageSize">Size of worlds on one page.</param>
+        /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
+        /// <returns>World object on the given page.</returns>
+        public IEnumerable<World> GetWorldByPage(int page, int pageSize, RequestedLanguage requestedLanguage = RequestedLanguage.En)
+        {
+            string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/worlds?page={0}&page_size={1}&lang={2}", page, pageSize, requestedLanguage));
+            return JsonConvert.DeserializeObject<IEnumerable<World>>(jsonString);
+        }
+
+        /// <summary>
         /// Returns the world that matches the Id.
         /// <para>
         /// Endpoint: https://api.guildwars2.com/v2/worlds?id=
@@ -33,7 +49,7 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <param name="ids">The world ids.</param>
         /// <returns>List of worlds that matches the ids.</returns>
-        public IEnumerable<World> GetWorldById(RequestedLanguage requestedLanguage = RequestedLanguage.En, params int[] ids)
+        public IEnumerable<World> GetWorldByIds(RequestedLanguage requestedLanguage = RequestedLanguage.En, params int[] ids)
         {
             return GetWorldByIds(ids, requestedLanguage);
         }

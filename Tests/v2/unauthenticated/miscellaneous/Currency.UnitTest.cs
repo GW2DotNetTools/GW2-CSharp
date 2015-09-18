@@ -2,7 +2,9 @@
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies.Enums;
 using NUnit.Framework;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 
 namespace Tests.V2.Unauthenticated.Miscellaneous
 {
@@ -21,6 +23,13 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
             Assert.AreEqual(expectedCurrency.Description, actualCurrency.Description);
             Assert.AreEqual(expectedCurrency.Order, actualCurrency.Order);
             Assert.AreEqual(expectedCurrency.Icon, actualCurrency.Icon);
+        }
+
+        [Test]
+        public void ShouldReturnAllCurrencies()
+        {
+            IEnumerable<Currency> currencies = GW2Api.V2.Currencies.GetAllCurrencies();
+            Assert.GreaterOrEqual(currencies.Count(), 21);
         }
 
         [Test]

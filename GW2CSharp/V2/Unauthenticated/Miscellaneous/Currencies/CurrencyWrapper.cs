@@ -1,6 +1,7 @@
 ﻿using GW2CSharp.Enums;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies.Enums;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies
 {
@@ -22,6 +23,20 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies
         {
             string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/currencies/{0}?lang={1}", (int)currencyType, requestedLanguage));
             return JsonConvert.DeserializeObject<Currency>(jsonString);
+        }
+
+        /// <summary>
+        /// Returns all currencies.
+        /// <para>
+        /// Endpoint: https://api.guildwars2.com/v2/currencies?ids=all
+        /// </para>
+        /// </summary>
+        /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
+        /// <returns>All currencies.</returns>
+        public IEnumerable<Currency> GetAllCurrencies(RequestedLanguage requestedLanguage = RequestedLanguage.En)
+        {
+            string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/currencies?ids=all&lang={0}", requestedLanguage));
+            return JsonConvert.DeserializeObject<IEnumerable<Currency>>(jsonString);
         }
     }
 }

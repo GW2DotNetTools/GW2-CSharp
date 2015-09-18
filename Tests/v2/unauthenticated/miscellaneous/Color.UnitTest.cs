@@ -10,15 +10,22 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
     [TestFixture]
     public class ColorUnitTest
     {
+        private Color skyColor;
+
+        [SetUp]
+        public void SetUp() 
+        {
+            skyColor = new Color(10, "Sky", new int[] { 128, 26, 26 }, null, null, null);
+        }
+
         [Test]
         public void ShouldReturnSingleColor() 
         {
-            Color expectedColor = new Color(10, "Sky", new int []{ 128,26,26}, null, null, null);
             Color actualColor = GW2Api.V2.Colors.GetColorById(10);
 
-            Assert.AreEqual(expectedColor.Id, actualColor.Id);
-            Assert.AreEqual(expectedColor.Name, actualColor.Name);
-            Assert.AreEqual(expectedColor.BaseRGB, actualColor.BaseRGB);
+            Assert.AreEqual(skyColor.Id, actualColor.Id);
+            Assert.AreEqual(skyColor.Name, actualColor.Name);
+            Assert.AreEqual(skyColor.BaseRGB, actualColor.BaseRGB);
             Assert.NotNull(actualColor.Cloth);
             Assert.NotNull(actualColor.Leather);
             Assert.NotNull(actualColor.Metal);
@@ -33,6 +40,19 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
 
             Assert.AreEqual("Dye Remover", actualColor.Name);
             Assert.GreaterOrEqual(480, allColors.Count());
+        }
+
+        [Test]
+        public void ShouldReturnCorrectColorsOnPage()
+        {
+            Color actualColor = GW2Api.V2.Colors.GetColorByPage(9, 1).ToList()[0];
+
+            Assert.AreEqual(skyColor.Id, actualColor.Id);
+            Assert.AreEqual(skyColor.Name, actualColor.Name);
+            Assert.AreEqual(skyColor.BaseRGB, actualColor.BaseRGB);
+            Assert.NotNull(actualColor.Cloth);
+            Assert.NotNull(actualColor.Leather);
+            Assert.NotNull(actualColor.Metal);
         }
     }
 }
