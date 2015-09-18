@@ -7,6 +7,10 @@ namespace GW2CSharp.Enums
     public enum Restriction
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Only for Asuras.
         /// </summary>
         Asura,

@@ -1,4 +1,5 @@
 ﻿using GW2CSharp;
+using GW2CSharp.Enums;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums;
 using NUnit.Framework;
@@ -31,7 +32,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         [Test]
         public void ShoudlReturnMultipleWorldsById()
         {
-            List<World> world = GW2Api.V2.Worlds.GetWorldById(RequestedLanguage.en, 1001, 2012).ToList();
+            List<World> world = GW2Api.V2.Worlds.GetWorldById(RequestedLanguage.En, 1001, 2012).ToList();
 
             CompareWorlds(anvilRock, world[0]);
             CompareWorlds(pikenSquare, world[1]);
@@ -42,7 +43,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         {
             List<World> world = GW2Api.V2.Worlds.GetAllWorlds().ToList();
 
-            Assert.AreEqual(51, world.Count());
+            Assert.GreaterOrEqual(51, world.Count());
         }
 
         private void CompareWorlds(World expectedWorld, World actualWorld) 

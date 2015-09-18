@@ -7,6 +7,10 @@ namespace GW2CSharp.Enums
     public enum GameMode
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Activity
         /// </summary>
         Activity,

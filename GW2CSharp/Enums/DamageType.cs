@@ -7,6 +7,10 @@ namespace GW2CSharp.Enums
     public enum DamageType
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Physical.
         /// </summary>
         Physical, 

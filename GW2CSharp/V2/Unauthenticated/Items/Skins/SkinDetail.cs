@@ -13,24 +13,33 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
         /// Initilization of a new skindetail object.
         /// </summary>
         /// <param name="type">Skin type.</param>
-        /// <param name="weight">The armor weight.</param>
-        /// <param name="damageType">The damage type.</param>
-        public SkinDetail (string type, Weight weight, DamageType damageType)
+        /// <param name="weight_class">The armor weight.</param>
+        /// <param name="damage_type">The damage type.</param>
+        public SkinDetail(string type, string weight_class, string damage_type)
 	    {
-            Armor armorResult = Armor.None;
-            Weapon weaponResult = Weapon.None;
-
+            Armor armorResult = Armor.Undefined;
             if (Enum.TryParse<Armor>(type, out armorResult))
             {
                 Armor = armorResult;
             }
+
+            Weapon weaponResult = Weapon.Undefined;
             if (Enum.TryParse<Weapon>(type, out weaponResult))
             {
                 Weapon = weaponResult;
             }
 
-            Weight = weight;
-            DamageType = damageType;
+            Weight weightResult = Weight.Undefined;
+            if (Enum.TryParse<Weight>(weight_class, out weightResult))
+            {
+                Weight = weightResult;
+            }
+
+            DamageType damageTypeResult = DamageType.Undefined;
+            if (Enum.TryParse<DamageType>(damage_type, out damageTypeResult))
+            {
+                DamageType = damageTypeResult;
+            }
 	    }
 
         /// <summary>
@@ -43,15 +52,14 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
         /// </summary>
         public Weapon Weapon { get; private set; }
 
-        [JsonProperty(PropertyName = "weight_class")]
+        /// <summary>
+        /// The armor weight.
+        /// </summary>
         public Weight Weight { get; private set; }
 
         /// <summary>
         /// The damage type.
         /// </summary>
-        [JsonProperty(PropertyName = "damage_type")]
         public DamageType DamageType { get; private set; }
-
-        internal string Type { get; private set; }
     }
 }

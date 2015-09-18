@@ -7,6 +7,10 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies.Enums
     public enum CurrencyType
     {
         /// <summary>
+        /// Undefined
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Coin.
         /// </summary>
         Coin = 1,

@@ -7,6 +7,10 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins.Enums
     public enum SkinType
     {
         /// <summary>
+        /// Undefined
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Armor.
         /// </summary>
         Armor, 

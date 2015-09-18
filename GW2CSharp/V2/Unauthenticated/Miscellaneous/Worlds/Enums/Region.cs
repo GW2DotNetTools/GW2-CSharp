@@ -12,9 +12,9 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums
     public enum Region
     {
         /// <summary>
-        /// Placeholder
+        /// Undefined
         /// </summary>
-        None,
+        Undefined,
         /// <summary>
         /// Worlds with the id 1xxx
         /// </summary>

@@ -12,6 +12,10 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums
     public enum Language
     {
         /// <summary>
+        /// Undefined
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Worlds with the id x0xx.
         /// </summary>
         English,

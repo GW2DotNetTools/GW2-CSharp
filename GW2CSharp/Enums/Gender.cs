@@ -7,6 +7,10 @@ namespace GW2CSharp.Enums
     public enum Gender
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Female.
         /// </summary>
         Female,

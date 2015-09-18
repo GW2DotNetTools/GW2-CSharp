@@ -7,9 +7,9 @@ namespace GW2CSharp.V2.Authenticated.Pvp.Stats.Enums
     public enum Ladder
     {
         /// <summary>
-        /// None ladder.
+        /// Undefined.
         /// </summary>
-        None,
+        Undefined,
         /// <summary>
         /// SoloArenaRated ladder.
         /// </summary>

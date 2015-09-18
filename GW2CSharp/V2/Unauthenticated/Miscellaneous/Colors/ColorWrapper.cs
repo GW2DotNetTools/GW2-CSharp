@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GW2CSharp.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -18,7 +19,7 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors
         /// <param name="id">The color id.</param>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <returns>Color that matches the id.</returns>
-        public Color GetColorById(int id, RequestedLanguage requestedLanguage = RequestedLanguage.en)
+        public Color GetColorById(int id, RequestedLanguage requestedLanguage = RequestedLanguage.En)
         {
             string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/colors/{0}?lang={1}", id, requestedLanguage));
             return JsonConvert.DeserializeObject<Color>(jsonString);
@@ -32,7 +33,7 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors
         /// </summary>
         /// <param name="requestedLanguage">Represents the language which the API should return. Default english.</param>
         /// <returns>Dictionary with all known colors.</returns>
-        public Dictionary<int, Lazy<Color>> GetAllColors(RequestedLanguage requestedLanguage = RequestedLanguage.en) 
+        public Dictionary<int, Lazy<Color>> GetAllColors(RequestedLanguage requestedLanguage = RequestedLanguage.En) 
         {
             string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/colors"));
 

@@ -7,9 +7,9 @@ namespace GW2CSharp.Enums
     public enum Weapon
     {
         /// <summary>
-        /// None.
+        /// Undefined.
         /// </summary>
-        None,
+        Undefined,
         /// <summary>
         /// 1H Axe.
         /// </summary>

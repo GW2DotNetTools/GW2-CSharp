@@ -7,6 +7,10 @@ namespace GW2CSharp.Enums
     public enum Discipline
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Artificer.
         /// </summary>
         Artificer,

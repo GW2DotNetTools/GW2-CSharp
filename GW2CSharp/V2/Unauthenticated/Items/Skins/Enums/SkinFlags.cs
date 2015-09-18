@@ -7,6 +7,10 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins.Enums
     public enum SkinFlag
     {
         /// <summary>
+        /// Undefined
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// When displayed in the account wardrobe (set for all skins listed in the API)
         /// </summary>
         ShowInWardrobe,

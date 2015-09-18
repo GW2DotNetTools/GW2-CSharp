@@ -7,6 +7,10 @@ namespace GW2CSharp.Enums
     public enum Weight
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Townclothing.
         /// </summary>
         Clothing,

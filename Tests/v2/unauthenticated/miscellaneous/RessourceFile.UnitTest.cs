@@ -18,7 +18,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         {
             IEnumerable<RessourceFile> ressourceFiles = GW2Api.V2.RessourceFiles.GetAllRessourceFiles();
 
-            Assert.AreEqual(84, ressourceFiles.Count());
+            Assert.GreaterOrEqual(84, ressourceFiles.Count());
         }
 
         [Test]

@@ -7,9 +7,9 @@ namespace GW2CSharp.Enums
     public enum  Armor
     {
         /// <summary>
-        /// None.
+        /// Undefined.
         /// </summary>
-        None,
+        Undefined,
         /// <summary>
         /// Underwaterhelm.
         /// </summary>

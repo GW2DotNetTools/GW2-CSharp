@@ -12,10 +12,33 @@ using System.Threading.Tasks;
 namespace GW2CSharp.V2.Unauthenticated.Items.Skins
 {
     /// <summary>
-    // Represents a single object of the v2/skins endpoint
+    /// Represents a single object of the v2/skins endpoint
     /// </summary>
     public class Skin
     {
+        /// <summary>
+        /// Represents a single skin.
+        /// </summary>
+        /// <param name="id">The skin id.</param>
+        /// <param name="name">The name of the skin.</param>
+        /// <param name="type">The skin type.</param>
+        /// <param name="flags">Additional skin flags.</param>
+        /// <param name="restrictions">Restrictions that apply to the skin.</param>
+        /// <param name="icon">The full icon URL.</param>
+        /// <param name="description">Optional skin description.</param>
+        /// <param name="details">Additional skin details.</param>
+        public Skin(int id, string name, SkinType type, IEnumerable<SkinFlag> flags, IEnumerable<Restriction> restrictions, string icon, string description, SkinDetail details)
+        {
+            Id = id;
+            Name = name;
+            Type = type;
+            Flags = flags;
+            Restrictions = restrictions;
+            Icon = icon;
+            Description = description;
+            Details = details;
+        }
+
         /// <summary>
         /// The skin id.
         /// </summary>
@@ -29,7 +52,7 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
         /// <summary>
         /// The skin type.
         /// </summary>
-        public Armor Type { get; private set; }
+        public SkinType Type { get; private set; }
 
         /// <summary>
         /// Additional skin flags.
@@ -47,14 +70,14 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
         public string Icon { get; private set; }
 
         /// <summary>
-        /// Optional skin description.
+        /// Optional skin description. Might contain c=@flavor
         /// </summary>
         public string Description { get; private set; }
 
         /// <summary>
         /// Additional skin details.
         /// </summary>
-        public IEnumerable<SkinDetail> Details { get; private set; }
+        public SkinDetail Details { get; private set; }
 
         /// <summary>
         /// Returns the Icon from the Url.

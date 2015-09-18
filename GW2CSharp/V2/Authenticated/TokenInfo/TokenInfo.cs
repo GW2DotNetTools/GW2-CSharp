@@ -8,8 +8,6 @@ namespace GW2CSharp.V2.Authenticated.TokenInfo
     /// </summary>
     public class Tokeninfo
     {
-        private Permission permission;
-
         /// <summary>
         /// Initialization of a new tokeninfo object.
         /// </summary>
@@ -20,7 +18,7 @@ namespace GW2CSharp.V2.Authenticated.TokenInfo
         {
             Id = id;
             Name = name;
-            Permissions = permissions;
+            Permission = new Permission(permissions);
         }
 
         /// <summary>
@@ -36,19 +34,6 @@ namespace GW2CSharp.V2.Authenticated.TokenInfo
         /// <summary>
         /// Describes which permissions the API key has granted.
         /// </summary>
-        public Permission Permission
-        {
-            get 
-            {
-                if (permission == null)
-                {
-                    permission = new Permission(Permissions);
-                }
-
-                return permission;
-            }
-        }
-
-        internal List<string> Permissions { get; private set; }
+        public Permission Permission { get; private set; }
     }
 }

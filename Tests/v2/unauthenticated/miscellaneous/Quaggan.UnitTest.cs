@@ -14,16 +14,16 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         [Test]
         public void ShouldReturnAllQuaggans()
         {
-            IEnumerable<Lazy<Quaggan>> quaggans = GW2Api.V2.Quaggans.GetAllQuaggans();
+            Dictionary<string, Lazy<Quaggan>> quaggans = GW2Api.V2.Quaggans.GetAllQuaggans();
 
-            Assert.AreEqual(35, quaggans.Count());
+            Assert.GreaterOrEqual(35, quaggans.Count());
         }
 
         [Test]
         public void ShouldReturnSpecificQuagganFromList()
         {
-            List<Lazy<Quaggan>> quaggans = GW2Api.V2.Quaggans.GetAllQuaggans().ToList();
-            Quaggan cryQuaggan = quaggans[13].Value;
+            Dictionary<string, Lazy<Quaggan>> quaggans = GW2Api.V2.Quaggans.GetAllQuaggans();
+            Quaggan cryQuaggan = quaggans["cry"].Value;
 
             Assert.AreEqual("https://static.staticwars.com/quaggans/cry.jpg", cryQuaggan.Url);
         }

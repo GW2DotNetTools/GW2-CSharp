@@ -13,16 +13,16 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Quaggans
         /// Returns all known quaggans.
         /// </summary>
         /// <returns>All known quaggans</returns>
-        public IEnumerable<Lazy<Quaggan>> GetAllQuaggans()
+        public Dictionary<string, Lazy<Quaggan>> GetAllQuaggans()
         {
             string jsonString = DownloadJsonString("https://api.guildwars2.com/v2/quaggans");
 
             List<string> quagganIds = JsonConvert.DeserializeObject<List<string>>(jsonString);
 
-            var quaggans = new List<Lazy<Quaggan>>();
+            var quaggans = new Dictionary<string, Lazy<Quaggan>>();
             foreach (var quagganId in quagganIds)
             {
-                quaggans.Add(new Lazy<Quaggan>(() => GetQuaggan(quagganId)));
+                quaggans.Add(quagganId, new Lazy<Quaggan>(() => GetQuaggan(quagganId)));
             }
 
             return quaggans;

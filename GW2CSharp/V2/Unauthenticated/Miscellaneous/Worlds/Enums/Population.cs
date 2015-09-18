@@ -12,6 +12,10 @@ namespace GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums
     public enum Population
     {
         /// <summary>
+        /// Undefined
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Worldstatus Low
         /// </summary>
         Low,

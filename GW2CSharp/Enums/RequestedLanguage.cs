@@ -1,5 +1,5 @@
 ﻿
-namespace GW2CSharp
+namespace GW2CSharp.Enums
 {
     /// <summary>
     /// Represents the language in which the API should be called.
@@ -7,20 +7,24 @@ namespace GW2CSharp
     public enum RequestedLanguage
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// English.
         /// </summary>
-        en, 
+        En, 
         /// <summary>
         /// French.
         /// </summary>
-        fr, 
+        Fr, 
         /// <summary>
         /// German.
         /// </summary>
-        de, 
+        De, 
         /// <summary>
         /// Spanish.
         /// </summary>
-        es
+        Es
     }
 }

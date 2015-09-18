@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Net;
+using System.Text;
 
 namespace GW2CSharp
 {
@@ -22,6 +23,7 @@ namespace GW2CSharp
             {
                 using (WebClient wc = new WebClient())
                 {
+                    wc.Encoding = Encoding.GetEncoding("utf-8");
                     jsonString = wc.DownloadString(url);
                 }
             }

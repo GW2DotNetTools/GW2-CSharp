@@ -7,6 +7,10 @@ namespace GW2CSharp.Enums
     public enum Race
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// Asura.
         /// </summary>
         Asura,

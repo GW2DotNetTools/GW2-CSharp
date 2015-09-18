@@ -7,6 +7,10 @@ namespace GW2CSharp.Enums
     public enum Profession
     {
         /// <summary>
+        /// Undefined.
+        /// </summary>
+        Undefined,
+        /// <summary>
         /// The elementalist.
         /// </summary>
         Elementalist,
