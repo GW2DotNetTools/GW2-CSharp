@@ -1,9 +1,11 @@
 ﻿using GW2CSharp;
 using GW2CSharp.Enums;
+using GW2CSharp.Services;
 using GW2CSharp.V2.Unauthenticated.Items.Skins;
 using GW2CSharp.V2.Unauthenticated.Items.Skins.Enums;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 
 namespace Tests.V2.Unauthenticated.Items
@@ -83,6 +85,13 @@ namespace Tests.V2.Unauthenticated.Items
         {
             Skin skin = GW2Api.V2.Skins.GetSkinById(5000);
             Assert.AreEqual(DamageType.Physical, skin.Details.DamageType);
+        }
+
+        [Test]
+        public void CanRenderBitmap()
+        {
+            Skin skin = GW2Api.V2.Skins.GetSkinById(5000);
+            Assert.NotNull(skin.GetIcon());
         }
     }
 }
