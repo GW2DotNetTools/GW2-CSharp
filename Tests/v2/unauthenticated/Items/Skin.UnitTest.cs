@@ -18,6 +18,13 @@ namespace Tests.V2.Unauthenticated.Items
             Assert.GreaterOrEqual(3532, skins.Count());
         }
 
+        [Test]
+        public void ShouldReturnAllSkinsAndLoadOnlyOne()
+        {
+            var skins = GW2Api.V2.Skins.GetAllSkins();
+            Assert.AreEqual("Adept Helm", skins[263].Value.Name);
+        }
+
         [TestCase(RequestedLanguage.De, "Kettenpanzer-Beinkleid")]
         [TestCase(RequestedLanguage.En, "Chainmail Leggings")]
         [TestCase(RequestedLanguage.Es, "Calzas de malla de cadena")]
