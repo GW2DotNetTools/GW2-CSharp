@@ -17,7 +17,7 @@ namespace Tests
         [Test]
         public void ThrowsErrorOnNotFound()
         {
-            Assert.Throws<ArgumentException>(() => ApiBase.DownloadJsonString("https://api.guildwars2.com/v2/buildmeh"));
+            Assert.Throws<ApiException>(() => ApiBase.DownloadJsonString("https://api.guildwars2.com/v2/buildmeh"));
         }
     }
 }

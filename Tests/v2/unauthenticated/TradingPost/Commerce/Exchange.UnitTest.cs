@@ -37,14 +37,14 @@ namespace Tests.V2.Unauthenticated.TradingPost.Commerce
         [TestCase(-1)]
         public void ThrowsExceptionOnWrongGemValues(int value)
         {
-            Assert.Throws<ArgumentException>(() => GW2Api.V2.Exchanges.GetGem(value));
+            Assert.Throws<ApiException>(() => GW2Api.V2.Exchanges.GetGem(value));
         }
 
         [TestCase(0)]
         [TestCase(-1)]
         public void ThrowsExceptionOnWrongCoinValues(int value)
         {
-            Assert.Throws<ArgumentException>(() => GW2Api.V2.Exchanges.GetCoin(new Money(value)));
+            Assert.Throws<ApiException>(() => GW2Api.V2.Exchanges.GetCoin(new Money(value)));
         }
     }
 }
