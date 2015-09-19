@@ -9,9 +9,6 @@ namespace GW2CSharp.V2.Unauthenticated.TradingPost.Commerce.Exchanges
     {
         /// <summary>
         /// Returns a specific amount of coins.
-        /// <para>
-        /// Endpoint: https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=
-        /// </para>
         /// </summary>
         /// <param name="money">The amount of coins to exchange for gems.</param>
         /// <returns>Coin object.</returns>
@@ -22,9 +19,6 @@ namespace GW2CSharp.V2.Unauthenticated.TradingPost.Commerce.Exchanges
 
         /// <summary>
         /// Returns a specific amount of gems.
-        /// <para>
-        /// Endpoint: https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=
-        /// </para>
         /// </summary>
         /// <param name="amountOfGems">The amount of gems to exchange for coins.</param>
         /// <returns>Gem object.</returns>

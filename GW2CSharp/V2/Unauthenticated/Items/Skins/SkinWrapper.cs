@@ -12,9 +12,6 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
     {
         /// <summary>
         /// Returns the skin that matches with the id.
-        /// <para>
-        /// Endpoint: https://api.guildwars2.com/v2/skins/{0}?lang={1}
-        /// </para>
         /// </summary>
         /// <param name="id">The skin id.</param>
         /// <param name="requestedLanguage">(Optional) Request localized information.</param>
@@ -27,9 +24,6 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
 
         /// <summary>
         /// Returns all known skins.
-        /// <para>
-        /// Endpoint: https://api.guildwars2.com/v2/skins
-        /// </para>
         /// </summary>
         /// <param name="requestedLanguage">(Optional) Request localized information.</param>
         /// <returns>All known skins.</returns>

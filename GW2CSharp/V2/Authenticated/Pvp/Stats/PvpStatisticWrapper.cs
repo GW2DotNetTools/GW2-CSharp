@@ -14,9 +14,6 @@ namespace GW2CSharp.V2.Authenticated.Pvp.Stats
     {
         /// <summary>
         /// Returns PvpStatistics about the given account.
-        /// <para>
-        /// Endpoint: https://api.guildwars2.com/v2/pvp/stats?access_token=
-        /// </para>
         /// </summary>
         /// <param name="token">API key.</param>
         /// <returns>PvpStatistics about the account.</returns>

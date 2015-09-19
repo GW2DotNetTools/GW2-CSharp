@@ -9,9 +9,6 @@ namespace GW2CSharp.V2.Authenticated.TokenInfo
     {
         /// <summary>
         /// This resource returns information about the supplied API key. 
-        /// <para>
-        /// Endpoint: https://api.guildwars2.com/v2/tokeninfo?access_token=
-        /// </para>
         /// </summary>
         /// <param name="token">API key.</param>
         /// <returns>Informations about the supplied API key.</returns>

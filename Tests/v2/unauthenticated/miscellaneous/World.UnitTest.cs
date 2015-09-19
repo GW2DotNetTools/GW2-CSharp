@@ -22,6 +22,12 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         }
 
         [Test]
+        public void ThrowsExceptionIfNotExisting()
+        {
+            Assert.Throws<ApiException>(() => GW2Api.V2.Worlds.GetWorldById(23456));
+        }
+
+        [Test]
         public void ShouldReturnCorrectWorldsOnPage()
         {
             List<World> worlds = GW2Api.V2.Worlds.GetWorldByPage(35, 1).ToList();

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.IO;
 using System.Net;
 using System.Text;
 
@@ -27,9 +28,21 @@ namespace GW2CSharp
                     jsonString = wc.DownloadString(url);
                 }
             }
-            catch (Exception)
+            catch (WebException exception)
             {
-                throw new ArgumentException(url + " does not return a valid object.");
+                if (exception.Response != null)
+                {
+                    var responseStream = exception.Response.GetResponseStream();
+
+                    if (responseStream != null)
+                    {
+                        using (var reader = new StreamReader(responseStream))
+                        {
+                            string responseText = reader.ReadToEnd().Replace("{\"text\":\"", "").Replace("\"}", "");
+                            throw new ApiException(responseText);
+                        }
+                    }
+                }
             }
 
             return jsonString;
