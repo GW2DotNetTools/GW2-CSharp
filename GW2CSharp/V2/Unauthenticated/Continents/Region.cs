@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace GW2CSharp.V2.Unauthenticated.Continents
 {
@@ -11,12 +12,12 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// Initializes a new instance of the <see cref="Region"/> class.
         /// </summary>
         /// <param name="name">The name.</param>
-        /// <param name="coord">The coord.</param>
+        /// <param name="label_coord">The coord.</param>
         /// <param name="maps">The maps.</param>
-        public Region(string name, List<double> coord, IEnumerable<Map> maps)
+        public Region(string name, List<double> label_coord, IEnumerable<Lazy<Map>> maps)
         {
             Name = name;
-            Coordinate = new Coordinate<double>(coord[0], coord[1]);
+            Coordinate = new Coordinate<double>(label_coord[0], label_coord[1]);
             Maps = maps;
         }
 
@@ -33,6 +34,6 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// <summary>
         /// Gets the maps.
         /// </summary>
-        public IEnumerable<Map> Maps { get; private set; }
+        public IEnumerable<Lazy<Map>> Maps { get; private set; }
     }
 }
