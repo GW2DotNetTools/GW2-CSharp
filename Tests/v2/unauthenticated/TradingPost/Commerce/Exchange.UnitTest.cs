@@ -1,6 +1,6 @@
 ﻿using GW2CSharp;
 using GW2CSharp.Entities;
-using GW2CSharp.V2.Unauthenticated.TradingPost.Commerce.Exchanges;
+using GW2CSharp.V2.Unauthenticated.Commerce.Exchange;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;

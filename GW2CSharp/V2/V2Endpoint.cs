@@ -1,13 +1,14 @@
 ﻿using GW2CSharp.V2.Authenticated.Pvp.Stats;
 using GW2CSharp.V2.Authenticated.TokenInfo;
+using GW2CSharp.V2.Unauthenticated.Colors;
+using GW2CSharp.V2.Unauthenticated.Commerce.Exchange;
+using GW2CSharp.V2.Unauthenticated.Continents;
+using GW2CSharp.V2.Unauthenticated.Currencies;
+using GW2CSharp.V2.Unauthenticated.Files;
 using GW2CSharp.V2.Unauthenticated.Items.Skins;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Files;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Quaggans;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds;
-using GW2CSharp.V2.Unauthenticated.TradingPost.Commerce.Exchanges;
+using GW2CSharp.V2.Unauthenticated.Quaggans;
+using GW2CSharp.V2.Unauthenticated.Worlds;
 
 namespace GW2CSharp.V2
 {
@@ -65,5 +66,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all skin endpoint calls.
         /// </summary>
         public SkinWrapper Skins { get { return new SkinWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all skin endpoint calls.
+        /// </summary>
+        public ContinentWrapper Continents { get { return new ContinentWrapper(); } }
     }
 }

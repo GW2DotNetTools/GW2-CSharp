@@ -1,6 +1,6 @@
 ﻿using GW2CSharp;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies.Enums;
+using GW2CSharp.V2.Unauthenticated.Currencies;
+using GW2CSharp.V2.Unauthenticated.Currencies.Enums;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Drawing;

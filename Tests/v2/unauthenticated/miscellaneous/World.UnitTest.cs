@@ -1,7 +1,7 @@
 ﻿using GW2CSharp;
 using GW2CSharp.Enums;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds.Enums;
+using GW2CSharp.V2.Unauthenticated.Worlds;
+using GW2CSharp.V2.Unauthenticated.Worlds.Enums;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;

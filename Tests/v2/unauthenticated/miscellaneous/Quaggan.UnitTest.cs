@@ -1,5 +1,5 @@
 ﻿using GW2CSharp;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Quaggans;
+using GW2CSharp.V2.Unauthenticated.Quaggans;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;

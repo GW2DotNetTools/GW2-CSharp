@@ -1,5 +1,5 @@
 ﻿using GW2CSharp;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
+using GW2CSharp.V2.Unauthenticated.Colors;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;

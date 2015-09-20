@@ -2,9 +2,9 @@
 using GW2CSharp.V1;
 using GW2CSharp.V2;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Colors;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Currencies;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Worlds;
+using GW2CSharp.V2.Unauthenticated.Colors;
+using GW2CSharp.V2.Unauthenticated.Currencies;
+using GW2CSharp.V2.Unauthenticated.Worlds;
 
 namespace GW2CSharp
 {

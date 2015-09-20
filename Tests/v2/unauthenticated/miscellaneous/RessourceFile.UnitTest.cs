@@ -1,5 +1,5 @@
 ﻿using GW2CSharp;
-using GW2CSharp.V2.Unauthenticated.Miscellaneous.Files;
+using GW2CSharp.V2.Unauthenticated.Files;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
