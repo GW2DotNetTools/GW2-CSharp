@@ -14,7 +14,6 @@ namespace Tests.V2.Unauthenticated.Continents
     public class ContinentUnitTest
     {
         //todo: fix language passing through
-        //cleanup useless tests
 
         //https://api.guildwars2.com/v2/continents?ids=all
         //https://api.guildwars2.com/v2/continents/1
