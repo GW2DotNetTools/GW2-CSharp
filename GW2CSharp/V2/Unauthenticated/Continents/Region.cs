@@ -14,10 +14,10 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// <param name="name">The name.</param>
         /// <param name="label_coord">The coord.</param>
         /// <param name="maps">The maps.</param>
-        public Region(string name, List<double> label_coord, IEnumerable<Lazy<Map>> maps)
+        public Region(string name, List<int> label_coord, Dictionary<string, Map> maps)
         {
             Name = name;
-            Coordinate = new Coordinate<double>(label_coord[0], label_coord[1]);
+            Coordinate = new Coordinate<int>(label_coord[0], label_coord[1]);
             Maps = maps;
         }
 
@@ -29,11 +29,11 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// <summary>
         /// Gets the coordinate.
         /// </summary>
-        public Coordinate<double> Coordinate { get; private set; }
+        public Coordinate<int> Coordinate { get; private set; }
 
         /// <summary>
         /// Gets the maps.
         /// </summary>
-        public IEnumerable<Lazy<Map>> Maps { get; private set; }
+        public Dictionary<string, Map> Maps { get; private set; }
     }
 }

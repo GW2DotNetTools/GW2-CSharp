@@ -22,7 +22,7 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// <param name="skill_challenges">The skill challenges.</param>
         /// <param name="sectors">The sectors.</param>
         public Map(string name, int min_level, int max_level, int default_floor, List<List<int>> map_rect, List<List<int>> continent_rect,
-            Dictionary<string, Lazy<Poi>> points_of_interest, Dictionary<string, Lazy<Objective>> tasks, IEnumerable<Lazy<SkillChallenge>> skill_challenges, Dictionary<string, Lazy<Sector>> sectors)
+            Dictionary<string, Poi> points_of_interest, Dictionary<string, Objective> tasks, IEnumerable<SkillChallenge> skill_challenges, Dictionary<string, Sector> sectors)
         {
             Name = name;
             MinLevel = min_level;
@@ -69,21 +69,21 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// <summary>
         /// Gets the points of interest.
         /// </summary>
-        public Dictionary<string, Lazy<Poi>> PointsOfInterest { get; private set; }
+        public Dictionary<string, Poi> PointsOfInterest { get; private set; }
 
         /// <summary>
         /// Gets the objectives.
         /// </summary>
-        public Dictionary<string, Lazy<Objective>> Objectives { get; private set; }
+        public Dictionary<string, Objective> Objectives { get; private set; }
 
         /// <summary>
         /// Gets the skill challenges.
         /// </summary>
-        public IEnumerable<Lazy<SkillChallenge>> SkillChallenges { get; private set; }
+        public IEnumerable<SkillChallenge> SkillChallenges { get; private set; }
 
         /// <summary>
         /// Gets the sectors.
         /// </summary>
-        public Dictionary<string, Lazy<Sector>> Sectors { get; private set; }
+        public Dictionary<string, Sector> Sectors { get; private set; }
     }
 }

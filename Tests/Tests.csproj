@@ -67,8 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="V1\" />
-    <Folder Include="V2\Unauthenticated\MapInformation\Continents\" />
-    <Folder Include="V2\Unauthenticated\MapInformation\Maps\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Specializations\" />
     <Folder Include="V2\Unauthenticated\Mechanics\Traits\" />
     <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Listings\" />

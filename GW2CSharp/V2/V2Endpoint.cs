@@ -68,7 +68,7 @@ namespace GW2CSharp.V2
         public SkinWrapper Skins { get { return new SkinWrapper(); } }
 
         /// <summary>
-        /// Returns a wrapper for all skin endpoint calls.
+        /// Returns a wrapper for all continent endpoint calls.
         /// </summary>
         public ContinentWrapper Continents { get { return new ContinentWrapper(); } }
     }

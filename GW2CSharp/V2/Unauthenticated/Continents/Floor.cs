@@ -13,7 +13,7 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// </summary>
         /// <param name="texture_dims">The dimension.</param>
         /// <param name="regions">The regions.</param>
-        public Floor(List<int> texture_dims, Dictionary<string, Lazy<Region>> regions)
+        public Floor(List<int> texture_dims, Dictionary<string, Region> regions)
         {
             Dimension = new Coordinate<int>(texture_dims[0], texture_dims[1]);
             Regions = regions;
@@ -27,6 +27,14 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// <summary>
         /// Gets the regions.
         /// </summary>
-        public Dictionary<string, Lazy<Region>> Regions { get; private set; }
+        public Dictionary<string, Region> Regions { get; set; }
+
+        internal string Url { get; set; }
+
+        internal Region GetRegion(int regionId)
+        {
+            Url = Url.Insert(Url.IndexOf("?"), "/regions/" + regionId);
+            return DeserializeObject<Region>(Url);
+        }
     }
 }
