@@ -28,13 +28,5 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// Gets the regions.
         /// </summary>
         public Dictionary<string, Region> Regions { get; set; }
-
-        internal string Url { get; set; }
-
-        internal Region GetRegion(int regionId)
-        {
-            Url = Url.Insert(Url.IndexOf("?"), "/regions/" + regionId);
-            return DeserializeObject<Region>(Url);
-        }
     }
 }

@@ -77,10 +77,7 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         internal Floor GetFloor(int floorId) 
         {
             string url = string.Format("https://api.guildwars2.com/v2/continents/{0}/floors/{1}?lang={2}", Id, floorId, Language);
-
-            Floor floor = DeserializeObject<Floor>(url);
-            floor.Url = url;
-            return floor;
+            return DeserializeObject<Floor>(url);
         }
 
         internal IEnumerable<int> floorIds;
