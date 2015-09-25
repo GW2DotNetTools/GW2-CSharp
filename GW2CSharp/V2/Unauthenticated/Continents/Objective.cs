@@ -10,36 +10,43 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
         /// <summary>
         /// Initializes a new instance of the <see cref="Objective"/> class.
         /// </summary>
-        /// <param name="objective">The objective.</param>
-        /// <param name="level">The level.</param>
-        /// <param name="coord">The coord.</param>
-        /// <param name="id">The identifier.</param>
-        public Objective(string objective, int level, List<double> coord, int id)
+        /// <param name="objective">The objective or name of the heart.</param>
+        /// <param name="level">The level of the heart.</param>
+        /// <param name="coord">The coordinates where it takes place.</param>
+        /// <param name="id">The renown heart id.</param>
+        /// <param name="chat_link">The link that can be used ingame.</param>
+        public Objective(string objective, int level, List<double> coord, int id, string chat_link)
         {
             Text = objective;
             Level = level;
             Coordinate = new Coordinate<double>(coord[0], coord[1]);
             Id = id;
+            ChatLink = chat_link;
         }
 
         /// <summary>
-        /// Gets the text.
+        /// The objective or name of the heart.
         /// </summary>
         public string Text { get; private set; }
 
         /// <summary>
-        /// Gets the level.
+        /// The level of the heart.
         /// </summary>
         public int Level { get; private set; }
 
         /// <summary>
-        /// Gets the coordinate.
+        /// The coordinates where it takes place.
         /// </summary>
         public Coordinate<double> Coordinate { get; private set; }
 
         /// <summary>
-        /// Gets the identifier.
+        /// The renown heart id.
         /// </summary>
         public int Id { get; private set; }
+
+        /// <summary>
+        /// The link that can be used ingame.
+        /// </summary>
+        public string ChatLink { get; private set; }
     }
 }

@@ -3,12 +3,8 @@ using GW2CSharp.Enums;
 using GW2CSharp.V2.Unauthenticated.Continents;
 using GW2CSharp.V2.Unauthenticated.Continents.Enums;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests.V2.Unauthenticated.Continents
 {
@@ -91,6 +87,7 @@ namespace Tests.V2.Unauthenticated.Continents
             Assert.AreEqual(16604.2m, objective.Coordinate.Y);
             Assert.AreEqual(1, objective.Id);
             Assert.AreEqual(40, objective.Level);
+            Assert.AreEqual("[&BAEAAAA=]", objective.ChatLink);
             Assert.AreEqual("Assist Daphne in halting the encroaching corruption.", objective.Text);
         }
 
@@ -107,6 +104,7 @@ namespace Tests.V2.Unauthenticated.Continents
             Assert.AreEqual(16594.8m, poi.Coordinate.Y);
             Assert.AreEqual(554, poi.Id);
             Assert.AreEqual(PoiType.Landmark, poi.Type);
+            Assert.AreEqual("[&BCoCAAA=]", poi.ChatLink);
             Assert.AreEqual("Leaning Grade", poi.Name);
         }
 
@@ -122,6 +120,7 @@ namespace Tests.V2.Unauthenticated.Continents
             Assert.AreEqual(19816.0m, sector.Coordinate.X);
             Assert.AreEqual(17914.8m, sector.Coordinate.Y);
             Assert.AreEqual(513, sector.Id);
+            Assert.AreEqual("[&BAECAAA=]", sector.ChatLink);
             Assert.AreEqual(50, sector.Level);
             Assert.AreEqual("Tribulation Rift", sector.Name);
         }
