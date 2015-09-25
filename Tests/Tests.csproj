@@ -52,6 +52,7 @@
     <Compile Include="V2\Authenticated\Tokeninfo.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Items\Skin.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\MapInformation\Continent.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\MapInformation\Map.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Color.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\Currency.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Miscellaneous\RessourceFile.UnitTest.cs" />

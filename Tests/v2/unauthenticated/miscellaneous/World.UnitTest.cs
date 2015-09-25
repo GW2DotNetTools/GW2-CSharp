@@ -57,7 +57,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         {
             List<World> world = GW2Api.V2.Worlds.GetAllWorlds().ToList();
 
-            Assert.GreaterOrEqual(51, world.Count());
+            Assert.GreaterOrEqual(world.Count(), 51);
         }
 
         private void CompareWorlds(World expectedWorld, World actualWorld) 

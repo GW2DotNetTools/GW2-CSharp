@@ -16,7 +16,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         {
             Dictionary<string, Lazy<Quaggan>> quaggans = GW2Api.V2.Quaggans.GetAllQuaggans();
 
-            Assert.GreaterOrEqual(35, quaggans.Count());
+            Assert.GreaterOrEqual(quaggans.Count(), 35);
         }
 
         [Test]

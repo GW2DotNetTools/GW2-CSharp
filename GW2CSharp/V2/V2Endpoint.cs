@@ -6,6 +6,7 @@ using GW2CSharp.V2.Unauthenticated.Continents;
 using GW2CSharp.V2.Unauthenticated.Currencies;
 using GW2CSharp.V2.Unauthenticated.Files;
 using GW2CSharp.V2.Unauthenticated.Items.Skins;
+using GW2CSharp.V2.Unauthenticated.Maps;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Quaggans;
 using GW2CSharp.V2.Unauthenticated.Worlds;
@@ -71,5 +72,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all continent endpoint calls.
         /// </summary>
         public ContinentWrapper Continents { get { return new ContinentWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all map endpoint calls.
+        /// </summary>
+        public MapWrapper Maps { get { return new MapWrapper(); } }
     }
 }

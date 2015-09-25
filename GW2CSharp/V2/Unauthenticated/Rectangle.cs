@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GW2CSharp.V2.Unauthenticated.Continents
+namespace GW2CSharp.V2.Unauthenticated
 {
     /// <summary>
     /// Represents a single Rectangle.

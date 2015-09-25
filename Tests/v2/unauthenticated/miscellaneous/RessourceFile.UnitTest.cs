@@ -1,12 +1,9 @@
 ﻿using GW2CSharp;
 using GW2CSharp.V2.Unauthenticated.Files;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests.V2.Unauthenticated.Miscellaneous
 {
@@ -18,7 +15,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         {
             IEnumerable<RessourceFile> ressourceFiles = GW2Api.V2.RessourceFiles.GetAllRessourceFiles();
 
-            Assert.GreaterOrEqual(84, ressourceFiles.Count());
+            Assert.GreaterOrEqual(ressourceFiles.Count(), 84);
         }
 
         [Test]

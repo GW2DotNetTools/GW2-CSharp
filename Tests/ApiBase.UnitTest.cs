@@ -1,6 +1,5 @@
 ﻿using GW2CSharp;
 using NUnit.Framework;
-using System;
 
 namespace Tests
 {

@@ -15,7 +15,7 @@ namespace Tests.V2.Unauthenticated.Continents
         public void ShouldGetAllContinents()
         {
             IEnumerable<Continent> continents = GW2Api.V2.Continents.GetAll();
-            Assert.GreaterOrEqual(2, continents.Count());
+            Assert.GreaterOrEqual(continents.Count(), 2);
         }
 
         [Test]
@@ -37,7 +37,7 @@ namespace Tests.V2.Unauthenticated.Continents
             Floor floor = continent.Floors[2].Value;
             Assert.AreEqual(32768, floor.Dimension.X);
             Assert.AreEqual(32768, floor.Dimension.Y);
-            Assert.GreaterOrEqual(7, floor.Regions.Count());
+            Assert.GreaterOrEqual(floor.Regions.Count(), 7);
         }
 
         [Test]
@@ -47,7 +47,7 @@ namespace Tests.V2.Unauthenticated.Continents
             Floor floor = continent.Floors[2].Value;
             Region region = floor.Regions["1"];
 
-            Assert.GreaterOrEqual(10, region.Maps.Count());
+            Assert.GreaterOrEqual(region.Maps.Count(), 10);
             Assert.AreEqual("Shiverpeak Mountains", region.Name);
             Assert.AreEqual(19840, region.Coordinate.X);
             Assert.AreEqual(13568, region.Coordinate.Y);
@@ -68,10 +68,10 @@ namespace Tests.V2.Unauthenticated.Continents
             Assert.AreEqual(50, map.MaxLevel);
             Assert.AreEqual(40, map.MinLevel);
             Assert.AreEqual("Dredgehaunt Cliffs", map.Name);
-            Assert.GreaterOrEqual(11, map.Objectives.Count());
-            Assert.GreaterOrEqual(52, map.PointsOfInterest.Count());
-            Assert.GreaterOrEqual(28, map.Sectors.Count());
-            Assert.GreaterOrEqual(6, map.SkillChallenges.Count());
+            Assert.GreaterOrEqual(map.Objectives.Count(), 11);
+            Assert.GreaterOrEqual(map.PointsOfInterest.Count(), 51);
+            Assert.GreaterOrEqual(map.Sectors.Count(), 28);
+            Assert.GreaterOrEqual(map.SkillChallenges.Count(), 6);
         }
 
         [Test]

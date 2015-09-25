@@ -39,7 +39,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
             Color actualColor = allColors[1].Value;
 
             Assert.AreEqual("Dye Remover", actualColor.Name);
-            Assert.GreaterOrEqual(480, allColors.Count());
+            Assert.GreaterOrEqual(allColors.Count(), 480);
         }
 
         [Test]
