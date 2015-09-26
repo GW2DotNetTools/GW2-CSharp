@@ -12,15 +12,15 @@ namespace GW2CSharp.V2.Unauthenticated.Colors
         /// </summary>
         /// <param name="id">The color id.</param>
         /// <param name="name">The color name.</param>
-        /// <param name="baseRgb">The base RGB values.</param>
+        /// <param name="base_rgb">The base RGB values.</param>
         /// <param name="cloth">Detailed information on its appearance when applied on cloth armor.</param>
         /// <param name="leather">Detailed information on its appearance when applied on leather armor.</param>
         /// <param name="metal">Detailed information on its appearance when applied on metal armor.</param>
-        public Color(int id, string name, int[] baseRgb, DyeMaterial cloth, DyeMaterial leather, DyeMaterial metal)
+        public Color(int id, string name, int[] base_rgb, DyeMaterial cloth, DyeMaterial leather, DyeMaterial metal)
         {
             Id = id;
             Name = name;
-            BaseRGB = baseRgb;
+            BaseRGB = base_rgb;
             Cloth = cloth;
             Leather = leather;
             Metal = metal;
@@ -39,7 +39,6 @@ namespace GW2CSharp.V2.Unauthenticated.Colors
         /// <summary>
         /// The base RGB values.
         /// </summary>
-        [JsonProperty(PropertyName = "base_rgb")]
         public int[] BaseRGB { get; private set; }
 
         /// <summary>

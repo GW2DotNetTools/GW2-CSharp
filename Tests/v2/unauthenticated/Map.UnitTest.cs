@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tests.V2.Unauthenticated.MapInformation
+namespace Tests.V2.Unauthenticated
 {
     [TestFixture]
     public class MapUnitTest
@@ -26,16 +26,16 @@ namespace Tests.V2.Unauthenticated.MapInformation
             Assert.AreEqual("Tyria", map.ContinentName);
         }
 
-        [TestCase("Lion's Arch", "Kryta", RequestedLanguage.En)]
-        [TestCase("Löwenstein", "Kryta", RequestedLanguage.De)]
-        [TestCase("L'Arche du Lion", "Kryte", RequestedLanguage.Fr)]
-        [TestCase("Arco del León", "Kryta", RequestedLanguage.Es)]
-        public void ShouldReturnSpicific(string mapName, string regionName, RequestedLanguage language)
+        [TestCase("Lion's Arch", "Kryta", "Tyria", RequestedLanguage.En)]
+        [TestCase("Löwenstein", "Kryta", "Tyria", RequestedLanguage.De)]
+        [TestCase("L'Arche du Lion", "Kryte", "Tyrie", RequestedLanguage.Fr)]
+        [TestCase("Arco del León", "Kryta", "Tyria", RequestedLanguage.Es)]
+        public void ShouldReturnSpicific(string mapName, string regionName, string continentName, RequestedLanguage language)
         {
             Map map = GW2Api.V2.Maps.GetById(50, language);
 
             Assert.AreEqual(50, map.Id);
-            Assert.AreEqual("Tyria", map.ContinentName);
+            Assert.AreEqual(continentName, map.ContinentName);
             Assert.AreEqual(15232, map.ContinentRectangle.X.X);
             Assert.AreEqual(14336, map.ContinentRectangle.X.Y);
             Assert.AreEqual(17664, map.ContinentRectangle.Y.X);

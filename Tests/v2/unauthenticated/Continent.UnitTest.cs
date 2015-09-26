@@ -6,7 +6,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tests.V2.Unauthenticated.Continents
+namespace Tests.V2.Unauthenticated
 {
     [TestFixture]
     public class ContinentUnitTest

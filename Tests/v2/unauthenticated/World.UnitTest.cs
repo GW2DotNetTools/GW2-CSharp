@@ -6,7 +6,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tests.V2.Unauthenticated.Miscellaneous
+namespace Tests.V2.Unauthenticated
 {
     [TestFixture]
     public class WorldUnitTest
@@ -24,13 +24,13 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         [Test]
         public void ThrowsExceptionIfNotExisting()
         {
-            Assert.Throws<ApiException>(() => GW2Api.V2.Worlds.GetWorldById(23456));
+            Assert.Throws<ApiException>(() => GW2Api.V2.Worlds.GetById(23456));
         }
 
         [Test]
         public void ShouldReturnCorrectWorldsOnPage()
         {
-            List<World> worlds = GW2Api.V2.Worlds.GetWorldByPage(35, 1).ToList();
+            List<World> worlds = GW2Api.V2.Worlds.GetByPage(35, 1).ToList();
 
             CompareWorlds(pikenSquare, worlds[0]);
         }
@@ -38,7 +38,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         [Test]
         public void ShouldReturnSingleWorldById()
         {
-            World world = GW2Api.V2.Worlds.GetWorldById(2012);
+            World world = GW2Api.V2.Worlds.GetById(2012);
 
             CompareWorlds(pikenSquare, world);
         }
@@ -46,7 +46,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         [Test]
         public void ShoudlReturnMultipleWorldsById()
         {
-            List<World> world = GW2Api.V2.Worlds.GetWorldByIds(RequestedLanguage.En, 1001, 2012).ToList();
+            List<World> world = GW2Api.V2.Worlds.GetByIds(RequestedLanguage.En, 1001, 2012).ToList();
 
             CompareWorlds(anvilRock, world[0]);
             CompareWorlds(pikenSquare, world[1]);
@@ -55,7 +55,7 @@ namespace Tests.V2.Unauthenticated.Miscellaneous
         [Test]
         public void ShouldReturnAllWorlds()
         {
-            List<World> world = GW2Api.V2.Worlds.GetAllWorlds().ToList();
+            List<World> world = GW2Api.V2.Worlds.GetAll().ToList();
 
             Assert.GreaterOrEqual(world.Count(), 51);
         }

@@ -7,13 +7,11 @@ namespace Tests.V2.Authenticated
     [TestFixture]
     public class TokeninfoUnitTest
     {
-        private const string TestAccountToken = "58751B23-07DA-AB49-A5DE-0DBC9BA6C79ECCDE107E-2785-4296-BAEF-64AD20580F8A";
-        private const string TestAccountTokenName = "Muh Pantsu";
 
         [Test]
         public void ShouldHaveAllPermissions() 
         {
-            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.GetTokeninfo(TestAccountToken);
+            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.Get(TestData.FullAccessAccountToken);
             
             Assert.IsTrue(tokeninfo.Permission.Account);
             Assert.IsTrue(tokeninfo.Permission.Builds);
@@ -28,17 +26,17 @@ namespace Tests.V2.Authenticated
         [Test]
         public void ShouldHaveCorrectTokenName()
         {
-            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.GetTokeninfo(TestAccountToken);
+            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.Get(TestData.FullAccessAccountToken);
 
-            Assert.AreEqual(TestAccountTokenName, tokeninfo.Name);
+            Assert.AreEqual(TestData.FullAccessAccountTokenName, tokeninfo.Name);
         }
 
         [Test]
         public void ShouldHaveCorrectTokenId()
         {
-            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.GetTokeninfo(TestAccountToken);
+            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.Get(TestData.FullAccessAccountToken);
 
-            Assert.AreEqual(TestAccountToken.Substring(0, 36), tokeninfo.Id); // Seems like only 36 letters of the Id will be returned.
+            Assert.AreEqual(TestData.FullAccessAccountToken.Substring(0, 36), tokeninfo.Id); // Seems like only 36 letters of the Id will be returned.
         }
     }
 }

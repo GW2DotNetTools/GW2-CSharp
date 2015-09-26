@@ -2,13 +2,8 @@
 using GW2CSharp.Entities;
 using GW2CSharp.V2.Unauthenticated.Commerce.Exchange;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Tests.V2.Unauthenticated.TradingPost.Commerce
+namespace Tests.V2.Unauthenticated
 {
     [TestFixture]
     public class ExchangeUnitTest

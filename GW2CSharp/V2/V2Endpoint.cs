@@ -1,4 +1,5 @@
-﻿using GW2CSharp.V2.Authenticated.Pvp.Stats;
+﻿using GW2CSharp.V2.Authenticated.Pvp.Games;
+using GW2CSharp.V2.Authenticated.Pvp.Stats;
 using GW2CSharp.V2.Authenticated.TokenInfo;
 using GW2CSharp.V2.Unauthenticated.Colors;
 using GW2CSharp.V2.Unauthenticated.Commerce.Exchange;
@@ -77,5 +78,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all map endpoint calls.
         /// </summary>
         public MapWrapper Maps { get { return new MapWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all pvpgame endpoint calls.
+        /// </summary>
+        public PvpGameWrapper PvpGame { get { return new PvpGameWrapper(); } }
     }
 }

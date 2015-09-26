@@ -64,6 +64,10 @@
     <Compile Include="Services\RenderService.cs" />
     <Compile Include="ApiBase.cs" />
     <Compile Include="V1\V1Endpoint.cs" />
+    <Compile Include="V2\Authenticated\Pvp\Games\Enums\Team.cs" />
+    <Compile Include="V2\Authenticated\Pvp\Games\PvpGame.cs" />
+    <Compile Include="V2\Authenticated\Pvp\Games\PvpGameWrapper.cs" />
+    <Compile Include="V2\Authenticated\Pvp\Games\Score.cs" />
     <Compile Include="V2\Authenticated\Pvp\Stats\Enums\Ladder.cs" />
     <Compile Include="V2\Authenticated\Pvp\Stats\PvpStatistic.cs" />
     <Compile Include="V2\Authenticated\Pvp\Stats\PvpStatisticWrapper.cs" />
@@ -120,7 +124,6 @@
     <Folder Include="V2\Authenticated\Account\Wallet\" />
     <Folder Include="V2\Authenticated\Characters\" />
     <Folder Include="V2\Authenticated\Commerce\Transactions\" />
-    <Folder Include="V2\Authenticated\Pvp\Games\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

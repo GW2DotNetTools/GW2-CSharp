@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace GW2CSharp.V2.Unauthenticated.Quaggans
@@ -13,16 +12,14 @@ namespace GW2CSharp.V2.Unauthenticated.Quaggans
         /// Returns all known quaggans.
         /// </summary>
         /// <returns>All known quaggans</returns>
-        public Dictionary<string, Lazy<Quaggan>> GetAllQuaggans()
+        public Dictionary<string, Lazy<Quaggan>> GetAll()
         {
-            string jsonString = DownloadJsonString("https://api.guildwars2.com/v2/quaggans");
-
-            List<string> quagganIds = JsonConvert.DeserializeObject<List<string>>(jsonString);
+            List<string> quagganIds = DeserializeObject<List<string>>("https://api.guildwars2.com/v2/quaggans");
 
             var quaggans = new Dictionary<string, Lazy<Quaggan>>();
             foreach (var quagganId in quagganIds)
             {
-                quaggans.Add(quagganId, new Lazy<Quaggan>(() => GetQuaggan(quagganId)));
+                quaggans.Add(quagganId, new Lazy<Quaggan>(() => Get(quagganId)));
             }
 
             return quaggans;
@@ -33,10 +30,9 @@ namespace GW2CSharp.V2.Unauthenticated.Quaggans
         /// </summary>
         /// <param name="id">The quaggan identifier.</param>
         /// <returns>Quaggan that matches the id.</returns>
-        public Quaggan GetQuaggan(string id)
+        public Quaggan Get(string id)
         {
-            string jsonString = DownloadJsonString(string.Format("https://api.guildwars2.com/v2/quaggans/{0}", id));
-            return JsonConvert.DeserializeObject<Quaggan>(jsonString);
+            return DeserializeObject<Quaggan>(string.Format("https://api.guildwars2.com/v2/quaggans/{0}", id));
         }
     }
 }

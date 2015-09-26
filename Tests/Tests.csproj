@@ -48,17 +48,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Money.UnitTest.cs" />
     <Compile Include="Services\RenderService.UnitTest.cs" />
+    <Compile Include="TestData.cs" />
+    <Compile Include="V2\Authenticated\PvpGame.UnitTest.cs" />
     <Compile Include="V2\Authenticated\PvpStatistic.UnitTest.cs" />
     <Compile Include="V2\Authenticated\Tokeninfo.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Items\Skin.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\MapInformation\Continent.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\MapInformation\Map.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Color.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Currency.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\RessourceFile.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\Quaggan.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\Miscellaneous\World.UnitTest.cs" />
-    <Compile Include="V2\Unauthenticated\TradingPost\Commerce\Exchange.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Skin.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Continent.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Map.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Color.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Currency.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\RessourceFile.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Quaggan.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\World.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Exchange.UnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -68,10 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="V1\" />
-    <Folder Include="V2\Unauthenticated\Mechanics\Specializations\" />
-    <Folder Include="V2\Unauthenticated\Mechanics\Traits\" />
-    <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Listings\" />
-    <Folder Include="V2\Unauthenticated\TradingPost\Commerce\Prices\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GW2CSharp\GW2CSharp.csproj">

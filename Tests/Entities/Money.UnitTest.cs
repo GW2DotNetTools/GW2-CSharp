@@ -1,9 +1,5 @@
 ﻿using GW2CSharp.Entities;
-using GW2CSharp.Services;
-using GW2CSharp.Services.Enums;
 using NUnit.Framework;
-using System;
-using System.Drawing;
 
 namespace Tests.Entities
 {

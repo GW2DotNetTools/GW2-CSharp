@@ -13,14 +13,14 @@ namespace GW2CSharp.V2.Authenticated.Pvp.Stats
         /// <summary>
         /// Initilization of a new pvpstatistic object.
         /// </summary>
-        /// <param name="rank">The player's PvP rank.</param>
-        /// <param name="overview">A win/loss object containing stats from all matches ever played.</param>
+        /// <param name="pvp_rank">The player's PvP rank.</param>
+        /// <param name="aggregate">A win/loss object containing stats from all matches ever played.</param>
         /// <param name="professions">Collection for each profession played in PvP.</param>
         /// <param name="ladders">Collection for each type of the ladder.</param>
-        public PvpStatistic(int rank, Statistic overview, Dictionary<Profession, Statistic> professions, Dictionary<Ladder, Statistic> ladders)
+        public PvpStatistic(int pvp_rank, Statistic aggregate, Dictionary<Profession, Statistic> professions, Dictionary<Ladder, Statistic> ladders)
         {
-            Rank = rank;
-            Overview = overview;
+            Rank = pvp_rank;
+            Overview = aggregate;
             Professions = professions;
             Ladders = ladders;
         }
@@ -28,13 +28,11 @@ namespace GW2CSharp.V2.Authenticated.Pvp.Stats
         /// <summary>
         /// The player's PvP rank.
         /// </summary>
-        [JsonProperty(PropertyName = "pvp_rank")]
         public int Rank { get; private set; }
 
         /// <summary>
         /// A win/loss object containing stats from all matches ever played.
         /// </summary>
-        [JsonProperty(PropertyName = "aggregate")]
         public Statistic Overview { get; private set; }
 
         /// <summary>
