@@ -20,7 +20,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnCorrectGem()
         {
-            Gem gem = GW2Api.V2.Exchanges.GetGem(100);
+            Gem gem = GW2Api.V2.Exchanges.GetGem(8000);
 
             Assert.NotNull(gem.AmountOfCoinsCalculated);
             Assert.NotNull(gem.CoinsPerGemCalculated);
