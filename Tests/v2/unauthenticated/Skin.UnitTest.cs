@@ -15,7 +15,7 @@ namespace Tests.V2.Unauthenticated
         public void ShouldReturnAllSkins() 
         {
             var skins = GW2Api.V2.Skins.GetAllSkins();
-            Assert.GreaterOrEqual(skins.Count(), 3532);
+            Assert.GreaterOrEqual(skins.Count(), 3000);
         }
 
         [Test]

@@ -52,6 +52,7 @@
     <Compile Include="V2\Authenticated\PvpGame.UnitTest.cs" />
     <Compile Include="V2\Authenticated\PvpStatistic.UnitTest.cs" />
     <Compile Include="V2\Authenticated\Tokeninfo.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Achievment.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Skin.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Continent.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Map.UnitTest.cs" />
