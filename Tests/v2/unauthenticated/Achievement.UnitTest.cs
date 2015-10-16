@@ -60,7 +60,7 @@ namespace Tests.V2.Unauthenticated
             Assert.That(achievement.Id, Is.EqualTo(id));
             Assert.That(achievement.Requirement, Is.Not.Null.Or.Empty);
             Assert.That(achievement.Type, Is.Not.Null.Or.Empty);
-            Assert.That(achievement.AchievementCategories.Count, Is.GreaterThan(1));
+            Assert.GreaterOrEqual(achievement.AchievementCategories.Count(), 1);
         }
     }
 }
