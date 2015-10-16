@@ -7,7 +7,7 @@ using System.Linq;
 namespace Tests.V2.Unauthenticated
 {
     [TestFixture]
-    public class Achievment
+    public class AchievementUnitTest
     {
         [Test]
         public void ShouldReturnAllAchievements()
@@ -60,7 +60,7 @@ namespace Tests.V2.Unauthenticated
             Assert.That(achievement.Id, Is.EqualTo(id));
             Assert.That(achievement.Requirement, Is.Not.Null.Or.Empty);
             Assert.That(achievement.Type, Is.Not.Null.Or.Empty);
-            Assert.That(achievement.AchievementCategories.Count, Is.AtLeast(1).And.AtMost(4));
+            Assert.That(achievement.AchievementCategories.Count, Is.GreaterThan(1));
         }
     }
 }
