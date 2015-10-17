@@ -62,5 +62,14 @@ namespace Tests.V2.Unauthenticated
             Assert.That(achievement.Type, Is.Not.Null.Or.Empty);
             Assert.GreaterOrEqual(achievement.AchievementCategories.Count(), 1);
         }
+
+        [Test]
+        public void ShouldReturnCorrectBitmap()
+        {
+            var achievements = GW2Api.V2.Achievements.GetAll();
+
+            Achievement achievement = achievements.Values.First().Value;
+            Assert.NotNull(achievement.GetImage());
+        }
     }
 }
