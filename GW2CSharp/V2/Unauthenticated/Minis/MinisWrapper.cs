@@ -33,7 +33,7 @@ namespace GW2CSharp.V2.Unauthenticated.Minis
 			{
 				minis.Add(miniId, new Lazy<Mini>(() => Get(miniId)));
 			}
-			return minis
+			return minis;
         }
 	}
 }
