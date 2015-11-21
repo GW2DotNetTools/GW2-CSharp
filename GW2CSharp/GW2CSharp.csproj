@@ -64,6 +64,10 @@
     <Compile Include="Services\Enums\FileFormat.cs" />
     <Compile Include="Services\RenderService.cs" />
     <Compile Include="ApiBase.cs" />
+    <Compile Include="V1\Guilds\Emblem.cs" />
+    <Compile Include="V1\Guilds\Enum\Flag.cs" />
+    <Compile Include="V1\Guilds\Guild.cs" />
+    <Compile Include="V1\Guilds\GuildWrapper.cs" />
     <Compile Include="V1\V1Endpoint.cs" />
     <Compile Include="V2\Authenticated\Pvp\Games\Enums\Team.cs" />
     <Compile Include="V2\Authenticated\Pvp\Games\PvpGame.cs" />
