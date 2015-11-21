@@ -81,6 +81,8 @@
     <Compile Include="V2\Unauthenticated\Continents\ContinentWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Maps\Map.cs" />
     <Compile Include="V2\Unauthenticated\Maps\MapWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Minis\Mini.cs" />
+    <Compile Include="V2\Unauthenticated\Minis\MinisWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Skins\Enums\SkinFlags.cs" />
     <Compile Include="V2\Unauthenticated\Skins\Enums\SkinType.cs" />
     <Compile Include="V2\Unauthenticated\Skins\Skin.cs" />

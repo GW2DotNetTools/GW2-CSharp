@@ -9,6 +9,7 @@ using GW2CSharp.V2.Unauthenticated.Currencies;
 using GW2CSharp.V2.Unauthenticated.Files;
 using GW2CSharp.V2.Unauthenticated.Items.Skins;
 using GW2CSharp.V2.Unauthenticated.Maps;
+using GW2CSharp.V2.Unauthenticated.Minis;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Quaggans;
 using GW2CSharp.V2.Unauthenticated.Worlds;
@@ -89,5 +90,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all achievements endpoint calls.
         /// </summary>
         public AchievementWrapper Achievements { get { return new AchievementWrapper(); } }
+
+		/// <summary>
+		/// Returns a wrapper for all the minis endpoint calls.
+		/// </summary>
+		public MinisWrapper Minis { get { return new MinisWrapper(); } }
     }
 }
