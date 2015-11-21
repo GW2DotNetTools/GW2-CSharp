@@ -60,7 +60,6 @@ namespace Tests.V2.Unauthenticated
             Assert.That(achievement.Id, Is.EqualTo(id));
             Assert.That(achievement.Requirement, Is.Not.Null.Or.Empty);
             Assert.That(achievement.Type, Is.Not.Null.Or.Empty);
-            Assert.GreaterOrEqual(achievement.AchievementCategories.Count(), 1);
         }
 
         [Test]
@@ -68,7 +67,7 @@ namespace Tests.V2.Unauthenticated
         {
             var achievements = GW2Api.V2.Achievements.GetAll();
 
-            Achievement achievement = achievements.Values.First().Value;
+            Achievement achievement = achievements.Values.Where(x => x.Value.Icon != null).First().Value;
             Assert.NotNull(achievement.GetImage());
         }
     }

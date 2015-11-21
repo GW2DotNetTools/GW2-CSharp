@@ -25,7 +25,7 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
         /// </summary>
         /// <param name="requestedLanguage">(Optional) Request localized information.</param>
         /// <returns>All known skins.</returns>
-        public Dictionary<int, Lazy<Skin>> GetAllSkins(RequestedLanguage requestedLanguage = RequestedLanguage.En)
+        public Dictionary<int, Lazy<Skin>> GetAll(RequestedLanguage requestedLanguage = RequestedLanguage.En)
         {
             List<int> skinIds = DeserializeObject<List<int>>(string.Format("https://api.guildwars2.com/v2/skins"));
 

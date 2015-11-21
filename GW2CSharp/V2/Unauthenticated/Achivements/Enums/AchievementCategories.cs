@@ -24,6 +24,10 @@
         /// <summary>
         /// Doesn't appear in the "nearly complete" UI.
         /// </summary>
-        IgnoreNearlyComplete
+        IgnoreNearlyComplete,
+        /// <summary>
+        /// Probably internal tag?.
+        /// </summary>
+        RepairOnLogin,
     }
 }

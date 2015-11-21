@@ -7,6 +7,7 @@ using GW2CSharp.V2.Unauthenticated.Commerce.Exchange;
 using GW2CSharp.V2.Unauthenticated.Continents;
 using GW2CSharp.V2.Unauthenticated.Currencies;
 using GW2CSharp.V2.Unauthenticated.Files;
+using GW2CSharp.V2.Unauthenticated.Items;
 using GW2CSharp.V2.Unauthenticated.Items.Skins;
 using GW2CSharp.V2.Unauthenticated.Maps;
 using GW2CSharp.V2.Unauthenticated.Minis;
@@ -95,5 +96,10 @@ namespace GW2CSharp.V2
 		/// Returns a wrapper for all the minis endpoint calls.
 		/// </summary>
 		public MinisWrapper Minis { get { return new MinisWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the item endpoint calls.
+        /// </summary>
+        public ItemWrapper Items { get { return new ItemWrapper(); } }
     }
 }

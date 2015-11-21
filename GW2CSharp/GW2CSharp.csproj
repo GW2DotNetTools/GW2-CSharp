@@ -54,6 +54,7 @@
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\Profession.cs" />
     <Compile Include="Enums\Race.cs" />
+    <Compile Include="Enums\Rarity.cs" />
     <Compile Include="Enums\Restriction.cs" />
     <Compile Include="Enums\Weapon.cs" />
     <Compile Include="Enums\Weight.cs" />
@@ -79,6 +80,10 @@
     <Compile Include="V2\Unauthenticated\Achivements\Achievement.cs" />
     <Compile Include="V2\Unauthenticated\Achivements\Enums\AchievementCategories.cs" />
     <Compile Include="V2\Unauthenticated\Continents\ContinentWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Items\Enums\ItemFlags.cs" />
+    <Compile Include="V2\Unauthenticated\Items\Enums\ItemType.cs" />
+    <Compile Include="V2\Unauthenticated\Items\ItemWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Items\Item.cs" />
     <Compile Include="V2\Unauthenticated\Maps\Map.cs" />
     <Compile Include="V2\Unauthenticated\Maps\MapWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Minis\Mini.cs" />

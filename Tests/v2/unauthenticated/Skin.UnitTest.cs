@@ -14,14 +14,14 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllSkins() 
         {
-            var skins = GW2Api.V2.Skins.GetAllSkins();
+            var skins = GW2Api.V2.Skins.GetAll();
             Assert.GreaterOrEqual(skins.Count(), 3000);
         }
 
         [Test]
         public void ShouldReturnAllSkinsAndLoadOnlyOne()
         {
-            var skins = GW2Api.V2.Skins.GetAllSkins();
+            var skins = GW2Api.V2.Skins.GetAll();
             Assert.AreEqual("Adept Helm", skins[263].Value.Name);
         }
 
