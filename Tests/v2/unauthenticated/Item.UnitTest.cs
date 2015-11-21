@@ -22,7 +22,7 @@ namespace Tests.V2.Unauthenticated
             Assert.AreEqual(64, actualItem.Level);
             Assert.AreEqual(Rarity.Basic, actualItem.Rarity);
             Assert.AreEqual(41, actualItem.VendorValue);
-            Assert.That(actualItem.GameTypes.Count, Is.GreaterThanOrEqualTo(1));
+            Assert.GreaterOrEqual(actualItem.GameTypes.Count(), 1);
             Assert.AreEqual(28864, actualItem.Id);
             Assert.AreEqual("[&AgHAcAAA]", actualItem.ChatLink);
         }
