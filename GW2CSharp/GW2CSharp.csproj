@@ -79,6 +79,12 @@
     <Compile Include="V2\Unauthenticated\Achivements\AchievementWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Achivements\Achievement.cs" />
     <Compile Include="V2\Unauthenticated\Achivements\Enums\AchievementCategories.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\PriceWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\TpItem.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\Listing.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\ListingWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\Price.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\TpItemListing.cs" />
     <Compile Include="V2\Unauthenticated\Continents\ContinentWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Items\Enums\ItemFlags.cs" />
     <Compile Include="V2\Unauthenticated\Items\Enums\ItemType.cs" />

@@ -3,10 +3,10 @@ using System.Drawing;
 
 namespace GW2CSharp.V2.Unauthenticated.Minis
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	public class Mini
+    /// <summary>
+    /// Represents a single object of the v2/minis endpoint
+    /// </summary>
+    public class Mini
 	{
 		/// <summary>
 		/// The mini id.

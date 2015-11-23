@@ -16,7 +16,7 @@ namespace Tests.V2.Unauthenticated
         public void ShouldLoadCorrectItem() 
         {
             Item actualItem = GW2Api.V2.Items.GetById(28864);
-
+            Assert.That(actualItem.Skin != null);
             Assert.AreEqual("Berserker's Greatsword", actualItem.Name);
             Assert.AreEqual(ItemType.Weapon, actualItem.Type);
             Assert.AreEqual(64, actualItem.Level);

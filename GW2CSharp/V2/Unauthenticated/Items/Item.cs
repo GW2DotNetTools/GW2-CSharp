@@ -13,22 +13,22 @@ namespace GW2CSharp.V2.Unauthenticated.Items
     public class Item
     {
         /// <summary>
-        /// 
+        /// Represents a single skin.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="chat_link"></param>
-        /// <param name="name"></param>
-        /// <param name="icon"></param>
-        /// <param name="description"></param>
-        /// <param name="type"></param>
-        /// <param name="rarity"></param>
-        /// <param name="level"></param>
-        /// <param name="vendor_value"></param>
-        /// <param name="default_skin"></param>
-        /// <param name="flags"></param>
-        /// <param name="game_types"></param>
-        /// <param name="restrictions"></param>
-        /// <param name="details"></param>
+        /// <param name="id">The item id.</param>
+        /// <param name="chat_link">The chat link.</param>
+        /// <param name="name">The item name.</param>
+        /// <param name="icon">The full icon URL.</param>
+        /// <param name="description">The item description.</param>
+        /// <param name="type">The item type.</param>
+        /// <param name="rarity">The item rarity.</param>
+        /// <param name="level">The required level.</param>
+        /// <param name="vendor_value">The value in coins when selling to a vendor. (Can be non-zero even when the item has the NoSell flag.)</param>
+        /// <param name="default_skin">The default skin id.</param>
+        /// <param name="flags">Flags applying to the item.</param>
+        /// <param name="game_types">The game types in which the item is usable. At least one game type is specified.</param>
+        /// <param name="restrictions">Restrictions applied to the item.</param>
+        /// <param name="details">Additional item details if applicable, depending on the item type.</param>
         public Item(int id, string chat_link, string name, string icon, string description, ItemType type, Rarity rarity, int level, int vendor_value, 
             int default_skin, IEnumerable<ItemFlag> flags, IEnumerable<GameMode> game_types, IEnumerable<Restriction> restrictions, object details)
         {
@@ -109,7 +109,7 @@ namespace GW2CSharp.V2.Unauthenticated.Items
         public IEnumerable<GameMode> GameTypes { get; set; }
 
         /// <summary>
-        /// Restrictions applied to the item. Possible values.
+        /// Restrictions applied to the item.
         /// </summary>
         public IEnumerable<Restriction> Restrictions { get; set; }
 
