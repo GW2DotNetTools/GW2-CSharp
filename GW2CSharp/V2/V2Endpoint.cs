@@ -1,4 +1,5 @@
-﻿using GW2CSharp.V2.Authenticated.Pvp.Games;
+﻿using GW2CSharp.V2.Authenticated.Account;
+using GW2CSharp.V2.Authenticated.Pvp.Games;
 using GW2CSharp.V2.Authenticated.Pvp.Stats;
 using GW2CSharp.V2.Authenticated.TokenInfo;
 using GW2CSharp.V2.Unauthenticated.Achievement;
@@ -112,5 +113,10 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all the price endpoint calls.
         /// </summary>
         public PriceWrapper Prices { get { return new PriceWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the account endpoint calls.
+        /// </summary>
+        public AccountWrapper Account { get { return new AccountWrapper(); } }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="Entities\Money.UnitTest.cs" />
     <Compile Include="Services\RenderService.UnitTest.cs" />
     <Compile Include="TestData.cs" />
+    <Compile Include="V2\Authenticated\Account.UnitTest.cs" />
     <Compile Include="V2\Authenticated\PvpGame.UnitTest.cs" />
     <Compile Include="V2\Authenticated\PvpStatistic.UnitTest.cs" />
     <Compile Include="V2\Authenticated\Tokeninfo.UnitTest.cs" />

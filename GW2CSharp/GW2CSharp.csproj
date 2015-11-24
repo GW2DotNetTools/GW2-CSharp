@@ -65,6 +65,9 @@
     <Compile Include="Services\RenderService.cs" />
     <Compile Include="ApiBase.cs" />
     <Compile Include="V1\V1Endpoint.cs" />
+    <Compile Include="V2\Authenticated\Account\Account.cs" />
+    <Compile Include="V2\Authenticated\Account\AccountType.cs" />
+    <Compile Include="V2\Authenticated\Account\AccountWrapper.cs" />
     <Compile Include="V2\Authenticated\Pvp\Games\Enums\Team.cs" />
     <Compile Include="V2\Authenticated\Pvp\Games\PvpGame.cs" />
     <Compile Include="V2\Authenticated\Pvp\Games\PvpGameWrapper.cs" />
