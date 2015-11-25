@@ -6,12 +6,32 @@ namespace GW2CSharp.V2.Unauthenticated.Minis
     /// <summary>
     /// Represents a single object of the v2/minis endpoint
     /// </summary>
-    public class Mini
-	{
-		/// <summary>
-		/// The mini id.
-		/// </summary>
-		public int Id { get; set; }
+    public class Mini : Imageable
+    {
+        /// <summary>
+        /// Initialize the new mini object
+        /// </summary>
+        /// <param name="id">The mini id.</param>
+        /// <param name="name">The mini name.</param>
+        /// <param name="unlock">A description of how to unlock the mini (only present on a few entries).</param>
+        /// <param name="icon">The mini icon URL.</param>
+        /// <param name="order">The sort order that is used for displaying the mini in-game.</param>
+        /// <param name="item_id">The item which unlocks the mini and can be resolved against /v2/items.</param>
+        public Mini(int id, string name, string unlock, string icon, int order, int item_id)
+            : base(icon)
+        {
+            Id = id;
+            Name = name;
+            Unlock = unlock;
+            Icon = icon;
+            Order = order;
+            ItemId = item_id;
+        }
+
+        /// <summary>
+        /// The mini id.
+        /// </summary>
+        public int Id { get; set; }
 
 		/// <summary>
 		/// The mini name.
@@ -37,33 +57,5 @@ namespace GW2CSharp.V2.Unauthenticated.Minis
 		/// The item which unlocks the mini and can be resolved against /v2/items.
 		/// </summary>
 		public int ItemId { get; set; }
-
-		/// <summary>
-		/// Initialize the new mini object
-		/// </summary>
-		/// <param name="id">The mini id.</param>
-		/// <param name="name">The mini name.</param>
-		/// <param name="unlock">A description of how to unlock the mini (only present on a few entries).</param>
-		/// <param name="icon">The mini icon URL.</param>
-		/// <param name="order">The sort order that is used for displaying the mini in-game.</param>
-		/// <param name="item_id">The item which unlocks the mini and can be resolved against /v2/items.</param>
-		public Mini(int id, string name, string unlock, string icon, int order, int item_id)
-		{
-			Id = id;
-			Name = name;
-			Unlock = unlock;
-			Icon = icon;
-			Order = order;
-			ItemId = item_id;
-		}
-
-		/// <summary>
-		/// Returns the icon for the mini as a Bitmap
-		/// </summary>
-		/// <returns>Mini icon as a Bitmap</returns>
-		public Bitmap GetImage()
-		{
-			return RenderService.GetImage(Icon);
-		}
 	}
 }

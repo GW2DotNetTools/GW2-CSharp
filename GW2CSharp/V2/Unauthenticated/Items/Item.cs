@@ -10,7 +10,7 @@ namespace GW2CSharp.V2.Unauthenticated.Items
     /// <summary>
     /// Represents a single map from the v2/items endpoint
     /// </summary>
-    public class Item
+    public class Item : Imageable
     {
         /// <summary>
         /// Represents a single skin.
@@ -31,6 +31,7 @@ namespace GW2CSharp.V2.Unauthenticated.Items
         /// <param name="details">Additional item details if applicable, depending on the item type.</param>
         public Item(int id, string chat_link, string name, string icon, string description, ItemType type, Rarity rarity, int level, int vendor_value, 
             int default_skin, IEnumerable<ItemFlag> flags, IEnumerable<GameMode> game_types, IEnumerable<Restriction> restrictions, object details)
+            : base(icon)
         {
             Id = id;
             ChatLink = chat_link;
@@ -117,14 +118,5 @@ namespace GW2CSharp.V2.Unauthenticated.Items
         /// Additional item details if applicable, depending on the item type.
         /// </summary>
         public object Details { get; set; } //todo: Seems to be a problem right now to cast it to something usefull need better way to deal with it.
-
-        /// <summary>
-        /// Returns the icon for the item as a Bitmap
-        /// </summary>
-        /// <returns>Item icon as a Bitmap</returns>
-        public Bitmap GetImage()
-        {
-            return RenderService.GetImage(Icon);
-        }
     }
 }

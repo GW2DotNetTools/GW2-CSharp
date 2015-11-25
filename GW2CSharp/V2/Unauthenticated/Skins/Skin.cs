@@ -14,7 +14,7 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
     /// <summary>
     /// Represents a single object of the v2/skins endpoint
     /// </summary>
-    public class Skin
+    public class Skin : Imageable
     {
         /// <summary>
         /// Represents a single skin.
@@ -28,6 +28,7 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
         /// <param name="description">Optional skin description.</param>
         /// <param name="details">Additional skin details.</param>
         public Skin(int id, string name, SkinType type, IEnumerable<SkinFlag> flags, IEnumerable<Restriction> restrictions, string icon, string description, SkinDetail details)
+            : base(icon)
         {
             Id = id;
             Name = name;
@@ -78,14 +79,5 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
         /// Additional skin details.
         /// </summary>
         public SkinDetail Details { get; private set; }
-
-        /// <summary>
-        /// Returns the Icon from the Url.
-        /// </summary>
-        /// <returns>Icon from the Url.</returns>
-        public Bitmap GetIcon() 
-        {
-            return RenderService.GetImage(Icon);
-        }
     }
 }

@@ -89,7 +89,7 @@ namespace Tests.V2.Unauthenticated
         public void CanRenderBitmap()
         {
             Skin skin = GW2Api.V2.Skins.GetById(5000);
-            Assert.NotNull(skin.GetIcon());
+            Assert.NotNull(skin.GetImage());
         }
     }
 }

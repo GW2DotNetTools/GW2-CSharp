@@ -59,6 +59,7 @@
     <Compile Include="Enums\Weapon.cs" />
     <Compile Include="Enums\Weight.cs" />
     <Compile Include="GW2Api.cs" />
+    <Compile Include="Imageable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enums\RequestedLanguage.cs" />
     <Compile Include="Services\Enums\FileFormat.cs" />
