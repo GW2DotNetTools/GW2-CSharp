@@ -20,7 +20,7 @@ namespace GW2CSharp.V2.Unauthenticated.WvW
 		/// <returns>A match containing the results</returns>
 		public Matches GetById(string id, RequestedLanguage requestedLanguage = RequestedLanguage.En)
 		{
-			return DeserializeObject<Matches>($"https://api.guildwars2.com/v2/wvw/matches?id={id}&lang={requestedLanguage}");
+			return DeserializeObject<Matches>(string.Format("https://api.guildwars2.com/v2/wvw/matches?id={0}&lang={1}", id, requestedLanguage));
 		}
 
 		/// <summary>
@@ -31,7 +31,7 @@ namespace GW2CSharp.V2.Unauthenticated.WvW
 		/// <returns>An match containing the results</returns>
 		public Matches GetByWorldId(int worldId, RequestedLanguage requestedLanguage = RequestedLanguage.En)
 		{
-			return DeserializeObject<Matches>($"https://api.guildwars2.com/v2/wvw/matches?world={worldId}&lang={requestedLanguage}");
+			return DeserializeObject<Matches>(string.Format("https://api.guildwars2.com/v2/wvw/matches?world={0}&lang={1}", worldId, requestedLanguage));
 		}
 
 		/// <summary>

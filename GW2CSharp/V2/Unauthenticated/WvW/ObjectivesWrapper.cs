@@ -20,7 +20,7 @@ namespace GW2CSharp.V2.Unauthenticated.WvW
 		/// <returns>An objective containing the results</returns>
 		public Objectives GetById(string id, RequestedLanguage requestedLanguage = RequestedLanguage.En)
 		{
-			return DeserializeObject<Objectives>($"https://api.guildwars2.com/v2/wvw/objectives?id={id}&lang={requestedLanguage}");
+			return DeserializeObject<Objectives>(string.Format("https://api.guildwars2.com/v2/wvw/objectives?id={0}&lang={1}", id, requestedLanguage));
 		}
 
 		/// <summary>
