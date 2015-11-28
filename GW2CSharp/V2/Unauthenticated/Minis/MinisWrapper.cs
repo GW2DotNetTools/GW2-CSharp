@@ -9,13 +9,13 @@ namespace GW2CSharp.V2.Unauthenticated.Minis
 	/// </summary>
 	public class MinisWrapper : ApiBase
 	{
-		/// <summary>
-		/// Returns a single mini that matches the id.
-		/// </summary>
-		/// <param name="id">The mini identifier.</param>
-		/// <param name="requestedLanguage"></param>
-		/// <returns>Mini that matches the id.</returns>
-		public Mini Get(int id, RequestedLanguage requestedLanguage = RequestedLanguage.En)
+        /// <summary>
+        /// Returns a single mini that matches the id.
+        /// </summary>
+        /// <param name="id">The mini identifier.</param>
+        /// <param name="requestedLanguage">Language in which the API should be called.</param>
+        /// <returns>Mini that matches the id.</returns>
+        public Mini Get(int id, RequestedLanguage requestedLanguage = RequestedLanguage.En)
 		{
 			return DeserializeObject<Mini>(string.Format("https://api.guildwars2.com/v2/minis/{0}", id));
 		}

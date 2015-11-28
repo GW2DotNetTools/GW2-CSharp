@@ -49,12 +49,14 @@
     <Compile Include="Entities\Money.UnitTest.cs" />
     <Compile Include="Services\RenderService.UnitTest.cs" />
     <Compile Include="TestData.cs" />
+    <Compile Include="V2\Authenticated\Account.UnitTest.cs" />
     <Compile Include="V2\Authenticated\PvpGame.UnitTest.cs" />
     <Compile Include="V2\Authenticated\PvpStatistic.UnitTest.cs" />
     <Compile Include="V2\Authenticated\Tokeninfo.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Achievement.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Minis.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Item.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Price.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Skin.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Continent.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Map.UnitTest.cs" />
@@ -67,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Compile Include="V2\Unauthenticated\Listing.UnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

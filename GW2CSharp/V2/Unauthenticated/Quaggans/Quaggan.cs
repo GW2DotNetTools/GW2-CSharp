@@ -6,7 +6,7 @@ namespace GW2CSharp.V2.Unauthenticated.Quaggans
     /// <summary>
     /// Represents a single quaggan from the v2/quaggans endpoint.
     /// </summary>
-    public class Quaggan
+    public class Quaggan : Imageable
     {
         /// <summary>
         /// Initialization of a new quaggan object.
@@ -14,6 +14,7 @@ namespace GW2CSharp.V2.Unauthenticated.Quaggans
         /// <param name="id">The quaggan identifier.</param>
         /// <param name="url">The URL to the quaggan image.</param>
         public Quaggan(string id, string url)
+            : base(url)
         {
             Id = id;
             Url = url;
@@ -28,14 +29,5 @@ namespace GW2CSharp.V2.Unauthenticated.Quaggans
         /// The URL to the quaggan image.
         /// </summary>
         public string Url { get; private set; }
-
-        /// <summary>
-        /// Returns a quaggan image as a Bitmap.
-        /// </summary>
-        /// <returns>Quaggan image as a Bitmap.</returns>
-        public Bitmap GetImage() 
-        {
-            return RenderService.GetImage(Url);
-        }
     }
 }

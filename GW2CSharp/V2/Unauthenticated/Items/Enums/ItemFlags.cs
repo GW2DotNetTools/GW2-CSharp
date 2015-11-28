@@ -21,6 +21,9 @@
         /// Hide the suffix of the upgrade component
         /// </summary>
         HideSuffix,
+        /// <summary>
+        /// Empty.
+        /// </summary>
         MonsterOnly,
         /// <summary>
         /// Not usable in the Mystic Forge

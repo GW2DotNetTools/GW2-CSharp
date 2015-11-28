@@ -59,6 +59,7 @@
     <Compile Include="Enums\Weapon.cs" />
     <Compile Include="Enums\Weight.cs" />
     <Compile Include="GW2Api.cs" />
+    <Compile Include="Imageable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enums\RequestedLanguage.cs" />
     <Compile Include="Services\Enums\FileFormat.cs" />
@@ -69,6 +70,9 @@
     <Compile Include="V1\Guilds\Guild.cs" />
     <Compile Include="V1\Guilds\GuildWrapper.cs" />
     <Compile Include="V1\V1Endpoint.cs" />
+    <Compile Include="V2\Authenticated\Account\Account.cs" />
+    <Compile Include="V2\Authenticated\Account\AccountType.cs" />
+    <Compile Include="V2\Authenticated\Account\AccountWrapper.cs" />
     <Compile Include="V2\Authenticated\Pvp\Games\Enums\Team.cs" />
     <Compile Include="V2\Authenticated\Pvp\Games\PvpGame.cs" />
     <Compile Include="V2\Authenticated\Pvp\Games\PvpGameWrapper.cs" />
@@ -83,6 +87,12 @@
     <Compile Include="V2\Unauthenticated\Achivements\AchievementWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Achivements\Achievement.cs" />
     <Compile Include="V2\Unauthenticated\Achivements\Enums\AchievementCategories.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\PriceWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\TpItem.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\Listing.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\ListingWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\Price.cs" />
+    <Compile Include="V2\Unauthenticated\Commerce\TpItemListing.cs" />
     <Compile Include="V2\Unauthenticated\Continents\ContinentWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Items\Enums\ItemFlags.cs" />
     <Compile Include="V2\Unauthenticated\Items\Enums\ItemType.cs" />

@@ -1,8 +1,10 @@
-﻿using GW2CSharp.V2.Authenticated.Pvp.Games;
+﻿using GW2CSharp.V2.Authenticated.Account;
+using GW2CSharp.V2.Authenticated.Pvp.Games;
 using GW2CSharp.V2.Authenticated.Pvp.Stats;
 using GW2CSharp.V2.Authenticated.TokenInfo;
 using GW2CSharp.V2.Unauthenticated.Achievement;
 using GW2CSharp.V2.Unauthenticated.Colors;
+using GW2CSharp.V2.Unauthenticated.Commerce;
 using GW2CSharp.V2.Unauthenticated.Commerce.Exchange;
 using GW2CSharp.V2.Unauthenticated.Continents;
 using GW2CSharp.V2.Unauthenticated.Currencies;
@@ -101,5 +103,20 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all the item endpoint calls.
         /// </summary>
         public ItemWrapper Items { get { return new ItemWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the listing endpoint calls.
+        /// </summary>
+        public ListingWrapper Listings { get { return new ListingWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the price endpoint calls.
+        /// </summary>
+        public PriceWrapper Prices { get { return new PriceWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the account endpoint calls.
+        /// </summary>
+        public AccountWrapper Account { get { return new AccountWrapper(); } }
     }
 }

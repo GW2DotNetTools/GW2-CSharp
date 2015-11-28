@@ -6,7 +6,7 @@ namespace GW2CSharp.V2.Unauthenticated.Currencies
     /// <summary>
     /// Represents a single currency of the v2/currencies endpoint.
     /// </summary>
-    public class Currency
+    public class Currency : Imageable
     {
         /// <summary>
         /// Initialization of a new currency object.
@@ -17,6 +17,7 @@ namespace GW2CSharp.V2.Unauthenticated.Currencies
         /// <param name="order">A number that can be used to sort the list of currencies when ordered from least to greatest.</param>
         /// <param name="icon">A URL to an icon for the currency.</param>
         public Currency(int id, string name, string description, int order, string icon)
+            : base(icon)
         {
             Id = id;
             Name = name;
@@ -49,14 +50,5 @@ namespace GW2CSharp.V2.Unauthenticated.Currencies
         /// A URL to an icon for the currency.
         /// </summary>
         public string Icon { get; private set; }
-
-        /// <summary>
-        /// Returns the Icon as a Bitmap.
-        /// </summary>
-        /// <returns>Icon as a Bitmap.</returns>
-        public Bitmap GetImage() 
-        {
-            return RenderService.GetImage(Icon);
-        }
     }
 }

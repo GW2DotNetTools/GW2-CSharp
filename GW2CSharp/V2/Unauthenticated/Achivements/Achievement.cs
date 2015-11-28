@@ -8,7 +8,7 @@ namespace GW2CSharp.V2.Unauthenticated.Achievement
     /// <summary>
     /// Represents a single achivement from the v2/achievement endpoint.
     /// </summary>
-    public class Achievement
+    public class Achievement : Imageable
     {
         /// <summary>
         /// Initialization of a new achievement object.
@@ -21,6 +21,7 @@ namespace GW2CSharp.V2.Unauthenticated.Achievement
         /// <param name="type">The achievement type.</param>
         /// <param name="flags">Achievement categories.</param>
         public Achievement(int id, string icon, string name, string description, string requirement, string type, IEnumerable<AchievementCategories> flags)
+            : base(icon)
         {
             Id = id;
             Icon = icon;
@@ -65,14 +66,5 @@ namespace GW2CSharp.V2.Unauthenticated.Achievement
         /// Achievement categories.
         /// </summary>
         public IEnumerable<AchievementCategories> AchievementCategories { get; set; }
-
-        /// <summary>
-        /// Rendered Image.
-        /// </summary>
-        /// <returns>Rendered Image.</returns>
-        public Bitmap GetImage()
-        {
-            return RenderService.GetImage(Icon);
-        }
     }
 }
