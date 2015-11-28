@@ -16,6 +16,7 @@ using GW2CSharp.V2.Unauthenticated.Minis;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Quaggans;
 using GW2CSharp.V2.Unauthenticated.Worlds;
+using GW2CSharp.V2.Unauthenticated.WvW;
 
 namespace GW2CSharp.V2
 {
@@ -118,5 +119,15 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all the account endpoint calls.
         /// </summary>
         public AccountWrapper Account { get { return new AccountWrapper(); } }
-    }
+
+		/// <summary>
+		/// Returns a wrapper for all the wvw objectives endpoint calls.
+		/// </summary>
+		public ObjectivesWrapper WvWObjectives { get { return new ObjectivesWrapper(); } }
+
+		/// <summary>
+		/// Returns a wrapper for all the wvw matches endpoint calls.
+		/// </summary>
+		public MatchesWrapper WvWMatches { get { return new MatchesWrapper(); } }
+	}
 }
