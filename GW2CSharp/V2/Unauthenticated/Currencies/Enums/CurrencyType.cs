@@ -75,6 +75,18 @@ namespace GW2CSharp.V2.Unauthenticated.Currencies.Enums
         /// </summary>
         TransmutationCharge = 18,
         /// <summary>
+        /// Airship Part.
+        /// </summary>
+        AirshipPart = 19,
+        /// <summary>
+        /// Ley Line Crystal.
+        /// </summary>
+        LeyLineCrystal = 20,
+        /// <summary>
+        /// Lump of Aurillium.
+        /// </summary>
+        LumpOfAurillium = 22,
+        /// <summary>
         /// Spirit Shard.
         /// </summary>
         SpiritShard = 23,
@@ -93,6 +105,14 @@ namespace GW2CSharp.V2.Unauthenticated.Currencies.Enums
         /// <summary>
         /// Bandit Crest.
         /// </summary>
-        BanditCrest = 27
+        BanditCrest = 27,
+        /// <summary>
+        /// Magnetite Shard.
+        /// </summary>
+        MagnetiteShard = 28,
+        /// <summary>
+        /// Provisioner Token.
+        /// </summary>
+        ProvisionerToken = 29
     }
 }
