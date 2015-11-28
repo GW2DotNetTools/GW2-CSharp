@@ -10,7 +10,7 @@ namespace GW2CSharp.V2.Unauthenticated.WvW
 	/// <summary>
 	/// This resource returns details about World vs. World objectives such as camps, towers, and keeps.
 	/// </summary>
-	public class Objectives
+	public class Objectives : Imageable
 	{
 		/// <summary>
 		/// This resource returns details about World vs. World objectives such as camps, towers, and keeps. 
@@ -25,6 +25,7 @@ namespace GW2CSharp.V2.Unauthenticated.WvW
 		/// <param name="label_coord">An array of two numbers representing the X and Y coordinates of the sector centroid.</param>
 		/// <param name="marker">The icon link</param>
 		public Objectives(string id, string name, int sector_id, ObjectiveType type, MapType map_type, int map_id, float[] coord, float[] label_coord, string marker)
+            : base(marker)
 		{
 			Id = id;
 			Name = name;
@@ -34,7 +35,6 @@ namespace GW2CSharp.V2.Unauthenticated.WvW
 			MapId = map_id;
 			Coord = coord;
 			LabelCoord = label_coord;
-			Marker = marker;
 		}
 
 		/// <summary>
@@ -76,10 +76,5 @@ namespace GW2CSharp.V2.Unauthenticated.WvW
 		/// An array of two numbers representing the X and Y coordinates of the sector centroid.
 		/// </summary>
 		public float[] LabelCoord { get; set; }
-
-		/// <summary>
-		/// The icon link
-		/// </summary>
-		public string Marker { get; set; }
 	}
 }
