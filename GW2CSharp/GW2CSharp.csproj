@@ -65,11 +65,15 @@
     <Compile Include="Services\Enums\FileFormat.cs" />
     <Compile Include="Services\RenderService.cs" />
     <Compile Include="ApiBase.cs" />
-    <Compile Include="V1\Guilds\Emblem.cs" />
-    <Compile Include="V1\Guilds\Enum\Flag.cs" />
-    <Compile Include="V1\Guilds\Guild.cs" />
-    <Compile Include="V1\Guilds\GuildWrapper.cs" />
     <Compile Include="V1\V1Endpoint.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Bonus.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Deaths.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Enums\MapType.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Enums\ObjectiveType.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Enums\Owner.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Kills.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Map.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Matches.cs" />
     <Compile Include="V2\Authenticated\Account\Account.cs" />
     <Compile Include="V2\Authenticated\Account\AccountType.cs" />
     <Compile Include="V2\Authenticated\Account\AccountWrapper.cs" />
@@ -138,6 +142,12 @@
     <Compile Include="Entities\Money.cs" />
     <Compile Include="V2\Unauthenticated\Commerce\Exchange\Coin.cs" />
     <Compile Include="V2\Unauthenticated\Commerce\Exchange\ExchangeWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\MatchesWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\MatchObjective.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Objectives.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\ObjectivesWrapper.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Scores.cs" />
+    <Compile Include="V2\Unauthenticated\WvW\Worlds.cs" />
     <Compile Include="V2\V2Endpoint.cs" />
   </ItemGroup>
   <ItemGroup>

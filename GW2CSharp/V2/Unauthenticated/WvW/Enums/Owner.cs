@@ -4,31 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GW2CSharp.V1.Guilds
+namespace GW2CSharp.V2.Unauthenticated.WvW.Enums
 {
 	/// <summary>
-	/// 
+	/// The owner of objects
 	/// </summary>
-	public class Guild
+	public enum Owner
 	{
 		/// <summary>
-		/// 
+		/// The red map
 		/// </summary>
-		public string GuildId { get; set; }
+		Red,
 
 		/// <summary>
-		/// 
+		/// The green map
 		/// </summary>
-		public string GuildName { get; set; }
+		Green,
 
 		/// <summary>
-		/// 
+		/// The blue maps
 		/// </summary>
-		public string Tag { get; set; }
+		Blue,
 
 		/// <summary>
-		/// 
+		/// Nobody owns it
 		/// </summary>
-		public Emblem Emblem { get; set; }
+		Neutral
 	}
 }
