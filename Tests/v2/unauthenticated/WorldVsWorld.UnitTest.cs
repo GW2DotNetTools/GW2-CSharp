@@ -31,7 +31,7 @@ namespace Tests.V2.Unauthenticated
 			Assert.IsNotNull(objectives);
 			Assert.Greater(objectives.Count(), 0);
 			var objective = objectives.First().Value;
-			Assert.Greater(objective.Id, 0);
+			Assert.IsNotNullOrEmpty(objective.Id);
 		}
 
 		[Test]
