@@ -49,6 +49,11 @@ namespace GW2CSharp.V2.Unauthenticated.Recipes.Enums
 		/// <summary>
 		/// The weaponsmith discipline
 		/// </summary>
-		Weaponsmith
+		Weaponsmith,
+
+		/// <summary>
+		/// The scribe discipline
+		/// </summary>
+		Scribe
 	}
 }

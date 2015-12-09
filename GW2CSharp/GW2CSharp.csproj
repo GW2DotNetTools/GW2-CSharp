@@ -71,6 +71,7 @@
     <Compile Include="V2\Unauthenticated\Recipes\Ingredient.cs" />
     <Compile Include="V2\Unauthenticated\Recipes\Recipes.cs" />
     <Compile Include="V2\Unauthenticated\Recipes\Enums\RecipeType.cs" />
+    <Compile Include="V2\Unauthenticated\Recipes\RecipesWrapper.cs" />
     <Compile Include="V2\Unauthenticated\WvW\Bonus.cs" />
     <Compile Include="V2\Unauthenticated\WvW\Deaths.cs" />
     <Compile Include="V2\Unauthenticated\WvW\Enums\MapType.cs" />

@@ -30,6 +30,8 @@ namespace Tests.V2.Unauthenticated
 			var objectives = GW2Api.V2.WvWObjectives.GetAll();
 			Assert.IsNotNull(objectives);
 			Assert.Greater(objectives.Count(), 0);
+			var objective = objectives.First().Value;
+			Assert.Greater(objective.Id, 0);
 		}
 
 		[Test]
@@ -54,11 +56,75 @@ namespace Tests.V2.Unauthenticated
 		}
 
 		[Test]
+		public void ShouldReturnMatchByWorld()
+		{
+			var match = GW2Api.V2.WvWMatches.GetByWorldId(1005);
+			Assert.IsNotNull(match.Scores);
+			Assert.IsNotNull(match.Worlds);
+			Assert.IsNotNull(match.Deaths);
+			Assert.IsNotNull(match.Kills);
+			Assert.IsNotNull(match.Maps);
+			Assert.IsNotNull(match.StartTime);
+			Assert.IsNotNull(match.EndTime);
+			Assert.Greater(match.Maps.Count, 0);
+
+			var map = match.Maps[1];
+			Assert.Greater(map.Id, 0);
+			Assert.IsNotNull(map.Type);
+
+			Assert.IsNotNull(map.Scores);
+			var scores = map.Scores;
+			Assert.Greater(scores.Red, 0);
+			Assert.Greater(scores.Green, 0);
+			Assert.Greater(scores.Blue, 0);
+
+			Assert.IsNotNull(map.Bonuses);
+			if (map.Bonuses != null && map.Bonuses.Count > 0)
+			{
+				var bonus = map.Bonuses.First();
+				Assert.IsNotNullOrEmpty(bonus.Type);
+				Assert.IsNotNull(bonus.Owner);
+			}
+
+			Assert.IsNotNull(map.Deaths);
+			var deaths = map.Deaths;
+			Assert.IsNotNull(deaths.Red);
+			Assert.IsNotNull(deaths.Green);
+			Assert.IsNotNull(deaths.Blue);
+
+			Assert.IsNotNull(map.Kills);
+			var kills = map.Kills;
+			Assert.IsNotNull(kills.Red);
+			Assert.IsNotNull(kills.Green);
+			Assert.IsNotNull(kills.Blue);
+
+			Assert.IsNotNull(map.Objectives);
+			if (map.Bonuses != null)
+			{
+				var objective = map.Objectives.First();
+				Assert.IsNotNullOrEmpty(objective.Id);
+				Assert.IsNotNullOrEmpty(objective.Type);
+				Assert.IsNotNull(objective.Owner);
+				Assert.IsNotNull(objective.LastFlipped);
+				if (objective.ClaimedBy != null)
+				{
+					Assert.IsNotEmpty(objective.ClaimedBy);
+				}
+				if (objective.ClaimedAt != null)
+				{
+					Assert.Greater(objective.ClaimedAt, new DateTime(0));
+				}
+			}
+		}
+
+		[Test]
 		public void ShouldReturnAllMatches()
 		{
 			var matches = GW2Api.V2.WvWMatches.GetAll();
 			Assert.IsNotNull(matches);
 			Assert.Greater(matches.Count(), 0);
+			var singleMatch = matches.First();
+			Assert.IsNotNull(singleMatch.Value.Id);
 		}
 
 		[Test]

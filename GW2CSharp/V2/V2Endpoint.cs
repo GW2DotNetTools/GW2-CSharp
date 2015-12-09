@@ -15,6 +15,7 @@ using GW2CSharp.V2.Unauthenticated.Maps;
 using GW2CSharp.V2.Unauthenticated.Minis;
 using GW2CSharp.V2.Unauthenticated.Miscellaneous;
 using GW2CSharp.V2.Unauthenticated.Quaggans;
+using GW2CSharp.V2.Unauthenticated.Recipes;
 using GW2CSharp.V2.Unauthenticated.Worlds;
 using GW2CSharp.V2.Unauthenticated.WvW;
 
@@ -129,5 +130,10 @@ namespace GW2CSharp.V2
 		/// Returns a wrapper for all the wvw matches endpoint calls.
 		/// </summary>
 		public MatchesWrapper WvWMatches { get { return new MatchesWrapper(); } }
+
+		/// <summary>
+		/// Returns a wrapper for acessing recipes
+		/// </summary>
+		public RecipesWrapper RecipeWrapper { get { return new RecipesWrapper(); } }
 	}
 }
