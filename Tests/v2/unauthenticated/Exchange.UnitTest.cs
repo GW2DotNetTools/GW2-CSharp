@@ -11,7 +11,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnCorrectCoin() 
         {
-            Coin coin = GW2Api.V2.Exchanges.GetCoin(new Money(10000));
+            Coin coin = GW2Api.V2().Exchanges.GetCoin(new Money(10000));
             Assert.Greater(coin.AmountOfGems, 0);
             Assert.Greater(coin.CoinsPerGemRaw, 0);
             Assert.NotNull(coin.CoinsPerGemCalculated);
@@ -20,7 +20,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnCorrectGem()
         {
-            Gem gem = GW2Api.V2.Exchanges.GetGem(8000);
+            Gem gem = GW2Api.V2().Exchanges.GetGem(8000);
 
             Assert.NotNull(gem.AmountOfCoinsCalculated);
             Assert.NotNull(gem.CoinsPerGemCalculated);
@@ -32,14 +32,14 @@ namespace Tests.V2.Unauthenticated
         [TestCase(-1)]
         public void ThrowsExceptionOnWrongGemValues(int value)
         {
-            Assert.Throws<ApiException>(() => GW2Api.V2.Exchanges.GetGem(value));
+            Assert.Throws<ApiException>(() => GW2Api.V2().Exchanges.GetGem(value));
         }
 
         [TestCase(0)]
         [TestCase(-1)]
         public void ThrowsExceptionOnWrongCoinValues(int value)
         {
-            Assert.Throws<ApiException>(() => GW2Api.V2.Exchanges.GetCoin(new Money(value)));
+            Assert.Throws<ApiException>(() => GW2Api.V2().Exchanges.GetCoin(new Money(value)));
         }
     }
 }

@@ -9,6 +9,24 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
     /// </summary>
     public class SkinWrapper : ApiBase
     {
+        private RequestedLanguage language;
+
+        /// <summary>
+        /// Returns a wrapper for all skin endpoint calls.
+        /// </summary>
+        public SkinWrapper()
+        {
+        }
+
+        /// <summary>
+        /// Returns a wrapper for all skin endpoint calls.
+        /// </summary>
+        /// <param name="language">Represents the language which the API should return.</param>
+        public SkinWrapper(RequestedLanguage language)
+        {
+            this.language = language;
+        }
+
         /// <summary>
         /// Returns the skin that matches with the id.
         /// </summary>

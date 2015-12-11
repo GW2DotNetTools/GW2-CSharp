@@ -9,12 +9,32 @@ namespace GW2CSharp.V2.Unauthenticated.Maps
     /// </summary>
     public class MapWrapper : ApiBase
     {
+        private RequestedLanguage language;
+
+        /// <summary>
+        /// Returns a wrapper for all map endpoint calls.
+        /// </summary>
+        /// <param name="language">Represents the language which the API should return.</param>
+        public MapWrapper(RequestedLanguage language)
+        {
+            this.language = language;
+        }
+
+        /// <summary>
+        /// Returns all maps.
+        /// </summary>
+        /// <returns>Returns all maps.</returns>
+        public IEnumerable<Lazy<Map>> GetAll()
+        {
+            return GetAll(language);
+        }
+
         /// <summary>
         /// Returns all maps.
         /// </summary>
         /// <param name="requestedLanguage">Language in which the API should be called.</param>
         /// <returns>Returns all maps.</returns>
-        public IEnumerable<Lazy<Map>> GetAll(RequestedLanguage requestedLanguage = RequestedLanguage.En)
+        public IEnumerable<Lazy<Map>> GetAll(RequestedLanguage requestedLanguage)
         {
             List<int> mapIds = DeserializeObject<List<int>>("https://api.guildwars2.com/v2/maps");
 
@@ -30,9 +50,19 @@ namespace GW2CSharp.V2.Unauthenticated.Maps
         /// Returns one map that matches the id.
         /// </summary>
         /// <param name="mapId">The id of the map.</param>
+        /// <returns>Returns map that matches the id.</returns>
+        public Map GetById(int mapId)
+        {
+            return GetById(mapId, language);
+        }
+
+        /// <summary>
+        /// Returns one map that matches the id.
+        /// </summary>
+        /// <param name="mapId">The id of the map.</param>
         /// <param name="requestedLanguage">Language in which the API should be called.</param>
         /// <returns>Returns map that matches the id.</returns>
-        public Map GetById(int mapId, RequestedLanguage requestedLanguage = RequestedLanguage.En)
+        public Map GetById(int mapId, RequestedLanguage requestedLanguage)
         {
             return DeserializeObject<Map>(string.Format("https://api.guildwars2.com/v2/maps/{0}?lang={1}", mapId, requestedLanguage));
         }

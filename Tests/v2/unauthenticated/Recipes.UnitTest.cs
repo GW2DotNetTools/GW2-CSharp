@@ -10,7 +10,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnSingleRecipe()
 		{
-			var recipe = GW2Api.V2.RecipeWrapper.GetById(7319);
+			var recipe = GW2Api.V2().RecipeWrapper.GetById(7319);
 			Assert.IsNotNull(recipe.Id);
 			Assert.IsNotNull(recipe.Type);
 			Assert.IsNotNull(recipe.OutputItemId);
@@ -29,7 +29,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnAllRecipes()
 		{
-			var recipes = GW2Api.V2.RecipeWrapper.GetAll();
+			var recipes = GW2Api.V2().RecipeWrapper.GetAll();
 			Assert.IsNotNull(recipes);
 			Assert.Greater(recipes.Count(), 0);
 			var singleRecipe = recipes.First().Value;
@@ -48,7 +48,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnRecipesForIngredient()
 		{
-			var recipes = GW2Api.V2.RecipeWrapper.SearchByIngredient(46731);
+			var recipes = GW2Api.V2().RecipeWrapper.SearchByIngredient(46731);
 			Assert.IsNotNull(recipes);
 			Assert.Greater(recipes.Count(), 0);
 			var singleRecipe = recipes.First().Value;
@@ -67,7 +67,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnRecipesForEndProduct()
 		{
-			var recipes = GW2Api.V2.RecipeWrapper.SearchByResultingItem(50065);
+			var recipes = GW2Api.V2().RecipeWrapper.SearchByResultingItem(50065);
 			Assert.IsNotNull(recipes);
 			Assert.Greater(recipes.Count(), 0);
 			var singleRecipe = recipes.First().Value;

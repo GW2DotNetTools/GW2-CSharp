@@ -21,7 +21,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnSingleColor() 
         {
-            Color actualColor = GW2Api.V2.Colors.GetById(10);
+            Color actualColor = GW2Api.V2().Colors.GetById(10);
 
             Assert.AreEqual(skyColor.Id, actualColor.Id);
             Assert.AreEqual(skyColor.Name, actualColor.Name);
@@ -34,7 +34,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllColors()
         {
-            Dictionary<int, Lazy<Color>> allColors = GW2Api.V2.Colors.GetAll();
+            Dictionary<int, Lazy<Color>> allColors = GW2Api.V2().Colors.GetAll();
 
             Color actualColor = allColors[1].Value;
 
@@ -45,7 +45,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnCorrectColorsOnPage()
         {
-            Color actualColor = GW2Api.V2.Colors.GetByPage(9, 1).ToList()[0];
+            Color actualColor = GW2Api.V2().Colors.GetByPage(9, 1).ToList()[0];
 
             Assert.AreEqual(skyColor.Id, actualColor.Id);
             Assert.AreEqual(skyColor.Name, actualColor.Name);

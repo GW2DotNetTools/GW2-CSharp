@@ -14,7 +14,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllQuaggans()
         {
-            Dictionary<string, Lazy<Quaggan>> quaggans = GW2Api.V2.Quaggans.GetAll();
+            Dictionary<string, Lazy<Quaggan>> quaggans = GW2Api.V2().Quaggans.GetAll();
 
             Assert.GreaterOrEqual(quaggans.Count(), 35);
         }
@@ -22,7 +22,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnSpecificQuagganFromList()
         {
-            Dictionary<string, Lazy<Quaggan>> quaggans = GW2Api.V2.Quaggans.GetAll();
+            Dictionary<string, Lazy<Quaggan>> quaggans = GW2Api.V2().Quaggans.GetAll();
             Quaggan cryQuaggan = quaggans["cry"].Value;
 
             Assert.AreEqual("https://static.staticwars.com/quaggans/cry.jpg", cryQuaggan.Url);
@@ -31,7 +31,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnSingleQuaggan()
         {
-            Quaggan cakeQuaggan = GW2Api.V2.Quaggans.Get("cake");
+            Quaggan cakeQuaggan = GW2Api.V2().Quaggans.Get("cake");
 
             Assert.AreEqual("https://static.staticwars.com/quaggans/cake.jpg", cakeQuaggan.Url);
         }
@@ -39,7 +39,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnCorrectBitmap()
         {
-            Bitmap cakeQuaggan = GW2Api.V2.Quaggans.Get("cake").GetImage();
+            Bitmap cakeQuaggan = GW2Api.V2().Quaggans.Get("cake").GetImage();
             Assert.NotNull(cakeQuaggan);
         }
     }

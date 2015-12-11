@@ -16,7 +16,7 @@ namespace Tests.V2.Unauthenticated
         {
             Currency expectedCurrency = new Currency(4, "Gem", "Purchased and spent via the Black Lion Trading Company.", 100, "https://render.guildwars2.com/file/220061640ECA41C0577758030357221B4ECCE62C/502065.png");
 
-            Currency actualCurrency = GW2Api.V2.Currencies.Get(CurrencyType.Gem);
+            Currency actualCurrency = GW2Api.V2().Currencies.Get(CurrencyType.Gem);
 
             Assert.AreEqual(expectedCurrency.Id, actualCurrency.Id);
             Assert.AreEqual(expectedCurrency.Name, actualCurrency.Name);
@@ -28,14 +28,14 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllCurrencies()
         {
-            IEnumerable<Currency> currencies = GW2Api.V2.Currencies.GetAll();
+            IEnumerable<Currency> currencies = GW2Api.V2().Currencies.GetAll();
             Assert.GreaterOrEqual(currencies.Count(), 21);
         }
 
         [Test]
         public void ShouldReturnCorrectBitmap()
         {
-            Bitmap gem = GW2Api.V2.Currencies.Get(CurrencyType.Gem).GetImage();
+            Bitmap gem = GW2Api.V2().Currencies.Get(CurrencyType.Gem).GetImage();
             Assert.NotNull(gem);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using GW2CSharp.Enums;
 
 namespace GW2CSharp.V2.Unauthenticated.Quaggans
 {

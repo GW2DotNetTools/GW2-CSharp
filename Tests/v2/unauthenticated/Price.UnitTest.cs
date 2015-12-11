@@ -11,7 +11,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllPrices()
         {
-            var prices = GW2Api.V2.Prices.GetAll();
+            var prices = GW2Api.V2().Prices.GetAll();
 
             //At any given moment there are at least more than 100 listings in the trading post.
             Assert.GreaterOrEqual(prices.Count, 100);
@@ -20,7 +20,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnCorrectPriceById()
         {
-            Price price = GW2Api.V2.Prices.GetById(123);
+            Price price = GW2Api.V2().Prices.GetById(123);
 
             Assert.GreaterOrEqual(price.Buys.Quantity, 1);
             Assert.GreaterOrEqual(price.Buys.UnitPrice.GetRawCoin(), 1);
@@ -34,7 +34,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnMultiplePrices()
         {
-            var prices = GW2Api.V2.Prices.GetMultiple(123, 125).ToList();
+            var prices = GW2Api.V2().Prices.GetMultiple(123, 125).ToList();
 
             Assert.AreEqual(2, prices.Count);
         }

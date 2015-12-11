@@ -14,14 +14,14 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllMaps()
         {
-            IEnumerable<Lazy<Map>> maps = GW2Api.V2.Maps.GetAll();
+            IEnumerable<Lazy<Map>> maps = GW2Api.V2().Maps.GetAll();
             Assert.GreaterOrEqual(maps.Count(), 574);
         }
 
         [Test]
         public void ShouldReturnSpicificMapOutOfAll()
         {
-            List<Lazy<Map>> maps = GW2Api.V2.Maps.GetAll().ToList();
+            List<Lazy<Map>> maps = GW2Api.V2().Maps.GetAll().ToList();
             Map map = maps[10].Value;
             Assert.AreEqual("Tyria", map.ContinentName);
         }
@@ -32,7 +32,7 @@ namespace Tests.V2.Unauthenticated
         [TestCase("Arco del León", "Kryta", "Tyria", RequestedLanguage.Es)]
         public void ShouldReturnSpicific(string mapName, string regionName, string continentName, RequestedLanguage language)
         {
-            Map map = GW2Api.V2.Maps.GetById(50, language);
+            Map map = GW2Api.V2().Maps.GetById(50, language);
 
             Assert.AreEqual(50, map.Id);
             Assert.AreEqual(continentName, map.ContinentName);

@@ -1,4 +1,5 @@
-﻿using GW2CSharp.V2.Authenticated.Account;
+﻿using GW2CSharp.Enums;
+using GW2CSharp.V2.Authenticated.Account;
 using GW2CSharp.V2.Authenticated.Pvp.Games;
 using GW2CSharp.V2.Authenticated.Pvp.Stats;
 using GW2CSharp.V2.Authenticated.TokenInfo;
@@ -26,25 +27,104 @@ namespace GW2CSharp.V2
     /// </summary>
     public class V2Endpoint
     {
-        /// <summary>
-        /// Returns the current build id.
-        /// </summary>
-        public int GetBuildId { get { return BuildWrapper.GetId(); } }
+        private string accountToken;
+        private RequestedLanguage language;
 
+        /// <summary>
+        /// The V2 endpoint.
+        /// </summary>
+        /// <param name="accountToken">Optional Accounttoken which all authenticated calls will automatically use.</param>
+        /// <param name="language">Optional language in which all calls should be made.</param>
+        public V2Endpoint(string accountToken, RequestedLanguage language)
+        {
+            this.accountToken = accountToken;
+            this.language = language;
+        }
+
+        #region Language Calls
         /// <summary>
         /// Returns a wrapper for all world endpoint calls.
         /// </summary>
-        public WorldWrapper Worlds { get { return new WorldWrapper(); } }
+        public WorldWrapper Worlds { get { return new WorldWrapper(language); } }
 
         /// <summary>
         /// Returns a wrapper for all currency endpoint calls.
         /// </summary>
-        public CurrencyWrapper Currencies { get { return new CurrencyWrapper(); } }
+        public CurrencyWrapper Currencies { get { return new CurrencyWrapper(language); } }
 
         /// <summary>
         /// Returns a wrapper for all color endpoint calls.
         /// </summary>
-        public ColorWrapper Colors { get { return new ColorWrapper(); } }
+        public ColorWrapper Colors { get { return new ColorWrapper(language); } }
+
+        /// <summary>
+        /// Returns a wrapper for all skin endpoint calls.
+        /// </summary>
+        public SkinWrapper Skins { get { return new SkinWrapper(language); } }
+
+        /// <summary>
+        /// Returns a wrapper for all continent endpoint calls.
+        /// </summary>
+        public ContinentWrapper Continents { get { return new ContinentWrapper(language); } }
+
+        /// <summary>
+        /// Returns a wrapper for all map endpoint calls.
+        /// </summary>
+        public MapWrapper Maps { get { return new MapWrapper(language); } }
+
+        /// <summary>
+        /// Returns a wrapper for all achievements endpoint calls.
+        /// </summary>
+        public AchievementWrapper Achievements { get { return new AchievementWrapper(language); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the minis endpoint calls.
+        /// </summary>
+        public MinisWrapper Minis { get { return new MinisWrapper(language); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the item endpoint calls.
+        /// </summary>
+        public ItemWrapper Items { get { return new ItemWrapper(language); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the wvw objectives endpoint calls.
+        /// </summary>
+        public ObjectivesWrapper WvWObjectives { get { return new ObjectivesWrapper(language); } }
+
+        /// <summary>
+        /// Returns a wrapper for all the wvw matches endpoint calls.
+        /// </summary>
+        public MatchesWrapper WvWMatches { get { return new MatchesWrapper(language); } }
+        #endregion
+
+        #region Authenticated
+        /// <summary>
+        /// Returns a wrapper for all the account endpoint calls.
+        /// </summary>
+        public AccountWrapper Account { get { return new AccountWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all tokeninfo endpoint calls.
+        /// </summary>
+        public TokeninfoWrapper TokenInfo { get { return new TokeninfoWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all pvpstats endpoint calls.
+        /// </summary>
+        public PvpStatisticWrapper PvpStatistics { get { return new PvpStatisticWrapper(); } }
+
+        /// <summary>
+        /// Returns a wrapper for all pvpgame endpoint calls.
+        /// </summary>
+        public PvpGameWrapper PvpGame { get { return new PvpGameWrapper(); } }
+        #endregion
+
+        #region Unauthenticated
+        /// <summary>
+        /// Returns the current build id.
+        /// </summary>
+        public int GetBuildId { get { return BuildWrapper.GetId(); } }
 
         /// <summary>
         /// Returns a wrapper for all quaggan endpoint calls.
@@ -62,51 +142,6 @@ namespace GW2CSharp.V2
         public ExchangeWrapper Exchanges { get { return new ExchangeWrapper(); } }
 
         /// <summary>
-        /// Returns a wrapper for all tokeninfo endpoint calls.
-        /// </summary>
-        public TokeninfoWrapper TokenInfo { get { return new TokeninfoWrapper(); } }
-
-        /// <summary>
-        /// Returns a wrapper for all pvpstats endpoint calls.
-        /// </summary>
-        public PvpStatisticWrapper PvpStatistics { get { return new PvpStatisticWrapper(); } }
-
-        /// <summary>
-        /// Returns a wrapper for all skin endpoint calls.
-        /// </summary>
-        public SkinWrapper Skins { get { return new SkinWrapper(); } }
-
-        /// <summary>
-        /// Returns a wrapper for all continent endpoint calls.
-        /// </summary>
-        public ContinentWrapper Continents { get { return new ContinentWrapper(); } }
-
-        /// <summary>
-        /// Returns a wrapper for all map endpoint calls.
-        /// </summary>
-        public MapWrapper Maps { get { return new MapWrapper(); } }
-
-        /// <summary>
-        /// Returns a wrapper for all pvpgame endpoint calls.
-        /// </summary>
-        public PvpGameWrapper PvpGame { get { return new PvpGameWrapper(); } }
-
-        /// <summary>
-        /// Returns a wrapper for all achievements endpoint calls.
-        /// </summary>
-        public AchievementWrapper Achievements { get { return new AchievementWrapper(); } }
-
-		/// <summary>
-		/// Returns a wrapper for all the minis endpoint calls.
-		/// </summary>
-		public MinisWrapper Minis { get { return new MinisWrapper(); } }
-
-        /// <summary>
-        /// Returns a wrapper for all the item endpoint calls.
-        /// </summary>
-        public ItemWrapper Items { get { return new ItemWrapper(); } }
-
-        /// <summary>
         /// Returns a wrapper for all the listing endpoint calls.
         /// </summary>
         public ListingWrapper Listings { get { return new ListingWrapper(); } }
@@ -117,23 +152,9 @@ namespace GW2CSharp.V2
         public PriceWrapper Prices { get { return new PriceWrapper(); } }
 
         /// <summary>
-        /// Returns a wrapper for all the account endpoint calls.
+        /// Returns a wrapper for acessing recipes
         /// </summary>
-        public AccountWrapper Account { get { return new AccountWrapper(); } }
-
-		/// <summary>
-		/// Returns a wrapper for all the wvw objectives endpoint calls.
-		/// </summary>
-		public ObjectivesWrapper WvWObjectives { get { return new ObjectivesWrapper(); } }
-
-		/// <summary>
-		/// Returns a wrapper for all the wvw matches endpoint calls.
-		/// </summary>
-		public MatchesWrapper WvWMatches { get { return new MatchesWrapper(); } }
-
-		/// <summary>
-		/// Returns a wrapper for acessing recipes
-		/// </summary>
-		public RecipesWrapper RecipeWrapper { get { return new RecipesWrapper(); } }
-	}
+        public RecipesWrapper RecipeWrapper { get { return new RecipesWrapper(); } }
+        #endregion
+    }
 }

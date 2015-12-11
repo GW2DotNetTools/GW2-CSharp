@@ -15,7 +15,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldLoadCorrectItem() 
         {
-            Item actualItem = GW2Api.V2.Items.GetById(28864);
+            Item actualItem = GW2Api.V2().Items.GetById(28864);
             Assert.That(actualItem.Skin != null);
             Assert.AreEqual("Berserker's Greatsword", actualItem.Name);
             Assert.AreEqual(ItemType.Weapon, actualItem.Type);
@@ -30,7 +30,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllItems()
         {
-            Dictionary<int, Lazy<Item>> allItems = GW2Api.V2.Items.GetAll();
+            Dictionary<int, Lazy<Item>> allItems = GW2Api.V2().Items.GetAll();
 
             Item actualItem = allItems[15].Value;
 

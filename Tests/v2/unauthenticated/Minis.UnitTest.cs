@@ -12,7 +12,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldLoadCorrectMini() 
         {
-            Mini actualMini = GW2Api.V2.Minis.Get(355);
+            Mini actualMini = GW2Api.V2().Minis.Get(355);
 
             Assert.AreEqual(355, actualMini.Id);
             Assert.AreEqual(76670, actualMini.ItemId);
@@ -24,7 +24,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllMinis()
         {
-            Dictionary<int, Lazy<Mini>> allMinis = GW2Api.V2.Minis.GetAll();
+            Dictionary<int, Lazy<Mini>> allMinis = GW2Api.V2().Minis.GetAll();
 
             Mini actualMini = allMinis[15].Value;
 

@@ -11,7 +11,7 @@ namespace Tests.V2.Authenticated
         [Test]
         public void ShouldHaveAllPermissions() 
         {
-            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.Get(TestData.FullAccessAccountToken);
+            Tokeninfo tokeninfo = GW2Api.V2().TokenInfo.Get(TestData.FullAccessAccountToken);
             
             Assert.IsTrue(tokeninfo.Permission.Account);
             Assert.IsTrue(tokeninfo.Permission.Builds);
@@ -26,7 +26,7 @@ namespace Tests.V2.Authenticated
         [Test]
         public void ShouldHaveCorrectTokenName()
         {
-            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.Get(TestData.FullAccessAccountToken);
+            Tokeninfo tokeninfo = GW2Api.V2().TokenInfo.Get(TestData.FullAccessAccountToken);
 
             Assert.AreEqual(TestData.FullAccessAccountTokenName, tokeninfo.Name);
         }
@@ -34,7 +34,7 @@ namespace Tests.V2.Authenticated
         [Test]
         public void ShouldHaveCorrectTokenId()
         {
-            Tokeninfo tokeninfo = GW2Api.V2.TokenInfo.Get(TestData.FullAccessAccountToken);
+            Tokeninfo tokeninfo = GW2Api.V2().TokenInfo.Get(TestData.FullAccessAccountToken);
 
             Assert.AreEqual(TestData.FullAccessAccountToken.Substring(0, 36), tokeninfo.Id); // Seems like only 36 letters of the Id will be returned.
         }

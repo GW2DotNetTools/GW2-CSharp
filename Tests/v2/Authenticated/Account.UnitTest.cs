@@ -12,7 +12,7 @@ namespace Tests.V2.Authenticated
         [Test]
         public void ShouldReturnCorrectAccount()
         {
-            Account account = GW2Api.V2.Account.Get("D0F26FAD-FAC1-E649-A177-CFEC0297C5B49AF875D9-CFC7-434B-8FF1-DC11D0B4A65D");
+            Account account = GW2Api.V2().Account.Get("D0F26FAD-FAC1-E649-A177-CFEC0297C5B49AF875D9-CFC7-434B-8FF1-DC11D0B4A65D");
 
             Assert.AreEqual(account.Access, AccountType.GuildWars2);
             Assert.AreEqual(account.Created, new DateTime(2015, 8, 5, 21, 51, 00));

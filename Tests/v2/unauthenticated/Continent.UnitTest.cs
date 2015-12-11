@@ -14,14 +14,14 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetAllContinents()
         {
-            IEnumerable<Continent> continents = GW2Api.V2.Continents.GetAll();
+            IEnumerable<Continent> continents = GW2Api.V2().Continents.GetAll();
             Assert.GreaterOrEqual(continents.Count(), 2);
         }
 
         [Test]
         public void ShouldGetSpecificContinent() 
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1);
+            Continent continent = GW2Api.V2().Continents.GetById(1);
             Assert.AreEqual("Tyria", continent.Name);
             Assert.AreEqual(32768, continent.Dimension.X);
             Assert.AreEqual(32768, continent.Dimension.Y);
@@ -33,7 +33,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetSpecificFloor() 
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1);
+            Continent continent = GW2Api.V2().Continents.GetById(1);
             Floor floor = continent.Floors[2].Value;
             Assert.AreEqual(32768, floor.Dimension.X);
             Assert.AreEqual(32768, floor.Dimension.Y);
@@ -43,7 +43,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetSpecificRegion()
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1);
+            Continent continent = GW2Api.V2().Continents.GetById(1);
             Floor floor = continent.Floors[2].Value;
             Region region = floor.Regions["1"];
 
@@ -56,7 +56,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetSpecificMap()
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1);
+            Continent continent = GW2Api.V2().Continents.GetById(1);
             Floor floor = continent.Floors[2].Value;
             Region region = floor.Regions["1"];
             Map map = region.Maps["26"];
@@ -77,7 +77,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetSpecificObjective()
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1);
+            Continent continent = GW2Api.V2().Continents.GetById(1);
             Floor floor = continent.Floors[2].Value;
             Region region = floor.Regions["1"];
             Map map = region.Maps["26"];
@@ -94,7 +94,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetSpecificPoi()
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1);
+            Continent continent = GW2Api.V2().Continents.GetById(1);
             Floor floor = continent.Floors[2].Value;
             Region region = floor.Regions["1"];
             Map map = region.Maps["26"];
@@ -111,7 +111,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetSpecificSector()
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1);
+            Continent continent = GW2Api.V2().Continents.GetById(1);
             Floor floor = continent.Floors[2].Value;
             Region region = floor.Regions["1"];
             Map map = region.Maps["26"];
@@ -128,7 +128,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetSpecificSkillChallenge()
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1);
+            Continent continent = GW2Api.V2().Continents.GetById(1);
             Floor floor = continent.Floors[2].Value;
             Region region = floor.Regions["1"];
             Map map = region.Maps["26"];
@@ -141,7 +141,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldGetAllTextInDifferentLanguage() 
         {
-            Continent continent = GW2Api.V2.Continents.GetById(1, RequestedLanguage.De);
+            Continent continent = GW2Api.V2().Continents.GetById(1, RequestedLanguage.De);
             Floor floor = continent.Floors[2].Value;
             Region region = floor.Regions["1"];
             Map map = region.Maps["26"];

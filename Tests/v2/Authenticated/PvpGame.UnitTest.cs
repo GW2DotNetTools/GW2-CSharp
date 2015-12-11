@@ -15,7 +15,7 @@ namespace Tests.V2.Authenticated
         [Test]
         public void ShouldGetRecentPvpGames()
         {
-            IEnumerable<PvpGame> games = GW2Api.V2.PvpGame.GetRecent(TestData.FullAccessAccountToken);
+            IEnumerable<PvpGame> games = GW2Api.V2().PvpGame.GetRecent(TestData.FullAccessAccountToken);
 
             PvpGame game = games.First();
             Assert.IsNotNullOrEmpty(game.Id);

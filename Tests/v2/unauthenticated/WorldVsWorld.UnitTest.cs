@@ -15,7 +15,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnObjective()
 		{
-			var objective = GW2Api.V2.WvWObjectives.GetById("38-6");
+			var objective = GW2Api.V2().WvWObjectives.GetById("38-6");
 			Assert.AreEqual("Speldan Clearcut", objective.Name);
 			Assert.AreEqual(844, objective.SectorId);
 			Assert.IsNotNull(objective.Coord);
@@ -27,7 +27,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnAllObjectives()
 		{
-			var objectives = GW2Api.V2.WvWObjectives.GetAll();
+			var objectives = GW2Api.V2().WvWObjectives.GetAll();
 			Assert.IsNotNull(objectives);
 			Assert.Greater(objectives.Count(), 0);
 			var objective = objectives.First().Value;
@@ -37,7 +37,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnMultipleObjectives()
 		{
-			var objectives = GW2Api.V2.WvWObjectives.GetMultiple("1102-100", "1143-100").ToList();
+			var objectives = GW2Api.V2().WvWObjectives.GetMultiple("1102-100", "1143-100").ToList();
 
 			Assert.AreEqual(2, objectives.Count);
 		}
@@ -45,7 +45,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnMatch()
 		{
-			var match = GW2Api.V2.WvWMatches.GetById("1-3");
+			var match = GW2Api.V2().WvWMatches.GetById("1-3");
 			Assert.IsNotNull(match.Scores);
 			Assert.IsNotNull(match.Worlds);
 			Assert.IsNotNull(match.Deaths);
@@ -58,7 +58,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnMatchByWorld()
 		{
-			var match = GW2Api.V2.WvWMatches.GetByWorldId(1005);
+			var match = GW2Api.V2().WvWMatches.GetByWorldId(1005);
 			Assert.IsNotNull(match.Scores);
 			Assert.IsNotNull(match.Worlds);
 			Assert.IsNotNull(match.Deaths);
@@ -120,7 +120,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnAllMatches()
 		{
-			var matches = GW2Api.V2.WvWMatches.GetAll();
+			var matches = GW2Api.V2().WvWMatches.GetAll();
 			Assert.IsNotNull(matches);
 			Assert.Greater(matches.Count(), 0);
 			var singleMatch = matches.First();
@@ -130,7 +130,7 @@ namespace Tests.V2.Unauthenticated
 		[Test]
 		public void ShouldReturnMultipleMatches()
 		{
-			var matches = GW2Api.V2.WvWMatches.GetMultipleById("1-8", "2-9").ToList();
+			var matches = GW2Api.V2().WvWMatches.GetMultipleById("1-8", "2-9").ToList();
 			Assert.AreEqual(2, matches.Count);
 		}
 	}

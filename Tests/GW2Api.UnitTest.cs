@@ -15,13 +15,13 @@ namespace Tests
         [Test]
         public void ShouldReturnV2Endpoint()
         {
-            Assert.NotNull(GW2Api.V2);
+            Assert.NotNull(GW2Api.V2());
         }
 
         [Test]
         public void ShouldReturnCorrectBuildId() 
         {
-            int id = GW2Api.V2.GetBuildId;
+            int id = GW2Api.V2().GetBuildId;
             Assert.Greater(id, 0);
         }
     }

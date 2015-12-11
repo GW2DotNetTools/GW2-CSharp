@@ -1,4 +1,5 @@
-﻿using GW2CSharp.V1;
+﻿using GW2CSharp.Enums;
+using GW2CSharp.V1;
 using GW2CSharp.V2;
 
 namespace GW2CSharp
@@ -26,12 +27,41 @@ namespace GW2CSharp
         /// <summary>
         /// Returns the V2 endpoint.
         /// </summary>
-        public static V2Endpoint V2 
+        /// <returns>V2Endpoint.</returns>
+        public static V2Endpoint V2()
         {
-            get
-            {
-                return new V2Endpoint(); 
-            } 
+            return new V2Endpoint(string.Empty, RequestedLanguage.En);
+        }
+
+        /// <summary>
+        /// Returns the V2 endpoint.
+        /// </summary>
+        /// <param name="accountToken">Accounttoken which all authenticated calls will automatically use.</param>
+        /// <returns>V2Endpoint.</returns>
+        public static V2Endpoint V2(string accountToken)
+        {
+            return V2(accountToken, RequestedLanguage.En);
+        }
+
+        /// <summary>
+        /// Returns the V2 endpoint.
+        /// </summary>
+        /// <param name="language">Language in which all calls should be made.</param>
+        /// <returns>V2Endpoint.</returns>
+        public static V2Endpoint V2(RequestedLanguage language)
+        {
+            return V2(string.Empty, language);
+        }
+
+        /// <summary>
+        /// Returns the V2 endpoint.
+        /// </summary>
+        /// <param name="accountToken">Accounttoken which all authenticated calls will automatically use.</param>
+        /// <param name="language">Language in which all calls should be made.</param>
+        /// <returns>V2Endpoint.</returns>
+        public static V2Endpoint V2(string accountToken, RequestedLanguage language)
+        {
+            return new V2Endpoint(accountToken, language);
         }
     }
 }

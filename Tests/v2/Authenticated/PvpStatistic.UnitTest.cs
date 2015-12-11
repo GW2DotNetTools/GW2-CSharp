@@ -12,13 +12,13 @@ namespace Tests.V2.Authenticated.Pvp
         [Test]
         public void ThrowsApiExceptionIfWrongRights()
         {
-            Assert.Throws<ApiException>(() => GW2Api.V2.PvpStatistics.Get(TestData.LimitedAccessToken));
+            Assert.Throws<ApiException>(() => GW2Api.V2().PvpStatistics.Get(TestData.LimitedAccessToken));
         }
 
         [Test]
         public void ShouldReturnTheCorrectStatistic() 
         {
-            PvpStatistic statistic = GW2Api.V2.PvpStatistics.Get(TestData.FullAccessAccountToken);
+            PvpStatistic statistic = GW2Api.V2().PvpStatistics.Get(TestData.FullAccessAccountToken);
 
             Assert.That(statistic.Ladders.ContainsKey(Ladder.Unranked));
             Assert.That(statistic.Ladders.ContainsKey(Ladder.Ranked));

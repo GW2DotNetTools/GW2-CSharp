@@ -12,7 +12,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnAllAchievements()
         {
-            var achievements = GW2Api.V2.Achievements.GetAll();
+            var achievements = GW2Api.V2().Achievements.GetAll();
             int id = achievements.Keys.Last();
 
             Achievement achievement = achievements[id].Value;
@@ -23,9 +23,9 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnMultiple()
         {
-            var keys = GW2Api.V2.Achievements.GetAll().Keys.ToList();
+            var keys = GW2Api.V2().Achievements.GetAll().Keys.ToList();
 
-            var achievements = GW2Api.V2.Achievements.GetMultiple(RequestedLanguage.En, keys[0], keys[1]);
+            var achievements = GW2Api.V2().Achievements.GetMultiple(RequestedLanguage.En, keys[0], keys[1]);
 
             AssertThatAchievementIsCorrectlyFilled(achievements[keys[0]].Value, keys[0]);
             AssertThatAchievementIsCorrectlyFilled(achievements[keys[1]].Value, keys[1]);
@@ -34,10 +34,10 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnSpecificAchievement()
         {
-            var achievements = GW2Api.V2.Achievements.GetAll();
+            var achievements = GW2Api.V2().Achievements.GetAll();
             int id = achievements.Keys.First();
 
-            var achievement = GW2Api.V2.Achievements.Get(id);
+            var achievement = GW2Api.V2().Achievements.Get(id);
 
             AssertThatAchievementIsCorrectlyFilled(achievement, id);
         }
@@ -45,11 +45,11 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnSpecificAchievementInLanguage()
         {
-            var achievements = GW2Api.V2.Achievements.GetAll();
+            var achievements = GW2Api.V2().Achievements.GetAll();
             int id = achievements.Keys.First();
 
-            var achievementEn = GW2Api.V2.Achievements.Get(id);
-            var achievementDe = GW2Api.V2.Achievements.Get(id, RequestedLanguage.De);
+            var achievementEn = GW2Api.V2().Achievements.Get(id);
+            var achievementDe = GW2Api.V2(RequestedLanguage.De).Achievements.Get(id, RequestedLanguage.De);
 
             Assert.That(achievementEn.Name, Is.Not.EqualTo(achievementDe.Name));
         }
@@ -65,7 +65,7 @@ namespace Tests.V2.Unauthenticated
         [Test]
         public void ShouldReturnCorrectBitmap()
         {
-            var achievements = GW2Api.V2.Achievements.GetAll();
+            var achievements = GW2Api.V2().Achievements.GetAll();
 
             Achievement achievement = achievements.Values.Where(x => x.Value.Icon != null).First().Value;
             Assert.NotNull(achievement.GetImage());
