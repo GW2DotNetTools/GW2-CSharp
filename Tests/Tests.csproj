@@ -57,6 +57,7 @@
     <Compile Include="V2\Unauthenticated\Minis.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Item.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Price.UnitTest.cs" />
+    <Compile Include="V2\Unauthenticated\Recipes.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Skin.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Continent.UnitTest.cs" />
     <Compile Include="V2\Unauthenticated\Map.UnitTest.cs" />
