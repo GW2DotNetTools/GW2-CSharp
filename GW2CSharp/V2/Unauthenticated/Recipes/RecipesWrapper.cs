@@ -1,17 +1,13 @@
-﻿using GW2CSharp.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GW2CSharp.V2.Unauthenticated.Recipes
 {
-	/// <summary>
-	/// Reqpresents a RecipesWrapper
-	/// There are no language options because the recipes only appear in English
-	/// </summary>
-	public class RecipesWrapper : ApiBase
+    /// <summary>
+    /// Reqpresents a RecipesWrapper
+    /// There are no language options because the recipes only appear in English
+    /// </summary>
+    public class RecipesWrapper : ApiBase
 	{
 		/// <summary>
 		/// Returns all the recipes

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GW2CSharp.V2.Unauthenticated.Recipes.Enums
+﻿namespace GW2CSharp.V2.Unauthenticated.Recipes.Enums
 {
-	/// <summary>
-	/// The type pf recipe
-	/// </summary>
-	public enum RecipeType
+    /// <summary>
+    /// The type pf recipe
+    /// </summary>
+    public enum RecipeType
 	{
 		/// <summary>
 		/// An axe recipe

@@ -1,15 +1,11 @@
 ﻿using GW2CSharp;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests.V2.Unauthenticated
 {
-	[TestFixture]
-	public class Recipes
+    [TestFixture]
+	public class RecipesUnitTest
 	{
 		[Test]
 		public void ShouldReturnSingleRecipe()

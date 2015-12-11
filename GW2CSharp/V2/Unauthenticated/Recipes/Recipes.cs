@@ -1,16 +1,13 @@
-﻿using GW2CSharp.V2.Unauthenticated.Recipes.Enums;
-using System;
+﻿using GW2CSharp.Enums;
+using GW2CSharp.V2.Unauthenticated.Recipes.Enums;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GW2CSharp.V2.Unauthenticated.Recipes
 {
-	/// <summary>
-	/// This resource returns information about recipes that were discovered by players in the game.
-	/// </summary>
-	public class Recipe
+    /// <summary>
+    /// This resource returns information about recipes that were discovered by players in the game.
+    /// </summary>
+    public class Recipe
 	{
 		/// <summary>
 		/// Constructor for this resource
@@ -25,7 +22,7 @@ namespace GW2CSharp.V2.Unauthenticated.Recipes
 		/// <param name="flags">Flags applying to the recipe.</param>
 		/// <param name="ingredients">List of recipe ingredients.</param>
 		/// <param name="chat_link">The chat code for the recipe.</param>
-		public Recipe(int id, RecipeType type, int output_item_id, int output_item_count, int time_to_craft_ms, List<Disciplines> disciplines, int min_rating, List<Flags> flags, List<Ingredient> ingredients, string chat_link)
+		public Recipe(int id, RecipeType type, int output_item_id, int output_item_count, int time_to_craft_ms, List<Discipline> disciplines, int min_rating, List<Flags> flags, List<Ingredient> ingredients, string chat_link)
 		{
 			Id = id;
 			Type = type;
@@ -72,7 +69,7 @@ namespace GW2CSharp.V2.Unauthenticated.Recipes
 		/// <summary>
 		/// The crafting disciplines that can use the recipe.
 		/// </summary>
-		public List<Disciplines> Disciplines { get; set; }
+		public List<Discipline> Disciplines { get; set; }
 
 		/// <summary>
 		/// Flags applying to the recipe.

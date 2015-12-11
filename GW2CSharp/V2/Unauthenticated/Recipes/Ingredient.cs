@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GW2CSharp.V2.Unauthenticated.Recipes
+﻿namespace GW2CSharp.V2.Unauthenticated.Recipes
 {
-	/// <summary>
-	/// The ingredient for the recipe
-	/// </summary>
-	public class Ingredient
+    /// <summary>
+    /// The ingredient for the recipe
+    /// </summary>
+    public class Ingredient
 	{
 		/// <summary>
 		/// The Ingredient constructor

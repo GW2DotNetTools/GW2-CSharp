@@ -7,40 +7,40 @@ namespace GW2CSharp.Enums
     public enum Discipline
     {
         /// <summary>
-        /// Undefined.
-        /// </summary>
-        Undefined,
-        /// <summary>
-        /// Artificer.
+        /// The artificer discipline
         /// </summary>
         Artificer,
         /// <summary>
-        /// Armorsmith.
+        /// The armorsmith discipline
         /// </summary>
         Armorsmith,
         /// <summary>
-        /// Chef.
+        /// The chef discipline
         /// </summary>
         Chef,
         /// <summary>
-        /// Huntsman.
+        /// The huntsman discipline
         /// </summary>
         Huntsman,
         /// <summary>
-        /// Jeweler.
+        /// The jeweler discipline
         /// </summary>
         Jeweler,
         /// <summary>
-        /// Leatherworker.
+        /// The leatherworker discipline
         /// </summary>
         Leatherworker,
         /// <summary>
-        /// Tailor.
+        /// The tailor discipline
         /// </summary>
         Tailor,
         /// <summary>
-        /// Weaponsmith.
+        /// The weaponsmith discipline
         /// </summary>
-        Weaponsmith
+        Weaponsmith,
+        /// <summary>
+        /// The scribe discipline
+        /// </summary>
+        Scribe
     }
 }
