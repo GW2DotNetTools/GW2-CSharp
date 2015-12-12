@@ -42,7 +42,10 @@ namespace GW2CSharp.V2.Unauthenticated.Items
             Rarity = rarity;
             Level = level;
             VendorValue = vendor_value;
-            Skin = new SkinWrapper().GetById(default_skin);
+            if (default_skin != 0)
+            {
+                Skin = new SkinWrapper().GetById(default_skin);
+            }
             Flags = flags;
             GameTypes = game_types;
             Restrictions = restrictions;
