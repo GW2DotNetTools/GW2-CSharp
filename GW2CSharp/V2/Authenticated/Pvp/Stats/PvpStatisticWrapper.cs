@@ -5,6 +5,26 @@
     /// </summary>
     public class PvpStatisticWrapper : ApiBase
     {
+        private string accountToken;
+
+        /// <summary>
+        /// Returns a wrapper for all pvpstats endpoint calls.
+        /// </summary>
+        /// <param name="accountToken">Accounttoken which all authenticated calls will automatically use.</param>
+        public PvpStatisticWrapper(string accountToken)
+        {
+            this.accountToken = accountToken;
+        }
+
+        /// <summary>
+        /// Returns PvpStatistics about the given account.
+        /// </summary>
+        /// <returns>PvpStatistics about the account.</returns>
+        public PvpStatistic Get()
+        {
+            return Get(accountToken);
+        }
+
         /// <summary>
         /// Returns PvpStatistics about the given account.
         /// </summary>

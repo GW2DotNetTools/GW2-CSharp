@@ -102,22 +102,22 @@ namespace GW2CSharp.V2
         /// <summary>
         /// Returns a wrapper for all the account endpoint calls.
         /// </summary>
-        public AccountWrapper Account { get { return new AccountWrapper(); } }
+        public AccountWrapper Account { get { return new AccountWrapper(accountToken); } }
 
         /// <summary>
         /// Returns a wrapper for all tokeninfo endpoint calls.
         /// </summary>
-        public TokeninfoWrapper TokenInfo { get { return new TokeninfoWrapper(); } }
+        public TokeninfoWrapper TokenInfo { get { return new TokeninfoWrapper(accountToken); } }
 
         /// <summary>
         /// Returns a wrapper for all pvpstats endpoint calls.
         /// </summary>
-        public PvpStatisticWrapper PvpStatistics { get { return new PvpStatisticWrapper(); } }
+        public PvpStatisticWrapper PvpStatistics { get { return new PvpStatisticWrapper(accountToken); } }
 
         /// <summary>
         /// Returns a wrapper for all pvpgame endpoint calls.
         /// </summary>
-        public PvpGameWrapper PvpGame { get { return new PvpGameWrapper(); } }
+        public PvpGameWrapper PvpGame { get { return new PvpGameWrapper(accountToken); } }
         #endregion
 
         #region Unauthenticated

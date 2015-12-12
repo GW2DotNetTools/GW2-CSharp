@@ -7,6 +7,26 @@ namespace GW2CSharp.V2.Authenticated.Pvp.Games
     /// </summary>
     public class PvpGameWrapper : ApiBase
     {
+        private string accountToken;
+
+        /// <summary>
+        /// Returns a wrapper for all pvpgame endpoint calls.
+        /// </summary>
+        /// <param name="accountToken">Accounttoken which all authenticated calls will automatically use.</param>
+        public PvpGameWrapper(string accountToken)
+        {
+            this.accountToken = accountToken;
+        }
+
+        /// <summary>
+        /// Returns all recent matches.
+        /// </summary>
+        /// <returns>Recent matches.</returns>
+        public IEnumerable<PvpGame> GetRecent()
+        {
+            return GetRecent(accountToken);
+        }
+
         /// <summary>
         /// Returns all recent matches.
         /// </summary>
