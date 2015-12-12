@@ -1,5 +1,6 @@
 ﻿using GW2CSharp.Enums;
 using GW2CSharp.V2.Authenticated.Account;
+using GW2CSharp.V2.Authenticated.Commerce;
 using GW2CSharp.V2.Authenticated.Pvp.Games;
 using GW2CSharp.V2.Authenticated.Pvp.Stats;
 using GW2CSharp.V2.Authenticated.TokenInfo;
@@ -118,6 +119,11 @@ namespace GW2CSharp.V2
         /// Returns a wrapper for all pvpgame endpoint calls.
         /// </summary>
         public PvpGameWrapper PvpGame { get { return new PvpGameWrapper(accountToken); } }
+
+        /// <summary>
+        /// Returns a wrapper for all transactions endpoint calls.
+        /// </summary>
+        public TransactionsWrapper Transactions { get { return new TransactionsWrapper(accountToken); } }
         #endregion
 
         #region Unauthenticated

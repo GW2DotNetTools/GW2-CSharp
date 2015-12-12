@@ -66,6 +66,8 @@
     <Compile Include="Services\RenderService.cs" />
     <Compile Include="ApiBase.cs" />
     <Compile Include="V1\V1Endpoint.cs" />
+    <Compile Include="V2\Authenticated\Commerce\Transaction.cs" />
+    <Compile Include="V2\Authenticated\Commerce\TransactionsWrapper.cs" />
     <Compile Include="V2\Unauthenticated\Recipes\Enums\Flags.cs" />
     <Compile Include="V2\Unauthenticated\Recipes\Ingredient.cs" />
     <Compile Include="V2\Unauthenticated\Recipes\Recipes.cs" />
@@ -162,7 +164,6 @@
     <Folder Include="V2\Authenticated\Account\Skins\" />
     <Folder Include="V2\Authenticated\Account\Wallet\" />
     <Folder Include="V2\Authenticated\Characters\" />
-    <Folder Include="V2\Authenticated\Commerce\Transactions\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
