@@ -7,6 +7,7 @@ namespace GW2CSharp.V2.Unauthenticated.Achievement
     /// <summary>
     /// Represents a wrapper for the v2/achievements endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Achievement" /></example>
     public class AchievementWrapper : ApiBase
     {
         private RequestedLanguage language;

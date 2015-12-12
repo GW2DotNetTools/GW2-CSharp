@@ -7,6 +7,7 @@ namespace GW2CSharp.V2.Unauthenticated.Maps
     /// <summary>
     /// Represents a single MapWrapper.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Maps" /></example>
     public class MapWrapper : ApiBase
     {
         private RequestedLanguage language;

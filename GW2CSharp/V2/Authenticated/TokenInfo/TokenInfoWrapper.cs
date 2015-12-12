@@ -3,6 +3,7 @@
     /// <summary>
     /// Represents a wrapper for the v2/tokeninfo endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Tokeninfo" /></example>
     public class TokeninfoWrapper : ApiBase
     {
         private string accountToken;

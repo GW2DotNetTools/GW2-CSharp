@@ -1,7 +1,5 @@
-﻿using GW2CSharp.Services;
-using GW2CSharp.V2.Unauthenticated.Achievement.Enums;
+﻿using GW2CSharp.V2.Unauthenticated.Achievement.Enums;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace GW2CSharp.V2.Unauthenticated.Achievement
 {

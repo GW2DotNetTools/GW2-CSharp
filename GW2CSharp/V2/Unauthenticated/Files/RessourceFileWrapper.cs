@@ -5,6 +5,7 @@ namespace GW2CSharp.V2.Unauthenticated.Files
     /// <summary>
     /// Represents a wrapper for the v2/quaggans endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="RessourceFile" /></example>
     public class RessourceFileWrapper : ApiBase
     {
         /// <summary>

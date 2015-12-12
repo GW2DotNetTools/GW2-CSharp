@@ -5,6 +5,7 @@ namespace GW2CSharp.V2.Authenticated.Pvp.Games
     /// <summary>
     /// Represents a wrapper for the v2/pvp/games endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="PvpGame" /></example>
     public class PvpGameWrapper : ApiBase
     {
         private string accountToken;

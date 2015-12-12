@@ -7,6 +7,7 @@ namespace GW2CSharp.V2.Unauthenticated.Currencies
     /// <summary>
     /// Represents a wrapper for the v2/currencies endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Currencies" /></example>
     public class CurrencyWrapper : ApiBase
     {
         private RequestedLanguage language;

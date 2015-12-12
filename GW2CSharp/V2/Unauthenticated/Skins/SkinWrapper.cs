@@ -7,6 +7,7 @@ namespace GW2CSharp.V2.Unauthenticated.Items.Skins
     /// <summary>
     /// Represents the v2/skins endpoint
     /// </summary>
+    /// <example><code source="Examples.cs" region="Skins" /></example>
     public class SkinWrapper : ApiBase
     {
         private RequestedLanguage language;

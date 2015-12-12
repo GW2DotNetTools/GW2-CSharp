@@ -26,6 +26,7 @@ namespace GW2CSharp.V2
     /// <summary>
     /// Represents the V2 endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="V2Endpoint" /></example>
     public class V2Endpoint
     {
         private string accountToken;

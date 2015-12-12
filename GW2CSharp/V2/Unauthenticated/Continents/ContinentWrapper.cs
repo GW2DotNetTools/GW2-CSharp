@@ -6,6 +6,7 @@ namespace GW2CSharp.V2.Unauthenticated.Continents
     /// <summary>
     /// Represents a single ContinentWrapper.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Continents" /></example>
     public class ContinentWrapper : ApiBase
     {
         private RequestedLanguage language;

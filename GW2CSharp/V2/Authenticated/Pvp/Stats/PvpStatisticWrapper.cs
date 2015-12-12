@@ -3,6 +3,7 @@
     /// <summary>
     /// Represents a wrapper for the v2/pvp/stats endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="PvpStatistics" /></example>
     public class PvpStatisticWrapper : ApiBase
     {
         private string accountToken;

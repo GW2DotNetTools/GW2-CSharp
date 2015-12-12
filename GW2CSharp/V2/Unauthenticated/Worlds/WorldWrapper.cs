@@ -6,6 +6,7 @@ namespace GW2CSharp.V2.Unauthenticated.Worlds
     /// <summary>
     /// Represents a wrapper for the v2/world endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Worlds" /></example>
     public class WorldWrapper : ApiBase
     {
         private RequestedLanguage language;

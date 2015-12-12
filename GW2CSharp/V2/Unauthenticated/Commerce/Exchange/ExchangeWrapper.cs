@@ -5,6 +5,7 @@ namespace GW2CSharp.V2.Unauthenticated.Commerce.Exchange
     /// <summary>
     /// Represents a wrapper for the v2/commerce/exchange endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Commerce/Exchange/Coins" /></example>
     public class ExchangeWrapper : ApiBase
     {
         /// <summary>

@@ -7,6 +7,7 @@ namespace GW2CSharp.V2.Unauthenticated.Quaggans
     /// <summary>
     /// Represents a wrapper for the v2/quaggans endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Quaggan" /></example>
     public class QuagganWrapper : ApiBase
     {
         /// <summary>

@@ -8,6 +8,7 @@ namespace GW2CSharp.Services
     /// <summary>
     /// Represents the render service which provides access to in-game assets like item icons.
     /// </summary>
+    /// <example><code source="Examples.cs" region="RenderService" /></example>
     public static class RenderService
     {
         private const string Pattern = "https://render.guildwars2.com/file/{0}/{1}.{2}";

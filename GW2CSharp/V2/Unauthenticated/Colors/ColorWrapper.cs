@@ -7,6 +7,7 @@ namespace GW2CSharp.V2.Unauthenticated.Colors
     /// <summary>
     /// Represents a wrapper for the v2/colors endpoint.
     /// </summary>
+    /// <example><code source="Examples.cs" region="Color" /></example>
     public class ColorWrapper : ApiBase
     {
         private RequestedLanguage language;
