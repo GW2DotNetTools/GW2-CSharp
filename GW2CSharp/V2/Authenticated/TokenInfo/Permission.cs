@@ -9,14 +9,15 @@ namespace GW2CSharp.V2.Authenticated.TokenInfo
     {
         internal Permission(List<string> permissions)
         {
-            Wallet = permissions.Contains("wallet");
-            Tradingpost = permissions.Contains("tradingpost");
-            Builds = permissions.Contains("builds");
             Account = permissions.Contains("account");
             Inventories = permissions.Contains("inventories");
             Characters = permissions.Contains("characters");
+            Tradingpost = permissions.Contains("tradingpost");
+            Wallet = permissions.Contains("wallet");
             Unlocks = permissions.Contains("unlocks");
             Pvp = permissions.Contains("pvp");
+            Builds = permissions.Contains("builds");
+            Progression = permissions.Contains("progression");
         }
         
         /// <summary>
@@ -58,5 +59,10 @@ namespace GW2CSharp.V2.Authenticated.TokenInfo
         /// Grants access to the /v2/pvp sub-endpoints. (i.e. /v2/pvp/games, /v2/pvp/stats)
         /// </summary>
         public bool Pvp { get; private set; }
+
+        /// <summary>
+        /// Grants access to achievements, dungeon unlock status, mastery point assignments, and general PvE progress.
+        /// </summary>
+        public bool Progression { get; private set; }
     }
 }
